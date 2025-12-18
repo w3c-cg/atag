@@ -1,0 +1,1613 @@
+<!DOCTYPE html.>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>
+			Authoring Tools Accessibility Guidelines CG Meeting &ndash; 5 December
+			2025
+		</title>
+		<meta name="viewport" content="width=device-width" />
+		<link
+			rel="stylesheet"
+			type="text/css"
+			title="2018"
+			href="https://www.w3.org/StyleSheets/scribe2/public.css" />
+		<link
+			rel="alternate stylesheet"
+			type="text/css"
+			title="2004"
+			href="https://www.w3.org/StyleSheets/base.css" />
+		<link
+			rel="alternate stylesheet"
+			type="text/css"
+			title="2004"
+			href="https://www.w3.org/StyleSheets/public.css" />
+		<link
+			rel="alternate stylesheet"
+			type="text/css"
+			title="2004"
+			href="https://www.w3.org/2004/02/minutes-style.css" />
+		<link
+			rel="alternate stylesheet"
+			type="text/css"
+			title="Fancy"
+			href="https://www.w3.org/StyleSheets/scribe2/fancy.css" />
+		<link
+			rel="alternate stylesheet"
+			type="text/css"
+			title="Typewriter"
+			href="https://www.w3.org/StyleSheets/scribe2/tt-member.css" />
+	</head>
+	<body>
+		<header>
+			<p>
+				<a href="https://www.w3.org/"
+					><img
+						src="https://www.w3.org/assets/logos/w3c-2025/svg/w3c-white.svg"
+						alt="W3C"
+						border="0"
+						height="60"
+						width="60"
+				/></a>
+			</p>
+
+			<h1>Authoring Tools Accessibility Guidelines CG Meeting</h1>
+			<h2>5 December 2025</h2>
+		</header>
+
+		<div id="prelims">
+			<div id="attendees">
+				<h2>Attendees</h2>
+				<dl class="intro">
+					<dt>Present:</dt>
+					<dd>
+						Adam Chaboryk, Sambhavi Chandrashekar, Hidde de Vries, Barry
+						Feigenbaum, Noemi Fernandez, Mike Gifford, Charles Hall, Jeroen
+						Hulscher, John Jameson, Mary Ann Jawili, Simon Jones, Shivaji Kumar,
+						Nicole Letoile, Lisa Liskovoi, Wendy Reid, Sophie Rutter, Laura
+						Staniland
+					</dd>
+					<dt>Regrets:</dt>
+					<dd>None</dd>
+					<dt>Chair</dt>
+					<dd>Wendy Reid</dd>
+					<dt>Scribe</dt>
+					<dd>Zoom</dd>
+				</dl>
+			</div>
+
+			<nav id="toc">
+				<h2>Contents</h2>
+				<ol>
+					<li><a href="#minutes">Meeting Minutes</a></li>
+					<li><a href="#chat">Chat Transcript</a></li>
+				</ol>
+			</nav>
+		</div>
+
+		<main id="meeting" class="meeting">
+			<section id="minutes">
+				<h2>Meeting Minutes</h2>
+
+				<p><cite>Wendy Reid:</cite> Alright.</p>
+				<p>
+					... Okay, thanks everyone for joining today. Just for the record, I
+					had this open in front of me. So we're gonna do the same as discussed
+					last meeting, 4 minutes, so we'll take a transcript from this meeting.
+					I will take that transcript and upload it into into, ether pad for
+					people to edit, so I will send a link out or I'll share it right now,
+					actually, because people are welcome to edit
+				</p>
+				<p>
+					... I've also included in this EtherPad after last meeting. There's a
+					section for the minutes, there is a section for chat, because we saved
+					the chat last time, because there was actually a lot of really good
+					discussion in the chat, and we'll do that again. And, notes. So if
+					anyone has notes that they've taken during the meeting and wants to
+					share them, as part of the minutes, then there's a notes section.
+				</p>
+				<p>
+					... If you've never used Etherpad, all you have to do, it's probably
+					gonna prompt you to sign in, you just need to use your W3C account.
+				</p>
+				<p>
+					... Same username and password as your W3C account, and it should just
+					work.
+				</p>
+				<p>
+					... But you don't have to pay attention to that during the meeting. I
+					will make sure that everything gets copied in there, and then you're
+					welcome to edit it later for spelling mistakes. The thing I've noticed
+					most from the transcript from last time is that it gets names wrong,
+					and it gets, acronyms hilariously wrong. So It's something to keep in
+					mind.
+				</p>
+				<p>... For this week's agenda</p>
+				<p>
+					... Actually, I'll start with the first reminder, which is, if you are
+					new to the group.
+				</p>
+				<p>
+					... We have an introductions thread going where people can introduce
+					themselves. And it's been nice to get to see everyone and learn why
+					they're here.
+				</p>
+				<p>
+					... I wanted to start off also by sharing some updates that I've made
+					to our GitHub. So, I'm going to share my screen, because it's easier.
+					I'll explain them, but I'll also show them, because it's nicer to see.
+					So, we now have a homepage. I created just a little, little GitHub
+					pages, home page this will be where it has a lot of the same
+					information as the repository README, but, so there's links to our
+					issues, our discussion, our wiki.
+				</p>
+				<p>
+					... You can find I will update it with meeting minutes when the
+					meeting minutes are ready, so you can be able to read them online.
+				</p>
+				<p>
+					... There will be, when I have a draft ready of the, document, it'll
+					be uploaded here.
+				</p>
+				<p>
+					... Same with the charter and all of that. I was really hoping today
+					that I would actually be able to show you, the the draft version of
+					the note, or of the document, but, I have spent several hours trying
+					to get it into, like, new W3C style. And I have still over 100 broken
+					links to fix, so I am working through that right now. I'm getting
+					close. I cracked the code on what was going on with it.
+				</p>
+				<p>
+					... Basically, the ATAG 2.0, was generated on an old system that W3C
+					doesn't use anymore for its documents. We now use something called
+					well, two options. You can either use something called Bike Shed or
+					something called Respec. I'm a Respec fan. So, I'm trying to take it
+					over to Respec. Respec has a lot of wonderful features that make
+					things a lot easier. But it works a lot better when you're working
+					from a new document, not an old document. So that is the problem I'm
+					running into now, is cleaning it up.
+				</p>
+				<p>
+					... I will hopefully I'll send out a link once I have it, once I'm
+					done cleaning.
+				</p>
+				<p>
+					... The old way that definitions were referenced is really hard to
+					clean up.
+				</p>
+				<p>
+					... So let's move to, what the meat the meat of the meeting today. So,
+					I thought for today's meeting that we could talk about some of the
+					open discussion topics that we have going right now.
+				</p>
+				<p>
+					... For people who weren't here last time, what we've decided to do is
+					we're gonna have discussions in the meeting, but, so that people can
+					participate asynchronously, we will have we are going to use the
+					discussions feature on GitHub, so people can contribute, comment to
+					each other, and we can, you know, take those discussions and talk
+					about them in the meeting.
+				</p>
+				<p>
+					... So the first one that I want to chat about, this one got some
+					traction, was around coming up with type or having a discussion about
+					types of authoring tools. So this, you know, there ar.
+				</p>
+				<p>
+					... I think some of this work was done when ATAG 2.0 was created, but
+					obviously in the intervening 10 years, there are probably new tools,
+					or new types of tools out there. What should we be taking into
+					account? And do we maybe need to recategorize them, or think of new
+					categories for authoring tools.
+				</p>
+				<p>
+					... And we'll be using the raise hands feature in Zoom, so I can keep
+					track of who wants to talk and when.
+				</p>
+
+				<p>
+					<cite>Charles Hall:</cite> I just like that, you used the word
+					categories. I think we should use that going forward, in the in that
+					discussion, channel in GitHub.
+				</p>
+				<p>
+					... I added the list from the 2.0 implementation report, which called
+					them, market segments, and and I don't think that's, I think that's
+					too narrow, or possibly, too vague, so categories, works better than
+					market segments.
+				</p>
+
+				<p>
+					<cite>Wendy Reid:</cite> Cool, that's good to know. Yeah, I I kind of
+					agree, market segments is a bit of an awkward delineation.
+				</p>
+
+				<p>
+					<cite>Hidde de Vries:</cite> Hi, I was thinking, there are some tools
+					that are specifically making web content, and then there are tools
+					that can make any type of content, like you can make a Word document
+					and never put it on the web, or, like, edit a movie or something like
+					that.
+				</p>
+				<p>
+					... Do we wanna scope it to web specifically, or is that not very
+					important to do.
+				</p>
+
+				<p>
+					<cite>Wendy Reid:</cite> I think, because we want to align with WCAG
+					3, that we need to look beyond the web, but are you, like, Beyond the
+					web, but no.
+				</p>
+				<p>... I guess the scope is, like, digital.</p>
+				<p>
+					... So we're not, we're not gonna, you know, talk about authoring tool
+					accessibility for typewriters, but I think, like, we can look slightly
+					beyond, like, I guess, like, maybe a good example is, like, mobile
+					applications, right? Like, Twitter is a mobile, or whatever we want to
+					call it now. Twitter is a mobile application, that you can create
+					content on, or Mastodon, o.
+				</p>
+				<p>
+					... So we should include those types of interfaces in our in our
+					categories as well.
+				</p>
+
+				<p><cite>Hidde de Vries:</cite> Or maybe one more thing to add.</p>
+				<p>... to, kind of, lock the definition into, sort of.</p>
+				<p>
+					... I was thinking maybe we need to say something like anything that
+					creates web content, or, like, that results in HTML, or something like
+					that. Maybe that is a way t.
+				</p>
+				<p>... Decide, kind of, what Belongs, or art doesn't belong i.</p>
+				<p>
+					... In this, because that seems to be kind of scrolling through the
+					issue, what most of the tools that we're mentioning ther.
+				</p>
+				<p>... actually do. So something that you ca.</p>
+				<p>
+					... After you've used an authoring tool, it ends up, or it can end up
+					on the web.
+				</p>
+				<p>... Is that, like, a way to scope it, perhaps.</p>
+
+				<p>
+					<cite
+						><p><cite>Mary Ann Jawili:</cite></p></cite
+					>
+					Hey everyone, I guess I would love to include, just anything that can
+					go can be shared digitally. Definitely stuff that can that can be
+					shared as HTML.
+				</p>
+				<p>... But, like, if I can create a video, then I would wan.</p>
+				<p>... to be able to, I don't know, add captions to that video.</p>
+				<p>
+					... And also, I like the Twitter example, just because, like, you're
+					creating content that will be posted, but you should be able to make
+					that accessible for anyone who's looking at it. And then also, if
+					you're creating.
+				</p>
+				<p>
+					... I guess what I'm also thinking about is, like, there's lots of
+					platforms where people can build on top of that platform, such as
+					Salesforce and ServiceNow. I work at ServiceNow now, so, and I'm
+					thinking about how we want t.
+				</p>
+				<p>... We should want to encourage people to create.</p>
+				<p>
+					... To build stuff on top of the platform, but also make sure that
+					stuff is accessible.
+				</p>
+
+				<p>
+					<cite>Charles Hall:</cite> I think reacting to and building on those
+					last two comments.
+				</p>
+				<p>
+					... I have, in the discussion thread, a short list to get started, and
+					every one of those thing.
+				</p>
+				<p>
+					... can be published to the web, despite the fact that they also exist
+					in other channels, right? So social media was brought up, social media
+					obviously has native apps, but they also have the web.
+				</p>
+				<p>... We have, like, customer relationship management platforms.</p>
+				<p>... Like those that were mentioned, again, they publis.</p>
+				<p>... To native applications and the web.</p>
+				<p>
+					... Figma has a desktop client and a web client, so, like, pretty much
+					all of these things involve the web.
+				</p>
+
+				<p>
+					<cite>Wendy Reid:</cite> Yeah, I think that's a good distinction, and
+					maybe we can this is basically the line, I think, and this is what
+					Hidde, I think, was getting at, was like.
+				</p>
+				<p>
+					... Even if the source of, like, where you're creating the content is
+					not on the web, if it can end up on the web.
+				</p>
+				<p>... or be cross-published to the web, then that is in scope.</p>
+
+				<p><cite>Lisa Liskovoi:</cite> I think I think that's great, but.</p>
+				<p>
+					... I guess my fear, in terms of how we articulate it, is that we do
+					it in a way so that it's not just the piece that's published onto the
+					web that is accessible, so that it applies in a way where the desktop
+					applications and the mobile applications also have to be accessible.
+				</p>
+
+				<p>
+					<cite>Wendy Reid:</cite> Yeah, I think that there's a key part of the
+					wording in there somewhere.
+				</p>
+
+				<p>
+					<cite>Nicole Letoile:</cite> Hi, I'm new, my first meeting, so I'm
+					trying to listen and figure out, what where we're headed and what's
+					happening. Just some context, I spend a lot of time with the
+					accessibility piece of online learning and learning management
+					systems. I think I'm in the right place, authoring tools and helping
+					instructional designers create accessible content.
+				</p>
+				<p>... And if I think if I hear, what you're saying.</p>
+				<p>
+					... I always, you know, if online learning is created with tools that
+					produce content that is used through the web, it should apply, so am I
+					are we talking about that? Is that what's happening.
+				</p>
+
+				<p><cite>Wendy Reid:</cite> Exactly.</p>
+				<p>... Yeah, I think what we're we're edging towards is that th.</p>
+				<p>
+					... Authoring tools themselves, be they web-based or software-based,
+					that's just the distinction I will make. Those tools should be
+					accessible, and the features of those tools should be accessible, and
+					then the content that they produc.
+				</p>
+				<p>... Also needs to be accessible.</p>
+
+				<p><cite>Nicole Letoile:</cite> Got it, thank you.</p>
+
+				<p>
+					<cite>Wendy Reid:</cite> Yes, yeah, Charles, the content falls under
+					WCAG.
+				</p>
+				<p>... That's the we get the we get the fine the fine line.</p>
+				<p>
+					... Alright, I think Where More or less agree. Oh, go ahead, Charles.
+				</p>
+
+				<p>
+					<cite>Charles Hall:</cite> Yeah, it hasn't come up yet today, but it
+					came up in discussions prior to the kickoff meeting, and I've had many
+					side discussion.
+				</p>
+				<p>... With other peers in the industry of where AI fits into this.</p>
+				<p>
+					... And it's my opinion and the result of some of those conversations
+					that if AI is used to produce content.
+				</p>
+				<p>... It's Function of doing so, and its output.</p>
+				<p>... Has nothing to do with the authoring tool.</p>
+				<p>
+					... The authoring part of it is the ability for the human to provide
+					the prompt to it.
+				</p>
+				<p>
+					... So, it's really just, when AI is used in the context of creating
+					content.
+				</p>
+				<p>
+					... The input method for the human is the authoring tool, and no other
+					part of it is.
+				</p>
+
+				<p>
+					<cite>Wendy Reid:</cite> I want to make sure I'm understanding. You
+					mean, like so, like, let'.
+				</p>
+
+				<p>
+					<cite>Charles Hall:</cite> If you use a web interface to access
+					something like ChatGPT, and you, as the human use an input in the
+					browser.
+				</p>
+				<p>... to provide a prompt to the AI, requesting Content be created.</p>
+				<p>... That's the authoring tool, the input.</p>
+				<p>
+					... Everything else the AI does Is irrelevant to the aspect of
+					authoring.
+				</p>
+
+				<p>
+					<cite>Hidde de Vries:</cite> Yeah, I get that point that you're
+					making, Charles. I do think the kind o.
+				</p>
+				<p>... what the eye does after I did things.</p>
+				<p>... It's still gonna end u.</p>
+				<p>
+					... on the website, and then it is kind of going to become web content
+					at some point, right? So you do some inputting.
+				</p>
+				<p>
+					... That is authoring, and then you put it on the website, and what
+					happens in between, maybe.
+				</p>
+				<p>
+					... AI doing stuff, maybe organizing it, maybe doing doing things to
+					it, but if it then ends up on a website, there's still something to
+					say abou.
+				</p>
+				<p>... how that has happened, so I feel lik.</p>
+				<p>... whatever AI did, it may, like.</p>
+				<p>
+					... add headings, or remove headings, or whatever, like, it may do
+					things that are relevant to accessibility, so I think the end result
+					that then ends up on a website is still kind o.
+				</p>
+				<p>
+					... part of the authoring operation, basically the B side of ATAC.
+				</p>
+				<p>
+					... And I think what you're referring to is the A side of ATEC, which
+					is about th.
+				</p>
+				<p>
+					... authoring, whereas, like, the B part is more about the ordered
+					content.
+				</p>
+				<p>... That makes sense.</p>
+
+				<p>
+					<cite>Mary Ann Jawili:</cite> Okay, I think I understand what Charles
+					was saying, I think that makes sense. I agree with the input needing
+					to be accessible, but I yeah, I guess I jus.
+				</p>
+				<p>
+					... my experience with, AI is that there can be a lot of back and
+					forth, and it's a very dynamic interface, and I would want that back
+					and forth, the dynamic content.
+				</p>
+				<p>
+					... the dynamic UI to also be accessible, just to be clear, so it
+					wouldn't just be the input, but everything else, betwee.
+				</p>
+				<p>
+					... Everything else that's part of that interaction, from the initial
+					input to th.
+				</p>
+				<p>... whatever content the per- the user wants to use from the AI.</p>
+
+				<p>
+					<cite>Wendy Reid:</cite> I put myself on the queue, to say, because I
+					think the Charles, to your example of, like, the input field and back
+					and forth, so, not all tools do this, but I've noticed that some have
+					started doing this. There's a tool I use called Cline.
+				</p>
+				<p>
+					... That started doing this in this latest update, where it actually
+					shows when you say, you give it a prompt.
+				</p>
+				<p>
+					... as it's thinking, it actually shows you what it's thinking. So you
+					can see a feed of i.
+				</p>
+				<p>... The process that it's going through to produce the output.</p>
+				<p>
+					... And that, I think, is an example of something where you need to
+					know that that is happening, if it's present, and it's something that
+					you probably want t.
+				</p>
+				<p>
+					... Not all tools show you, and, like, so when we're talking about
+					the, accessibility of, like, the interface, I think, like, it's stuff
+					like that. It's not just the input field, and it's not just the chat,
+					it's what's happening alongside.
+				</p>
+				<p>... Tha.</p>
+				<p>
+					... because you almost need to be able to react to it. Like, I
+					definitely have had interactions with it wher.
+				</p>
+				<p>
+					... When I see what the thinking what the thinking is versus what the
+					output is, I have to intervene to be like, whoa, whoa, whoa, like,
+					you're on the wrong path, don't make this change to the file, make
+					that change to the file.
+				</p>
+				<p>
+					... And I guess, like, Shivaji, to your question, like, yeah, good
+					one. I don't know if I haven't tested using Cline with a screen
+					reader. I should maybe I'll do that today when if I if I pick it up,
+					because I'm curious, too.
+				</p>
+
+				<p>
+					<cite>Sambhavi Chandrashekar:</cite> Yeah, I, joined late, so
+					apologies if it's not, relevant, but the two goals for this kind of a
+					standard is tha.
+				</p>
+				<p>
+					... everybody should be able to author, like Wendy, you were saying
+					rightly, and the only people who can certify are nativ.
+				</p>
+				<p>... Assistive technology users.</p>
+				<p>
+					... you and I cannot really how much ever we know how to use. I mean,
+					that's that's not the main point. And the second thing is that the
+					content that comes ou.
+				</p>
+				<p>... Must be usable by everybody.</p>
+				<p>
+					... And it's also about pushing organizations that create those
+					programs That spew out the content.
+				</p>
+				<p>... To be aware tha.</p>
+				<p>
+					... what they create should be readable, understandable, usable. Even
+					during the prompt and response process, because it's a cycle, right?
+					You put in something, you get a feedback, and then you react.
+				</p>
+				<p>... All of that should be accessible.</p>
+				<p>
+					... if it was not relevant to what Charles was saying, pardon me, but
+					Charles, you really got som.
+				</p>
+				<p>
+					... brain work my brain working in a different direction today. Thank
+					you.
+				</p>
+
+				<p>
+					<cite>Shivaji Kumar:</cite> Yeah, so, so when we think about platforms
+					that create content.
+				</p>
+				<p>
+					... And we want to come up with a list of tools. So we are basically
+					thinking about some of the larger, bigger fishes, right? So, for
+					instance, ServiceNow, and Salesforce, an.
+				</p>
+				<p>... The traditional existing platforms.</p>
+				<p>... Because if we can get them to adopt thes.</p>
+				<p>
+					... Recommendations or guidelines that we might create, then we have a
+					much better chance at convincing the smaller fishes.
+				</p>
+				<p>... Is that is that correct.</p>
+
+				<p><cite>Wendy Reid:</cite> I think it can go either way.</p>
+				<p>
+					... One thing that I've noticed, speaking from my experience in the
+					EPUB space.
+				</p>
+				<p>
+					... And digital publishing, is that sometimes it's actually the bigger
+					players that are hard to convince to do to make changes, but it's the
+					smaller, more agile players that are willing to experiment and willing
+					to, like.
+				</p>
+				<p>
+					... push the envelope, because maybe they're looking for an edge, or
+					it's something they wan.
+				</p>
+				<p>
+					... Can do, because they don't have to worry as much about pivoting.
+				</p>
+				<p>
+					... So I wouldn't, like like, yes, it's great if we can get the big
+					players to do it, but it shouldn't be.
+				</p>
+
+				<p><cite>Shivaji Kumar:</cite> ultimate goal.</p>
+
+				<p><cite>Wendy Reid:</cite> The ultimate goal.</p>
+
+				<p><cite>Shivaji Kumar:</cite> Got it.</p>
+
+				<p>
+					<cite>Hidde de Vries:</cite> Yeah, I agree with that, and I think
+					there is also a market incentive for companies that are doing it,
+					because so man.
+				</p>
+				<p>... Websites need to comply with legislation.</p>
+				<p>
+					... A company that makes an authoring tool that creates accessible
+					content.
+				</p>
+				<p>
+					... is more likely to win with those customers. At least that's the
+					theory. I don't know if it's gonna happen like that in practice, but
+					we can.
+				</p>
+				<p>... We can definitely promote it like that, I think.</p>
+				<p>
+					... Yeah, it's, it's good if your authoring tool does meet ATAC well,
+					because, yeah, you'll be able to get more, more customers in the
+					sectors that need to meet the legislation.
+				</p>
+
+				<p>
+					<cite>Wendy Reid:</cite> This segues really nicely into what the
+					second thing on the agenda was, which was, why wasn't ATAG2 more
+					widely adopted.
+				</p>
+
+				<p>
+					<cite>Charles Hall:</cite> Just real quick to close out the last one,
+					it sounds like we have consensus that AI belongs.
+				</p>
+				<p>
+					... being, covered by ATAG in some capacity, but it doesn't sound like
+					we have consensus on how. So, could someone take a stab at adding a
+					how in the in that discussion thread.
+				</p>
+
+				<p><cite>Shivaji Kumar:</cite> I can give it a shot.</p>
+
+				<p><cite>Wendy Reid:</cite> Oh, that would be great. Thank you.</p>
+
+				<p><cite>Shivaji Kumar:</cite> Sure.</p>
+
+				<p>
+					<cite>Wendy Reid:</cite> So, yeah. Why wasn't ATAG too more widely
+					adopted.
+				</p>
+				<p>... I see you in the chat, Barry. Would you like to say.</p>
+
+				<p>
+					<cite>Barry Feigenbaum:</cite> You know, I have a lot of history in
+					this area. I'm a little bit out of date, but I have a tremendous
+					amount of history of this.
+				</p>
+				<p>
+					... And My personal opinion, and I think it's well supported, is tha.
+				</p>
+				<p>
+					... Accessible content will be created when accessible content takes
+					no extra effort to create. Otherwise, it will never be created, simply
+					because most people and most businesse.
+				</p>
+				<p>
+					... don't care to spend the time or spend the money it takes to make
+					it happen. There are a few, like, ones that have to meet government
+					standards or something, they have other motivations that sort of
+					motivate them to do it. As long as those aren't holding out for them,
+					it really is irrelevant.
+				</p>
+				<p>
+					... And for the vast amount of content, especially more recently, that
+					exists, that motivator simply isn't there. So, if you just don't
+					personally want to do it, and are willing to spend the extra time to
+					do it, you won't do it.
+				</p>
+				<p>
+					... And most businesses won't do it, simply because it's not the
+					return on investment isn't there. So somehow, and again, I don't know
+					exactly how to do it, but we have to find a way, in my opinion.
+				</p>
+				<p>
+					... to do it automatically. Now, I think we have a great tool that's
+					emerging now, which is artificial intelligence, that allows us to find
+					some way to actually do this, to make either the generation or the
+					presentatio.
+				</p>
+				<p>
+					... do the job for the author, not have the author do the job. And
+					somehow I mean, the author may actually, you know, validate the work
+					done, or somehow, you know, tweak it, make it better, but most of the
+					work needs to be don.
+				</p>
+				<p>
+					... for the author automatically, not that the author hasn't taken the
+					effort. And that's where our I think our challenge is. Authoring tools
+					need to b.
+				</p>
+				<p>
+					... embedded in the either content generation or content presentation,
+					probably both, mechanisms, such that they just happen, and they just
+					work. I try to use a point in a comment before, like.
+				</p>
+				<p>
+					... this is notional alt text. Well, yes, some content author
+					describes a picture that they or an image they stuck in a document.
+					Well, they're describing it based on a completely.
+				</p>
+				<p>... unknow.</p>
+				<p>
+					... motivation for the human being read looking at the picture, and so
+					they're describing it in a very generalized way. Some people may want
+					a very summary thing, like, oh, it's a picture of a person. Other
+					people may want, you know, 10,000 words describing every little thing
+					in there. You don't know, as an author, what the reader wants.
+				</p>
+				<p>
+					... Only the reader knows what they want. You know, whether they're
+					going to spend 10 minutes on a picture or 10 seconds on a picture. We
+					don't know. So it's very difficult to author it. We need to find some
+					way t.
+				</p>
+				<p>
+					... you know, know the user, and adjust to the user, and all that
+					stuff, and that's in the presentation engine, not in the authoring
+					engine, if that happens. So there's some problems here, at least in my
+					opinion, about, you know, the goals, at least the old goals of ATAG.
+				</p>
+				<p>
+					... they just didn't quite solve the problem. We need to look at it a
+					different way.
+				</p>
+
+				<p><cite>Wendy Reid:</cite> Thanks.</p>
+
+				<p><cite>Shivaji Kumar:</cite> Can I chime in.</p>
+
+				<p><cite>Wendy Reid:</cite> Well I have a bit of a queue going.</p>
+
+				<p>
+					<cite>Mike Gifford (CivicActions):</cite> Being unmuted is really
+					important, but, thank you. Having good defaults are really important,
+					being able to go off and make sure that your, whatever systems you are
+					have this built in, and this is what we try to do in the Drupal
+					community as much as we can.
+				</p>
+				<p>
+					... And that includes looking at the authoring experience. But I think
+					there's more than that that is required in order to make this work.
+					Partly, it comes down to investments. When you're dealing with open
+					source tools.
+				</p>
+				<p>
+					... governments need to invest in this, and be able to say that
+					they're going to either pay a premium to ensure that people are
+					building it into the systems that governments are buying, or other
+					organizations as well, or it has to be something that is required as
+					part of the procurement process. I've seen lots of RFPs, almost none
+					of them mention ATAG, and if they do mention ATAG, it's kind of like .
+				</p>
+				<p>
+					... They're clueless. They have no idea how much additional they want
+					the benefits of ATAG for no additional price.
+				</p>
+				<p>
+					... And that's just not possible. You have to pay more money in order
+					to have these additional features, and no amount of AI magic is going
+					to go off to change that, but you can provide carrots and sticks and
+					guidance for legislators, and for that matter.
+				</p>
+				<p>
+					... businesses to be able to take on these challenges. And there are
+					things like the European Accessibility Act that the only way we're
+					going to actually effectively deal meet the challenge of the EAA is be
+					able to support offering tools better. That's all.
+				</p>
+
+				<p>
+					<cite>Laura Staniland:</cite> Sorry, I was running errands. I'm gonna
+					pull over. I was wondering if an authoring tool would be something
+					like AutoCAD, or, there's a lot o.
+				</p>
+				<p>... programs where people are 3D printing things.</p>
+				<p>... And when I tried to do a project once, An.</p>
+				<p>
+					... I tried to look at the accessibility of the off like, the 3D
+					modeling tool. It wasn't very accessible. So, like, there's a library
+					of accessible media in Pennsylvania, they have a tactile as an
+					example, they have a tactil.
+				</p>
+				<p>
+					... program, but they have somebody from the library who is cited,
+					becaus.
+				</p>
+				<p>... A program isn't fully accessible to someone who'.</p>
+				<p>
+					... you know, got a vision impairment, it would be really great if
+					these 3D modeling programs, or Photoshop, whatever, were accessible.
+					Somebody said the user experience for th.
+				</p>
+				<p>
+					... you know, the blind person, whatever, needs to also be accessible,
+					and that was one of the biggest barriers I found, and I think, you
+					know, probably they've found, is that right now, things like CAD,
+					AutoCAD, Autodesk, whatever, the.
+				</p>
+				<p>... They are not fully accessible. I don't know if that'.</p>
+				<p>
+					... Considered, like, an authoring tool, or that would be in some sort
+					of, like, media working group.
+				</p>
+
+				<p>
+					<cite>Wendy Reid:</cite> That's a really good question. Might have to
+					think about that.
+				</p>
+
+				<p>
+					<cite>Hidde de Vries:</cite> Yeah, so I think the kind of two reasons
+					that ATAG didn't get adopted as much as we would hope. One is, I think
+					it's very big. There's a lot of requirements, like.
+				</p>
+				<p>... The first SE is literally to meet all of WCAG.</p>
+				<p>... That's A111.</p>
+				<p>
+					... And then you haven't even gotten started with the rest of the
+					document. Like, there's a lot of requirements kind of hidden inside of
+					all the requirements, and they all make sense, like, from our point of
+					view.
+				</p>
+				<p>
+					... But then it does make it very hard for an authoring tool vendor to
+					actually go and comply with all of it, at once. And I think the second
+					is that it's no.
+				</p>
+				<p>
+					... super practical, many times. I used to work for CMS, and it was
+					really hard to convince managers t.
+				</p>
+				<p>
+					... spend time on something like this, to say, like, we've got this
+					document, let's try and meet all of it. There was a lot of, kind of,
+					questions around how do we practically implement a lot of these
+					things. Some of them are hard to measure as well.
+				</p>
+				<p>... Like, there's one, for instance, that is called Help Authors.</p>
+				<p>... decide.</p>
+				<p>
+					... and it's super unclear whether you've done enough to help them
+					decide or not, or, like, there's a lot of questions to ask, like,
+					while you're doing the implementation. So I think ATAG coul.
+				</p>
+				<p>... In our next version, could benefit fro.</p>
+				<p>
+					... more practical guidance, more kind of information on, here are
+					some examples of how the CMS has implemented it. So I'm hoping we can
+					work together with some of the open source ones, maybe Drupal, through
+					Mike, to show, like, this is an example of how is it solved here.
+				</p>
+				<p>
+					... To make it easier for folks to actually perform. So there's
+					practical reasons, and there is size reasons, and I don't think we
+					have fixed the size reasons, because a lot of it is really important.
+					But we can probably work on the practical part.
+				</p>
+
+				<p><cite>Shivaji Kumar:</cite> Yeah, so, mine is sort of a prett.</p>
+				<p>
+					... It's a curiosity-based question, especially for those who
+					participated in the previous versions of ATAG. And the question is.
+				</p>
+				<p>... And in addition to regulation-based arguments.</p>
+				<p>
+					... Did you guys also consider market-based arguments that, hey, if
+					you make your tools accessible.
+				</p>
+				<p>
+					... then you would have a much better reach to the customer base. How
+					did those conversations go, if they did at all.
+				</p>
+
+				<p><cite>Wendy Reid:</cite> It's a good question.</p>
+				<p>
+					... I do not have an answer for it, but, I was thinking in this, too,
+					I think there's, like.
+				</p>
+				<p>
+					... some of this is timing, right? There wasn't the same landscape.
+				</p>
+				<p>
+					... 10 years ago for ATAG2 that there is today, so there's that to
+					consider in its lack of adoption. I do think that there is als.
+				</p>
+				<p>
+					... You know, when there's a lack of clarity, or it's difficult to
+					determine how to implement something, it's easy to just say, let's not
+					do it, because you don't know what you're doing.
+				</p>
+				<p>... And I think, like, Our opportunities now, too, ar.</p>
+				<p>
+					... we can think about how to integrate these new tools, we can think
+					about how to make authoring a little bit easier, also just for content
+					creators in general, because I think, like, one of the fears wit.
+				</p>
+				<p>
+					... Barry, I think you made a comment a while ago that I thought was
+					really interesting about how different types of content have different
+					needs, or people have different needs from similar types of content,
+					and so writing one image description isn't always necessarily
+					sufficient.
+				</p>
+				<p>
+					... Because users may need different, you know, shorter description,
+					longer description.
+				</p>
+
+				<p>
+					<cite>Barry Feigenbaum:</cite> You know, a different type of
+					description.
+				</p>
+				<p>
+					... how do you get that? You know, one person can't write all those
+					descriptions necessarily. We have tools for that now, that could do
+					that.
+				</p>
+				<p>
+					... so I think, like, we also have, like, a different technological
+					landscape to look at, which might make some of thi.
+				</p>
+				<p>
+					... less scary to implementers. But then we also have, like, the legal
+					side, which makes it more important for implementers, to consider.
+				</p>
+
+				<p>
+					<cite>Mary Ann Jawili:</cite> Hey guys, I put in the chat that, so, I
+					used to work at a company, just very previ- very recently, and just my
+					experience I don't know why ATAG, wasn't widely adopted.
+				</p>
+				<p>... But as far as, a company goes, like, in my experience.</p>
+				<p>... There's just a big brush to, like.</p>
+				<p>
+					... prioritize all these other features and not necessarily,
+					supporting accessible content. And if that if there was a need to if
+					they did work on accessible content, it was just more like, oh,
+					customers have been requesting this.
+				</p>
+				<p>
+					... So, that that was kind of the motivation, and customers were
+					oftentimes motivated by, like, their legal obligations. So, I just
+					think it does go back to legal, but it it's kind o.
+				</p>
+				<p>
+					... It in my experience, it's because customers have been putting were
+					putting pressur.
+				</p>
+				<p>... I would also say.</p>
+				<p>... sometimes it was, like, the bare minimum, lik.</p>
+				<p>
+					... Okay, you can set headings, I'm just making stuff up at this. Oh,
+					oh.
+				</p>
+				<p>... There was something around, like.</p>
+				<p>... tables, but, in any case, like, maybe like, w.</p>
+				<p>
+					... there was not a strong interest in making it a in facilitating the
+					creation of accessible content. As long as you could do it, if it was
+					a bit tedious, then that would be okay, if that makes sense. But we
+					didn't want to necessarily invest to make it really easy or automatic.
+				</p>
+				<p>... For people to create accessible content.</p>
+
+				<p>
+					<cite>Mary Ann Jawili:</cite> Oh, yeah, and EPUBLAND. Yeah, so we were
+					working with, ABC, recently, with InDesign.
+				</p>
+				<p>
+					... Yeah, there were so many tough conversations, like, well,
+					technically, you can do it, it's just a few hoops you have to jump
+					through, but, yes, you can do, tables, and oh, like, with tables,
+					column headers.
+				</p>
+				<p>
+					... well, you can't do I don't know, there were I can't remember it
+					anymore, but, like.
+				</p>
+				<p>
+					... There was a need to create, indicate either row headers or column
+					headers, like, programmatically, bu.
+				</p>
+				<p>
+					... Since you couldn't even create row headers for, like, people who
+					didn't have visual impairments, then we wouldn't bother to create to
+					enable that functionality for programmatic row or column headers, if
+					that makes sense. So, anyway, you're naughty. Okay, good, I'm glad you
+					understand.
+				</p>
+
+				<p>
+					<cite>Wendy Reid:</cite> I remember, I remember. Alright, with our
+					last couple of minute.
+				</p>
+				<p>... This conversation has flowed so nicely.</p>
+				<p>
+					... The last topic that I thought would be worth spending a little bit
+					of time on today was use cases for authoring tools.
+				</p>
+				<p>
+					... And so I encourage everyone, and thanks, Mike, for providing the
+					first example, thinking about, like.
+				</p>
+				<p>
+					... taking one step back, you know, erase ATAG2 from your memory for a
+					moment, or if you didn't have it in your memory, don't worry.
+				</p>
+				<p>
+					... What are as someone who either implements authoring tools, or uses
+					authoring tools, or uses the output of authoring tools.
+				</p>
+				<p>
+					... What are the use cases today, and what are the use cases tomorrow?
+					Because I think, like, I love a use case exercise.
+				</p>
+				<p>
+					... As a starting point for looking at, future work, because it gives
+					you an opportunity to think, you know.
+				</p>
+				<p>
+					... It, like, there's no harm in saying something that already exists,
+					because then it's just like, sweet, we get to cross it off the list,
+					it already exists.
+				</p>
+				<p>
+					... And when you're talking about something that doesn't yet exist,
+					then you get to have the fun of thinking, okay, well, how do you make
+					this happen.
+				</p>
+				<p>... S.</p>
+				<p>
+					... I gave, like, a rough structure, and Mike was helpful enough to
+					give some examples of what that structure looks like, but the use case
+					structure is generally, as a person who does something, I need to be
+					able to do this.
+				</p>
+				<p>... And a description of what you want to do.</p>
+				<p>... And so, thinking a.</p>
+				<p>
+					... people who I guarantee we all use authoring tools every day, and
+					we all author content.
+				</p>
+				<p>... And we know people who do that.</p>
+				<p>... What are the use cases fo.</p>
+				<p>
+					... this new version of ATAG? And think I think, especially thinking
+					about AI, because this is something we want to include. What are the
+					use cases for AI.
+				</p>
+				<p>
+					... using AI both as a user and as, like, possibly as a receiver of
+					AI-generated content? This is a big question.
+				</p>
+				<p>
+					... I'm gonna apologize in advance, my background is in publishing,
+					and I chair the EPUB working group, so I EPUB is on my brain all the
+					time.
+				</p>
+				<p>
+					... like, this is a conversation we're having in EPUP right now,
+					about, you know, how do you tell users, or should users know when
+					content is AI-generated? And how do you communicate that effectively
+					to users, in a way that's no.
+				</p>
+				<p>... Intrusive, or annoying, or, you kno.</p>
+				<p>
+					... And, like, effective. And, like, what level and, like, even an
+					additionally fair question of what What level o.
+				</p>
+				<p>
+					... interference interference is maybe not the right word. What level
+					of participation does the A.
+				</p>
+				<p>
+					... and the human have, that takes it from AI-generated to human
+					human-generated.
+				</p>
+				<p>
+					... Like, where's the Where's the line on the content where you no
+					longer Have to worry about that.
+				</p>
+				<p>
+					... These are all the kind of things that I want people to keep in
+					mind.
+				</p>
+				<p>... Totally agree, Charles. I think all AI should be disclosed.</p>
+
+				<p>
+					<cite>Hidde de Vries:</cite> To me, I think one of the major use cases
+					for ATAG, and I think also for the AI angle of it, is t.
+				</p>
+				<p>... Help people create more accessible experiences, so to hav.</p>
+				<p>
+					... Heuristics that can help people figure out where they may be
+					making something that's inaccessible, guide them towards making it
+					more accessible.
+				</p>
+				<p>... Those kinds of things.</p>
+				<p>
+					... come to mind, like, I feel like that is something where I think
+					that can really shine.
+				</p>
+				<p>
+					... And where we'll also get a lot of adoption, because that is
+					something a lot of people need to do today, and if it makes that
+					easier for them, that's great.
+				</p>
+
+				<p><cite>Wendy Reid:</cite> Something this conversation actually.</p>
+				<p>
+					... Had me thinking about was, you know, we haven't defined fully what
+					our deliverables are.
+				</p>
+				<p>
+					... And I wonder if one of the deliverables we may want to consider is
+					producing a set of sample context files for AI tools around the
+					generation of accessible content.
+				</p>
+				<p>
+					... So, like, most AI tools, you know, be that ChatGPT, Copilot,
+					Cline.
+				</p>
+				<p>
+					... A lot of them use there's more and more names for this now, but,
+					like, they're essentially context files, a set of instructions that
+					you can give and say, hey, I'm working on content. Whenever I do this,
+					I want you to look at this file before you start working.
+				</p>
+				<p>... And.</p>
+				<p>
+					... It's really easy to write a context file. It's generally just a
+					very simple set of instructions, and you're just giving i.
+				</p>
+				<p>
+					... You're giving it kind of, like, a persona to take on, and
+					parameters to follow.
+				</p>
+				<p>
+					... And while, obviously, like, anything we create wouldn't be, like,
+					you have to use this, but just to get people in that headspace of,
+					like, oh, like.
+				</p>
+				<p>
+					... as an as an, you know, content author, I should do the following,
+					and it's just a list of, you know, instructions that maybe they can
+					build off of for their ow.
+				</p>
+
+				<p>
+					<cite>Charles Hall:</cite> I know we're coming up on time, and we're
+					still talking about use cases, but I think in order to get some of the
+					use cases we'll need, we also have to talk about.
+				</p>
+				<p>
+					... scoping a definition of content. For example, the definition of
+					content in WCA.
+				</p>
+				<p>
+					... Includes the information that's communicated to the user, but it
+					also includes the code or markup that makes that possible.
+				</p>
+				<p>... So, would an authoring tool be a code editor.</p>
+				<p>... If content is code.</p>
+
+				<p>
+					<cite>Wendy Reid:</cite> I mean, I think thinking about Hidde's
+					example of, like, getting prompted as you go, like.
+				</p>
+				<p>
+					... we actually have, like, an existing example of that in, like,
+					most, developer environments, right? Code linters.
+				</p>
+				<p>
+					... that hint to you as you're working, like, hey, that property
+					you're referencing doesn't exist, or, you know, you're you know, that
+					you didn't close that tag there.
+				</p>
+				<p>
+					... Can we have that for content generation. You're writing a
+					paragraph, or you insert an image, and it's like, hey, you didn't put
+					alt text on this picture.
+				</p>
+
+				<p>
+					<cite>Hidde de Vries:</cite> Yes, I think so. I think we could have
+					that. There's also a bunch of those kind of things that we can
+					obviously do without AI as well.
+				</p>
+				<p>
+					... I know of one CMS that will not let you save the page if you
+					haven't added alternative text. There's obviously all sorts o.
+				</p>
+				<p>
+					... things around that, because then people put in nonsense, and then
+					they've met the requirement technically and all that. I've also built
+					a plugin for the CMS I was working at, with, like, some rules that
+					would automatically check if your list was a list and all these kind
+					of things. And that's basically three lines o.
+				</p>
+				<p>
+					... JavaScript that you can use to do that, which I think, thinking
+					from a sustainability angle, that could be much more effective to
+					have, like, thos.
+				</p>
+				<p>
+					... few lines of JavaScript, as well as a context file, I like that
+					idea.
+				</p>
+				<p>
+					... But it triggered me to think about maybe we can, in addition to a
+					context file, also say, and here is a few JavaScript functions you can
+					insert into your editor and have it checked.
+				</p>
+				<p>
+					... some some basic things that are checkable, that way. I'll pop a
+					link int.
+				</p>
+				<p>
+					... I think it's, like, 4 or 5 jobs profiles. I know at the Dutch
+					government, some colleagues of ours are working o.
+				</p>
+				<p>... building this, and I think they're doing that open source.</p>
+				<p>
+					... But they're building, basically JavaScript that can go into a CMS
+					and then tell you what's wrong and, warn you when you've forgotten
+					something, so that's something we could probably also think of as a
+					deliverable, to have some non-AI solution.
+				</p>
+				<p>
+					... That is kind of less smart, but also helpful to find some of the
+					things that are easy to find.
+				</p>
+
+				<p>
+					<cite>Wendy Reid:</cite> I think there's a also, I think, and this is
+					possibly something we can put in the document itself as we're talking
+					about AI, because I thin.
+				</p>
+				<p>
+					... the hype cycle that we're in right now has people kind of
+					over-indexing on AI and using AI for everything, even things tha.
+				</p>
+				<p>... It's not the best at, especially when it comes to content.</p>
+				<p>
+					... And I think, like, reminding people as well to kind of push pull
+					back in the other direction to say, like, hey.
+				</p>
+				<p>
+					... your your instinct is right that this thing can be automated, but
+					AI is probably not the best way to automate it. And, like, you know,
+					using things like code linters, I think, is a good example of that,
+					where, like, code linters aren't AI, they're they're buil.
+				</p>
+				<p>... Programmatically. Or, like, things like.</p>
+				<p>
+					... things that pull like, pull things out of content in a systematic
+					way, like, that that's a Python script, or, you know, can be done with
+					with much more automated processes that are probably actually going to
+					be much more consistent than AI, because AI tends to lose it a bit
+					when you give it too much to work with.
+				</p>
+				<p>
+					... So I think that that's, like, a good actually, that is probably a
+					good use case of, like, you know, as .
+				</p>
+				<p>
+					... trying to think of how to, like, phrase this, but, like, as a
+					content creator, I want to know when when I should use AI, and when
+					there might be other options out there.
+				</p>
+				<p>... or as a user, I want accuracy in my authoring experience.</p>
+				<p>... I want to trust my authoring experience.</p>
+				<p>... As usual, the chat is wonderful.</p>
+				<p>
+					... All right, we're just at the top of the hour, and I don't want to
+					run over. This has been a really good meeting, so thank you everyone
+					for participating.
+				</p>
+				<p>
+					... so far in the feedback, it looks like this time slot works pretty
+					well for everyone, so I'm gonna keep this time slot going.
+				</p>
+				<p>
+					... I believe at this point, I'll have to double-check my calendar.
+				</p>
+				<p>
+					... I think I only scheduled meetings till the end of the year, so
+					what I'm gonna do is so we will have one more meeting in two weeks on
+					December 19th.
+				</p>
+				<p>... And the.</p>
+				<p>
+					... I will fix the meeting I'll set up the meeting cadence so that it,
+					continues into next year, obviously.
+				</p>
+				<p>
+					... I will likely, probably not have us have a meeting on January 2nd,
+					because that would be the next time slot, and I'm gonna guess that
+					most people wil.
+				</p>
+				<p>
+					... probably be not in office, or not in the mood to be in office,
+					even if you're physically there.
+				</p>
+				<p>... And Barry, I'm jealous, I hope you have a lot of fun.</p>
+				<p>
+					... But yeah, so we'll have a meeting next meeting on December 19th,
+					and then we'll probably, not have a meeting again until mid-January. I
+					will send ou.
+				</p>
+				<p>
+					... materials after the meeting. I will let everyone know when I
+					finally finish getting through the edits of the document, so people
+					can look at it.
+				</p>
+				<p>
+					... But yeah, please keep participating in the discussions. Feel free
+					to open new discussions if there's questions that you have, or things
+					that you just want people to noodle on.
+				</p>
+				<p>... And we will all we will talk in 2 weeks.</p>
+
+				<p>
+					<cite>Shivaji Kumar:</cite> Thank you. Have a great rest of your day.
+				</p>
+
+				<p><cite>Lisa Liskovoi:</cite> Thanks, everyone.</p>
+			</section>
+
+			<section id="chat">
+				<h2>Chat Transcript</h2>
+				<p>Wendy Reid: https://pad.w3.org/p/ATAG_CG_Minutes_-_Dec_5_2025</p>
+				<p>Wendy Reid: https://github.com/w3c-cg/atag/discussions/3</p>
+				<p>Charles Hall: That seems expected given the age of the Rec</p>
+				<p>
+					John Jameson: And I’ll introduce myself here too since I’m new — I’m
+					an accessibility tester/developer at Princeton University, and Mike
+					suggested I swing by since most of my work is on writing live
+					validation and inline tips for authoring tools (e.g. Editoria11y).
+				</p>
+				<p>
+					Hidde de Vries: we just through earlier in the year for WCAG-EM, it
+					was fun
+				</p>
+				<p>
+					Mike Gifford (CivicActions):
+					https://github.com/w3c-cg/atag/discussions
+				</p>
+				<p>Wendy Reid: https://github.com/w3c-cg/atag/discussions/12</p>
+				<p>Adam Chaboryk: Good morning!</p>
+				<p>
+					Mike Gifford (CivicActions): @Adam Chaboryk feel free to add your info
+					here https://github.com/w3c-cg/atag/discussions/3
+				</p>
+				<p>
+					Mike Gifford (CivicActions): Twitter is really terrible. We should
+					include that in the spec.
+				</p>
+				<p>Charles Hall: Or use a web API</p>
+				<p>
+					Mike Gifford (CivicActions): That is a terrific starting point, but
+					that means almost any digital content. It is a big goal.
+				</p>
+				<p>Charles Hall: The content falls under WCAG though</p>
+				<p>Nicole Letoile: Agree</p>
+				<p>
+					Hidde de Vries: ATAG is like a superset of WCAG, one of the SCs is to
+					meet WCAG
+				</p>
+				<p>Hidde de Vries: (to +1 what Charles says)</p>
+				<p>
+					barry: This may not be well received, but IMHO putting the
+					responsibility for a11y on authoring tools is not likely to be
+					generally successful. economics fights us. It is better to try to get
+					presentation tools be able to react well to "normal" (vs. augmented)
+					content. AI is a potential means to make this happen. much more
+					pervasively. Consider alt text for images. There are often many fomrs
+					of it that are needed based on the readers needs. It is unreasonable
+					to expect the author to provide many forms to cover this. Instead the
+					renderer (engine) needs to understand the reader's needs and make the
+					appropriate alt text real time.
+				</p>
+				<p>
+					Shivaji Kumar: Both content and interface need to be accessible,
+					similar to other tools
+				</p>
+				<p>Charles Hall: But the output is subject to WCAG</p>
+				<p>Mike Gifford (CivicActions): How is the human in the loop?</p>
+				<p>
+					Charles Hall: doesn’t the back and forth occur in the same input
+					field?
+				</p>
+				<p>
+					Hidde de Vries: Replying to "But the output is su..." but also has a
+					relation to the B-part of ATAG
+					https://www.w3.org/TR/ATAG20/#principle_b1
+				</p>
+				<p>
+					Charles Hall: But is output from someone or something else a task of
+					authoring?
+				</p>
+				<p>Shivaji Kumar: Is that feedback picked up by AT?</p>
+				<p>
+					Mike Gifford (CivicActions): Certainly the input propt and interface
+					with AI needs should meet WCAG standards.
+				</p>
+				<p>
+					Charles Hall: Replying to "Certainly the input ..." Agree. But the
+					input can be used to subsequently create content. Much the same as
+					user generated content interfaces.
+				</p>
+				<p>Charles Hall: I have no regard for the size of the fish</p>
+				<p>
+					Mike Gifford (CivicActions): I’m not concerned with the size of the
+					fish. I’m concerned with the incentives. Things like procurement.
+				</p>
+				<p>
+					Mary Ann Jawili: My immediate past employer was a company, and I was
+					definitely thinking about ATAG while I was there.
+				</p>
+				<p>Wendy Reid: https://github.com/w3c-cg/atag/discussions/5</p>
+				<p>
+					barry: If we want to make accessible content pervasive, we need to
+					find a way to make authoring it essentially free and no extra effort,
+					else it will never become widespread.
+				</p>
+				<p>
+					barry: ATAG 2 was too expensive to implement, thus is was not widely
+					done.
+				</p>
+				<p>
+					Charles Hall: One reason is also that it was never regulated as
+					required.
+				</p>
+				<p>
+					Lisa Liskovoi: I don’t think it’s realistic for accessibility to “just
+					happen” or “just work”, even with AI. AI is not a magic bullet.
+				</p>
+				<p>
+					Charles Hall: But the image description should align to the intent of
+					the author just like the rest of the content.
+				</p>
+				<p>
+					Charles Hall: Opinion (aligned to ATAG 2 scope) when the output
+					content is only for the author and not made available to others, the
+					authoring aspect is out of scope.
+				</p>
+				<p>
+					barry: Yes a11y will never be entirely free, but the closer we can get
+					the better. ATAG 2.0 is IMHO generally too expensive/hard, and
+					anything like it will not be much more successful. IMHO almost any
+					static enablement will not be sufficient.
+				</p>
+				<p>barry: I will end my soap box now.</p>
+				<p>
+					Mike Gifford (CivicActions): And the back-end interfaces are so much
+					more complicated than the front-end components.
+				</p>
+				<p>
+					Sambhavi Chandrashekar: Replying to "I don’t think it’s r..."
+					Conformance with at least 60% of content accessibility guidelines is
+					achievable without human intervention. We could push for that and for
+					alerting humans in the loop to intervene to tweak the remaining.
+				</p>
+				<p>
+					Mike Gifford (CivicActions): Evaluating Drupal for ATAG was very
+					difficult. So much was judgment.
+				</p>
+				<p>
+					Mike Gifford (CivicActions): Replying to "I don’t think it’s r..."
+					Better use of automated tools (and some form of AI) is important.
+				</p>
+				<p>
+					Charles Hall: Replying to "I don’t think it’s r..." Which seems
+					relevant to WCAG but not the author
+				</p>
+				<p>
+					Mike Gifford (CivicActions): Replying to "I don’t think it’s r..." Why
+					not for the author?
+				</p>
+				<p>
+					Charles Hall: Those have always been solid arguments for WCAG. But
+					ATAG is about who gets to participate in making the things.
+				</p>
+				<p>
+					Hidde de Vries: to Shivaji's q: market arguments were definitely part
+					of how we tried to promote ATAG at the time
+				</p>
+				<p>
+					Mike Gifford (CivicActions): Replying to "Those have always be..."
+					Part A, yes.
+				</p>
+				<p>
+					Lisa Liskovoi: Replying to "I don’t think it’s r..." I agree that some
+					things can and should be automated, but that’s a way (and should only
+					be one way, not the only way) to meet requirements. Personally I don’t
+					think we should be relying on automation, or thinking about what
+					should or can be automated in how we think about requirements or how
+					to meet them.
+				</p>
+				<p>Wendy Reid: I have stories from EPUB land…</p>
+				<p>
+					Sambhavi Chandrashekar: Replying to "I don’t think it’s r..." “Which
+					seems relevant to WCAG but not the author”
+				</p>
+				<p>Wendy Reid: https://github.com/w3c-cg/atag/discussions/15</p>
+				<p>
+					Sambhavi Chandrashekar: Replying to "I don’t think it’s r..." Charles,
+					I see your point. We are targeting the system and not the author - I
+					think.
+				</p>
+				<p>
+					Sambhavi Chandrashekar: Replying to "I don’t think it’s r..." Per
+					ATAG, content created must be accessible.
+				</p>
+				<p>
+					Lisa Liskovoi: Replying to "I don’t think it’s r..." there’s some
+					nuance there, there is content “at the end”, and there is content that
+					is part of the authoring experience. WCAG covers the first, but not
+					the second.
+				</p>
+				<p>
+					Lisa Liskovoi: Replying to "I don’t think it’s r..." at the end =
+					after it’s published
+				</p>
+				<p>Hidde de Vries: love how iA Writer indicates AI written content</p>
+				<p>Charles Hall: Disclosing AI generation is an ethical mandate.</p>
+				<p>barry: yes</p>
+				<p>John Jameson: This is what I do</p>
+				<p>
+					Sambhavi Chandrashekar: Canada published the Accessible & Equitable AI
+					Systems standards on Dec 3rd.
+				</p>
+				<p>
+					Mike Gifford (CivicActions): So much can be done with code, but not
+					AI, Certainly not Generative LLMs.
+				</p>
+				<p>
+					Charles Hall: Most software evaluation and rulesets do not require AI
+				</p>
+				<p>Hidde de Vries: https://github.com/hidde/porta11y</p>
+				<p>
+					barry: if a tools requires (say) alt text, what determines if it is
+					sufficient? The author may be a weak judge.
+				</p>
+				<p>
+					Sambhavi Chandrashekar: Replying to "Most software evalua..."
+					Popularly, there’s conflation between automation and AI-based
+					processing.
+				</p>
+				<p>
+					Charles Hall: Replying to "if a tools requires ..." In my opinion, the
+					author is the only judge. It retains human agency over intent.
+				</p>
+				<p>
+					barry: We seems to belive authors are experts. This may nt always be
+					true.
+				</p>
+				<p>
+					John Jameson: At the moment Sa11y and Editoria11y just have a long
+					list of “suspicious” strings often found in bad alts.
+				</p>
+				<p>
+					John Jameson: It’s no AI, so it doesn’t really check if the alt is
+					good, but it is very good at detecting PEOPLE who need to read the
+					inline hints on how to write good alts.
+				</p>
+				<p>
+					Sambhavi Chandrashekar: Replying to "We seems to belive a..." Barry,
+					the business reason of ease of implementation you made is very
+					critical.
+				</p>
+				<p>
+					Sambhavi Chandrashekar: Replying to "We seems to belive a..." … to
+					achieve any degree of success with a new standard.
+				</p>
+				<p>
+					Lisa Liskovoi: Replying to "We seems to belive a... yes, and… that’s
+					why we NEED regulation for adoption
+				</p>
+				<p>
+					Hidde de Vries: 'i want to trust my authoring experience ' - wendy
+					(capturing in case the captioning didnt catch it, great way to put it
+					)
+				</p>
+				<p>
+					Laura’s iPhone: I’d love it if there was a warning about flashing
+					lights in coding liners, generative AI, etc.
+				</p>
+				<p>Jeroen Hulscher: Thank-you!</p>
+				<p>Nicole Letoile: Thank you</p>
+			</section>
+		</main>
+	</body>
+</html>
