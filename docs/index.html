@@ -1,0 +1,4210 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>Authoring Tool Accessibility Guidelines</title>
+		<script
+			src="https://www.w3.org/Tools/respec/respec-w3c"
+			class="remove"
+			defer></script>
+		<script class="remove">
+			// All config options at https://respec.org/docs/
+			var respecConfig = {
+				specStatus: "CG-DRAFT",
+				shortName: "atag",
+				group: "atag",
+				latestVersion: "https://www.w3.org/TR/atag/",
+				editors: [
+					{
+						name: "Jan Richards",
+						company: "Inclusive Design Institute, OCAD University",
+					},
+					{
+						name: "Jeanne Spellman",
+						company: "W3C",
+					},
+					{
+						name: "Jutta Treviranus",
+						company: "Inclusive Design Institute, OCAD University",
+					},
+				],
+				processVersion: 2025,
+				github: {
+					repoURL: "https://github.com/w3c-cg/atag",
+					branch: "main",
+				},
+			};
+		</script>
+        <script>
+            var respecConfig = {
+                xref: ["WCAG2"],
+            };
+</script>
+	</head>
+	<body>
+		<section id="abstract">
+			<p>
+				The Authoring Tool Accessibility Guidelines (ATAG) 2.0 provides
+				guidelines for designing web content authoring tools that are both more
+				accessible to authors with disabilities (Part A) and designed to enable,
+				support, and promote the production of more accessible web content by
+				all authors (Part B). See
+				<a href="https://www.w3.org/WAI/standards-guidelines/atag/"
+					>Authoring Tool Accessibility Guidelines (ATAG) Overview</a
+				>
+				for an introduction and links to ATAG technical and educational
+				material.
+			</p>
+		</section>
+
+		<section id="sotd"></section>
+
+		<section id="introduction" class="informative">
+			<h2>Introduction</h2>
+
+			<p>
+				This is W3C Recommendation (standard) of the Authoring Tool
+				Accessibility Guidelines (ATAG) version 2.0. This document includes
+				recommendations for assisting [=authoring tool developers=] to make
+				their [=authoring tools=] more accessible to people with disabilities,
+				including auditory, cognitive, neurological, physical, speech, and
+				visual disabilities.
+			</p>
+
+			<p>
+				Authoring tool accessibility addresses the needs of two overlapping user
+				groups with disabilities:
+			</p>
+
+			<ul>
+				<li>
+					[=authors=] of [=web content=], whose needs are met by ensuring that
+					[=authoring tool user interfaces=] are more accessible (addressed by
+					<a href="#guidelines-part-a">Part A of the Guidelines</a>), and
+				</li>
+				<li>
+					[=end users=] of web content, whose needs are met by ensuring that all
+					authors are enabled, supported, and guided by the authoring tools that
+					they use toward producing [=accessible web content (WCAG)=] (addressed
+					by <a href="#guidelines-guidelines-part-b">Part B of the Guidelines</a>).
+				</li>
+			</ul>
+
+			<p>
+				It is important to note that while the requirements for meeting these
+				two sets of user needs are separated for clarity within the guidelines,
+				the accelerating trend toward user-produced content means that, in
+				reality, they are deeply inter-connected. For example, when a user
+				participates in an online forum, the user frequently authors content
+				that is then incorporated with content authored by other users.
+				Accessibility problems in either the authoring user interface or the
+				content produced by the other forum users would reduce the overall
+				accessibility of the forum.
+			</p>
+
+			<div class="note" title="Introduction Notes">
+				<ol>
+					<li>
+						The term &quot;[=authoring tools=]&quot; has a specific definition
+						in ATAG 2.0. The definition, which includes several [=normative=]
+						notes, appears in the <a href="#glossary">Glossary</a>.
+					</li>
+					<li>
+						The term &quot;[=accessible content (WCAG)=]&quot; and related
+						terms, such as &quot;[=accessible template (WCAG)=]&quot; is used by
+						ATAG 2.0 to refer to &quot;content that would conform to
+						[[WCAG20]]&quot;, at either Level A, AA,
+						or AAA, assuming that any [=web content technologies=] relied upon
+						to satisfy the WCAG 2.0 success criteria are accessibility
+						supported. The definition of the term reflects the WCAG 2.0 note
+						that even content that conforms to the highest level of WCAG 2.0
+						(Level AAA) may not be &quot;accessible to individuals with all
+						types, degrees, or combinations of disability&quot;. For more
+						information, see &quot;<a href="#conf-rel-wcag"
+							>Relationship to the Web Content Accessibility Guidelines (WCAG)
+							2.0</a
+						>&quot;.
+					</li>
+					<li>
+						ATAG 2.0 does not include standard usability recommendations, except
+						where they have a significantly greater impact on people with
+						disabilities than on other people.
+					</li>
+					<li>
+						Authoring tools are just one aspect of web accessibility. For an
+						overview of the different components of web accessibility and how
+						they work together see:
+						<ul>
+							<li>
+								<a href="https://www.w3.org/WAI/fundamentals/components/">
+									Essential Components of Web Accessibility</a
+								>
+							</li>
+							<li>
+								<a href="https://www.w3.org/WAI/standards-guidelines/wcag/">
+									Web Content Accessibility Guidelines (WCAG) Overview</a
+								>
+							</li>
+							<li>
+								<a href="https://www.w3.org/WAI/standards-guidelines/uaag/">
+									User Agent Accessibility Guidelines (UAAG) Overview</a
+								>
+								(This will be of special interest to developers of
+								&quot;[=Combined User Agent/Authoring Tools=]&quot; and
+								&quot;[=User Agents with Authoring Tool Modes=]&quot;)
+							</li>
+						</ul>
+					</li>
+				</ol>
+			</div>
+
+			<section id="intro-guidance-layers">
+				<h3>ATAG 2.0 Layers of Guidance</h3>
+
+				<p>
+					The individuals and organizations that may use ATAG 2.0 vary widely
+					and include [=authoring tool developers=], [=authoring tool=] users
+					([=authors=]), authoring tool purchasers, and policy makers. In order
+					to meet the varying needs of these audiences, several layers of
+					guidance are provided:
+				</p>
+				<ul>
+					<li>
+						<strong>Parts:</strong> ATAG 2.0 is divided into two parts, each
+						reflecting a key aspect of accessibility with respect to authoring
+						tools. <a href="#guidelines-part-a">Part A</a> relates to the accessibility of
+						[=authoring tool user interfaces=] to authors with disabilities.
+						<a href="#guidelines-part-b">Part B</a> relates to support by authoring tools
+						for the creation, by any author (not just those with disabilities),
+						of [=web content=] that is more accessible to [=end users=] with
+						disabilities. Both parts include [=normative=] &quot;Conformance
+						Applicability Notes&quot; that apply to all of the success criteria
+						within that part:
+						<a href="#part-a-notes">
+                            Part A Conformance Applicability Notes</a>
+						and
+						<a href="#part-b-notes">
+                            Part B Conformance Applicability Notes</a>.
+					</li>
+					<li>
+						<strong>Principles:</strong> Under each part are several high-level
+						principles that organize the guidelines.
+					</li>
+					<li>
+						<strong>Guidelines:</strong> Under the principles are guidelines.
+						The guidelines provide the basic goals that authoring tool
+						developers should work toward in order to make authoring tools more
+						accessible to both authors and end users of web content with
+						different disabilities. The guidelines are not testable, but provide
+						the framework and overall objectives to help authoring tool
+						developers understand the success criteria. Each guideline includes
+						a brief rationale for why the guideline was included.
+					</li>
+					<li>
+						<strong>Success Criteria:</strong> For each guideline, testable
+						success criteria are provided to allow ATAG 2.0 to be used where
+						requirements and conformance testing are necessary, such as in
+						design specification, purchasing, regulation, and contractual
+						agreements. In order to meet the needs of different groups and
+						different situations, multiple levels of full and partial
+						conformance are defined (see
+						<a href="#intro-conformance-levels">Levels of Conformance</a>).
+					</li>
+					<li>
+						<strong>Implementing ATAG 2.0 document:</strong> The
+						<a href="https://www.w3.org/TR/IMPLEMENTING-ATAG20/">
+                            Implementing ATAG 2.0</a>
+						document provides additional non-normative information for each
+						success criterion, including a description of the intent of the
+						success criterion, examples, and links to related resources.
+                        <a href="https://www.w3.org/TR/IMPLEMENTING-ATAG20/"></a>
+					</li>
+				</ul>
+
+				<p>
+					See
+					<a href="https://www.w3.org/WAI/standards-guidelines/atag/">
+                        Authoring Tool Accessibility Guidelines (ATAG) Overview</a>
+					for links to additional ATAG technical and educational material.
+				</p>
+			</section>
+
+			<section id="intro-conformance-levels">
+				<h3>Levels of Conformance</h3>
+
+				<p>
+					In order to ensure that the process of using ATAG 2.0 and
+					[[WCAG20]] together in the development of
+					[=authoring tools=] is as simple as possible, ATAG 2.0 shares
+					[[WCAG20]]'s three level conformance model:
+					Level A (lowest), AA (middle), AAA (highest). For more information,
+					see
+					<a href="https://www.w3.org/TR/IMPLEMENTING-ATAG20/#intro_understand_levels_conformance">
+                        Understanding Levels of Conformance</a>.
+				</p>
+			</section>
+
+			<section id="intro-feature-integration">
+				<h3>Integration of Accessibility Features</h3>
+
+				<p>
+					When implementing ATAG 2.0, [=authoring tool developers=] should
+					carefully integrate features that support more accessible authoring
+					into the same &quot;look-and-feel&quot; as other features of the
+					[=authoring tool=]. Close integration has the potential to:
+				</p>
+				<ul>
+					<li>produce a more seamless product;</li>
+					<li>leverage the existing knowledge and skills of [=authors=];</li>
+					<li>
+						make authors more receptive to new accessibility-related authoring
+						requirements; and
+					</li>
+					<li>reduce the likelihood of author confusion.</li>
+				</ul>
+			</section>
+		</section>
+
+		<section id="guidelines-part-a">
+			<h2>Guidelines Part A: Make the authoring tool user interface accessible</h2>
+
+			<section id="part-a-notes">
+				<h3>Conformance Applicability Notes</h3>
+				<ol>
+					<li id="part-a-note-1">
+						<strong>
+						Scope of &quot;authoring tool user interface&quot;:</strong>
+						The Part A success criteria apply to all aspects of the [=authoring
+						tool user interface=] that are concerned with producing the
+						<a href="#conf-techs-produced">&quot;included&quot; web content 
+                        technologies</a>. This includes [=views=] of the [=web content 
+                        being edited=] and features that are independent of the content 
+                        being edited (e.g. menus, button bars, status bars, user 
+                        preferences, [=documentation=]).
+					</li>
+					<li id="part-a-note-2">
+						<strong>Reflected content accessibility problems:</strong> The
+						[=authoring tool=] is responsible for ensuring that
+						[=editing-views=] display the [=web content being edited=] in a way
+						that is more accessible to [=authors=] with disabilities (e.g.
+						ensuring that <span>[=text alternatives=]</span> in the content can
+						be [=programmatically determined=]). However, where an [=authoring
+						tool user interface accessibility problem=] is caused directly by
+						the content being edited (e.g. if an image in the content lacks a
+						text alternative), then this would not be considered a deficiency in
+						the accessibility of the [=authoring tool user interface=].
+					</li>
+					<li id="part-a-note-3">
+						<strong>Developer control:</strong> The Part A success criteria
+						only apply to the [=authoring tool user interface=] as it is
+						provided by the [=developer=]. They do not apply to any subsequent
+						modifications by parties other than the authoring tool developer
+						(e.g. user modifications of default settings, third-party plug-ins).
+					</li>
+					<li id="part-a-note-4">
+						<strong>User agent features:</strong> [=Web-based authoring tools=]
+						may rely on [=user agent=] features (e.g. keyboard navigation, find
+						functions, display preferences, undo features) to satisfy success
+						criteria. <a href="#conformance-claims">Conformance claims</a> are optional,
+						but any claim that is made must
+						<a href="#conf-user-agents">record the user agent(s)</a>.
+					</li>
+					<li id="part-a-note-5">
+						<strong>Accessibility of features provided to meet Part A:</strong>
+						The Part A success criteria apply to the entire [=authoring tool
+						user interface=], including any features added to meet the success
+						criteria in Part A (e.g. documentation, search functions). The only
+						exemption is for [=preview=] features, as long as they meet the
+						relevant success criteria in <a href="#part-a-principle-a.37">Guideline A.3.7</a>.
+						Previews are treated differently than editing-views because all
+						authors, including those with disabilities, benefit when preview
+						features accurately reflect the functionality of user agents that
+						are actually in use by <span>[=end users=]</span>.
+					</li>
+					<li id="part-a-note-6">
+						<strong>Unrecognizable content:</strong>
+						When success criteria require authoring tools to treat web content
+						according to semantic criteria, the success criteria only apply when
+						these semantics are encoded programmatically (e.g. text describing
+						an image can only be considered a [=text alternatives for non-text
+						content=] when this role is encoded within markup).
+					</li>
+				</ol>
+			</section>
+
+			<section id="part-a-principle-a.1">
+				<h3>
+					Principle A.1: Authoring tool user interfaces follow applicable
+					accessibility guidelines
+				</h3>
+
+				<section id="part-a-principle-a.1.1">
+					<h4>
+						Guideline A.1.1: (For the authoring tool user interface) Ensure that
+						web-based functionality is accessible.
+					</h4>
+
+					<a href="https://www.w3.org/TR/IMPLEMENTING-ATAG20/#part-a-principle-a.11">
+                        Implementing A.1.1</a>
+
+					<p>
+						Rationale: When [=authoring tools=] (or parts of authoring tools)
+						are [=web-based=], conforming to
+						[[WCAG20]] will facilitate access by all
+						[=authors=], including those using [=assistive technologies=].
+					</p>
+
+					<section id="part-a-principle-a.1.1.1">
+						<h5>A.1.1.1 Web-Based Accessible (WCAG)</h5>
+
+						<p>
+							If the [=authoring tool=] contains [=web-based user interfaces=],
+							then those web-based user interfaces meet the
+							[[WCAG20]] success criteria.
+						</p>
+                        <p>
+                            (<strong>Level A</strong> to meet WCAG 2.0 Level A success
+							criteria; <strong>Level AA</strong> to meet WCAG 2.0 Level A and
+							AA success criteria; <strong>Level AAA</strong> to meet all WCAG
+							2.0 success criteria)
+						</p>
+
+						<a
+							href="https://www.w3.org/TR/IMPLEMENTING-ATAG20/#sc_a111"
+							>Implementing A.1.1.1</a>
+					</section>
+				</section>
+
+				<section id="part-a-principle-a.1.2">
+					<h4>
+						Guideline A.1.2: (For the authoring tool user interface) Ensure that
+						non-web-based functionality is accessible.
+					</h4>
+
+					<a
+						href="https://www.w3.org/TR/IMPLEMENTING-ATAG20/#part-a-principle-a.12"
+						>Implementing A.1.2</a>
+
+					<p>
+						Rationale: When [=authoring tools=] (or parts of authoring tools)
+						are [=non-web-based=], following existing [=platform=] accessibility
+						guidelines and implementing communication with [=platform
+						accessibility services=] facilitates access by all [=authors=],
+						including those using [=assistive technologies=].
+					</p>
+
+					<section id="part-a-principle-a.1.2.1">
+						<h5>A.1.2.1 Accessibility Guidelines:</h5>
+
+						<p>
+							If the [=authoring tool=] contains [=non-web-based user
+							interfaces=], then those non-web-based user interfaces follow user
+							interface accessibility guidelines for the [=platform=].
+							</p><p>(<strong>Level A</strong>)
+						</p>
+
+						<div class="note" title="A.1.2.1 Note">
+							<p>
+								The (optional)
+								<a href="#conf-explanation-results">
+                                explanation of conformance claim results</a>
+								should record the user interface accessibility guidelines that
+								were followed.
+							</p>
+						</div>
+
+						<a
+							href="https://www.w3.org/TR/IMPLEMENTING-ATAG20/#sc_a121"
+							>Implementing A.1.2.1</a>
+					</section>
+
+					<section id="part-a-principle-a.1.2.2">
+						<h5>A.1.2.2 Platform Accessibility Services:</h5>
+
+						<p>
+							If the [=authoring tool=] contains [=non-web-based user
+							interfaces=], then those non-web-based user interfaces expose
+							accessibility information through [=platform accessibility
+							services=].
+                        </p>
+                        
+                        <p>(<strong>Level A</strong>)</p>
+
+						<div class="note" title="A.1.2.2 Note">
+							<p>
+								The (optional)
+								<a href="#conf-explanation-results"
+									>explanation of conformance claim results</a>
+								should record the platform accessibility service(s) that were
+								implemented.
+							</p>
+						</div>
+
+						<a
+							href="https://www.w3.org/TR/IMPLEMENTING-ATAG20/#sc_a122"
+							>Implementing A.1.2.2</a>
+					</section>
+				</section>
+			</section>
+
+			<section id="part-a-principle-a.2">
+				<h3>Principle A.2: Editing-views are perceivable</h3>
+
+				<section id="part-a-principle-a.2.1">
+					<h4>
+						Guideline A.2.1: (For the authoring tool user interface) Make
+						alternative content available to authors.
+					</h4>
+
+					<a
+						href="https://www.w3.org/TR/IMPLEMENTING-ATAG20/#part-a-principle-a.21"
+						>Implementing A.2.1</a>
+
+					<p>
+						Rationale: Some [=authors=] require access to [=alternative
+						content=] in order to interact with the [=web content=] that they
+						are editing.
+					</p>
+
+					<section id="part-a-principle-a.2.1.1">
+						<h5>A.2.1.1 Text Alternatives for Rendered Non-Text Content:</h5>
+
+						<p>
+							If an [=editing-view=] [=renders=] [=non-text content=], then any
+							[=programmatically associated=] [=text alternatives for the
+							non-text content=] can be [=programmatically determined=].
+						</p>
+                        <p>(<strong>Level A</strong>)</p>
+
+						<a
+							href="https://www.w3.org/TR/IMPLEMENTING-ATAG20/#sc_a211"
+							>Implementing A.2.1.1</a>
+					</section>
+
+					<section id="part-a-principle-a.2.1.2">
+						<h5>A.2.1.2 Alternatives for Rendered Time-Based Media:</h5>
+
+						<p>
+							If an [=editing-view=] [=renders=] time-based media, then at least
+							one of the following is true:
+						</p>
+                        
+                        <p>(<strong>Level A</strong>)</p>
+
+						<ul>
+							<li>
+								<strong>(a) Option to Render:</strong> The [=authoring tool=]
+								provides the [=option=] to render alternatives for the
+								time-based media; or
+							</li>
+							<li>
+								<strong>(b) User Agent Option:</strong> [=Authors=] have the
+								option to [=preview=] the time-based media in a [=user agent=]
+								that is able to render the alternatives.
+							</li>
+						</ul>
+
+						<a
+							href="https://www.w3.org/TR/IMPLEMENTING-ATAG20/#sc_a212"
+							>Implementing A.2.1.2</a>
+					</section>
+				</section>
+
+				<section id="part-a-principle-a.2.2">
+					<h4>
+						Guideline A.2.2: (For the authoring tool user interface) Ensure that
+						editing-view presentation can be programmatically determined.
+					</h4>
+
+					<a
+						href="https://www.w3.org/TR/IMPLEMENTING-ATAG20/#part-a-principle-a.22"
+						>Implementing A.2.2</a>
+
+					<p>
+						Rationale: Some [=authors=] need access to details about the
+						[=editing-view=] [=presentation=], via their assistive technology,
+						when that presentation is used to convey status messages (e.g.
+						underlining misspelled words) or provide information about how the
+						[=end user=] will experience the [=web content being edited=].
+					</p>
+
+					<section id="part-a-principle-a.2.2.1">
+						<h5>A.2.2.1 Editing-View Status Indicators:</h5>
+
+						<p>
+							If an [=editing-view=] adds status indicators to the
+							<span>[=content being edited=]</span>, then the information being
+							conveyed by the status indicators can be [=programmatically
+							determined=].
+						</p>
+                        
+                        <p>(<strong>Level A</strong>)</p>
+
+						<div class="note" title="A.2.2.1 Note">
+							<p>
+								Status indicators may indicate errors (e.g. spelling errors),
+								tracked changes, hidden elements, or other information.
+							</p>
+						</div>
+
+						<a
+							href="https://www.w3.org/TR/IMPLEMENTING-ATAG20/#sc_a221"
+							>Implementing A.2.2.1</a>
+					</section>
+
+					<section id="part-a-principle-a.2.2.2">
+						<h5>A.2.2.2 Access to Rendered Text Properties:</h5>
+
+						<p>
+							If an [=editing-view=] renders any text formatting [=properties=]
+							that [=authors=] can also edit using the editing-view, then the
+							properties can be [=programmatically determined=].
+						</p>
+                        
+                        <p>(<strong>Level AA</strong>)</p>
+
+						<a
+							href="https://www.w3.org/TR/IMPLEMENTING-ATAG20/#sc_a222"
+							>Implementing A.2.2.2</a>
+					</section>
+				</section>
+			</section>
+
+			<section id="part-a-principle-a.3">
+				<h3>Principle A.3: Editing-views are operable</h3>
+
+				<section id="part-a-principle-a.3.1">
+					<h4>
+						Guideline A.3.1: (For the authoring tool user interface) Provide
+						keyboard access to authoring features.
+					</h4>
+
+					<a
+						href="https://www.w3.org/TR/IMPLEMENTING-ATAG20/#part-a-principle-a.31"
+						>Implementing A.3.1</a>
+
+					<p>
+						Rationale: Some [=authors=] with limited mobility or visual
+						disabilities do not use a mouse and instead require keyboard
+						interface access to all of the functionality of the [=authoring
+						tool=].
+					</p>
+
+					<section id="part-a-principle-a.3.1.1">
+						<h5>A.3.1.1 Keyboard Access (Minimum):</h5>
+
+						<p>
+							All functionality of the [=authoring tool=] is operable through a
+							[=keyboard interface=] without requiring specific timings for
+							individual keystrokes, except where the underlying function
+							requires input that depends on the path of the user's movement and
+							not just the endpoints.
+						</p>
+                        
+                        <p>(<strong>Level A</strong>)</p>
+
+						<div class="note" title="A.3.1.1 Notes">
+							<ul>
+								<li>
+									<em>Note 1:</em> Keyboard interfaces are programmatic services
+									provided by many [=platforms=] that allow operation in a
+									device independent manner. This success criterion does not
+									imply the presence of a hardware keyboard.
+								</li>
+								<li>
+									<em>Note 2:</em> The path exception relates to the underlying
+									function, not the input technique. For example, if using
+									handwriting to enter text, the input technique (handwriting)
+									requires path-dependent input, but the underlying function
+									(text input) does not. The path exception encompasses other
+									input variables that are continuously sampled from pointing
+									devices, including pressure, speed, and angle.
+								</li>
+								<li>
+									<em>Note 3:</em> This success criterion does not forbid and
+									should not discourage other input methods (e.g. mouse, touch)
+									in addition to keyboard operation.
+								</li>
+							</ul>
+						</div>
+
+						<a
+							href="https://www.w3.org/TR/IMPLEMENTING-ATAG20/#sc_a311"
+							>Implementing A.3.1.1</a>
+					</section>
+
+					<section id="part-a-principle-a.3.1.2">
+						<h5>A.3.1.2 No Keyboard Traps:</h5>
+
+						<p>
+							If keyboard focus can be moved to a [=component=] using a
+							[=keyboard interface=], then focus can be moved away from that
+							component using only a keyboard interface. If it requires more
+							than unmodified arrow or tab keys or other standard exit methods,
+							<span>[=authors=]</span> are advised of the method for moving
+							focus away.
+                        </p>
+                            
+                        <p>(<strong>Level A</strong>)</p>
+
+						<a
+							href="https://www.w3.org/TR/IMPLEMENTING-ATAG20/#sc_a312"
+							>Implementing A.3.1.2</a>
+					</section>
+
+					<section id="part-a-principle-a.3.1.3">
+						<h5>A.3.1.3 Efficient Keyboard Access:</h5>
+
+						<p>
+							The [=authoring tool user interface=] includes mechanisms to make
+							keyboard access more efficient than [=sequential keyboard
+							access=].
+                        </p>
+                            
+                        <p>(<strong>Level AA</strong>)</p>
+
+						<a
+							href="https://www.w3.org/TR/IMPLEMENTING-ATAG20/#sc_a313"
+							>Implementing A.3.1.3</a>
+					</section>
+
+					<section id="part-a-principle-a.3.1.4">
+						<h5>A.3.1.4 Keyboard Access (Enhanced):</h5>
+
+						<p>
+							All functionality of the [=authoring tool=] is operable through a
+							[=keyboard interface=] without requiring specific timings for
+							individual keystrokes.
+						</p>
+                        
+                        <p>(<strong>Level AAA</strong>)</p>
+
+						<a
+							href="https://www.w3.org/TR/IMPLEMENTING-ATAG20/#sc_a314"
+							>Implementing A.3.1.4</a>
+					</section>
+
+					<section id="part-a-principle-a.3.1.5">
+						<h5>A.3.1.5 Customize Keyboard Access:</h5>
+
+						<p>
+							If the [=authoring tool=] includes keyboard commands, then those
+							keyboard commands can be customized.
+					    </p>
+                            
+                        <p>(<strong>Level AAA</strong>)</p>
+
+						<a
+							href="https://www.w3.org/TR/IMPLEMENTING-ATAG20/#sc_a315"
+							>Implementing A.3.1.5</a>
+					</section>
+
+					<section id="part-a-principle-a.3.1.6">
+						<h5>A.3.1.6 Present Keyboard Commands:</h5>
+
+						<p>
+							If the [=authoring tool=] includes keyboard commands, then the
+							authoring tool provides a way for [=authors=] to determine the
+							keyboard commands associated with [=authoring tool user
+							interface=] [=components=].
+						</p>
+                        
+                        <p>(<strong>Level AAA</strong>)</p>
+
+						<a
+							href="https://www.w3.org/TR/IMPLEMENTING-ATAG20/#sc_a316"
+							>Implementing A.3.1.6</a>
+					</section>
+				</section>
+
+				<section id="part-a-principle-a.3.2">
+					<h4>
+						Guideline A.3.2: (For the authoring tool user interface) Provide
+						authors with enough time.
+					</h4>
+
+					<a
+						href="https://www.w3.org/TR/IMPLEMENTING-ATAG20/#part-a-principle-a.32"
+						>Implementing A.3.2</a>
+
+					<p>
+						Rationale: Some [=authors=] who have difficulty typing, operating
+						the mouse, or processing information can be prevented from using
+						systems with short [=time limits=] or that require fast reaction
+						speeds, such as clicking on a moving target.
+					</p>
+
+					<section id="part-a-principle-a.3.2.1">
+						<h5>A.3.2.1 Auto-Save (Minimum):</h5>
+
+						<p>
+							The [=authoring tool=] does not include [=session=] [=time
+							limits=] or the authoring tool can automatically save edits made
+							before the session time limits are reached.
+						</p>
+                        
+                        <p>(<strong>Level A</strong>)</p>
+
+						<a
+							href="https://www.w3.org/TR/IMPLEMENTING-ATAG20/#sc_a321"
+							>Implementing A.3.2.1</a>
+					</section>
+
+					<section id="part-a-principle-a.3.2.2">
+						<h5>A.3.2.2 Timing Adjustable:</h5>
+
+						<p>
+							The [=authoring tool=] does not include [=time limits=] or at
+							least one of the following is true:
+						</p>
+                        
+                        <p>(<strong>Level A</strong>)</p>
+
+						<ul>
+							<li>
+								<strong>(a) Turn Off:</strong> [=Authors=] are allowed to turn
+								off the time limit before encountering it; or
+							</li>
+							<li>
+								<strong>(b) Adjust:</strong> Authors are allowed to adjust the
+								time limit before encountering it over a wide range that is at
+								least ten times the length of the default setting; or
+							</li>
+							<li>
+								<strong>(c) Extend:</strong> Authors are warned before time
+								expires and given at least 20 seconds to extend the time limit
+								with a simple action (e.g. &quot;press the space bar&quot;), and
+								authors are allowed to extend the time limit at least ten times;
+								or
+							</li>
+							<li>
+								<strong>(d) Real-time Exception:</strong> The time limit is a
+								required part of a real-time event (e.g. a collaborative
+								authoring system), and no alternative to the time limit is
+								possible; or
+							</li>
+							<li>
+								<strong>(e) Essential Exception:</strong> The time limit is
+								essential and extending it would invalidate the activity; or
+							</li>
+							<li>
+								<strong>(f) 20 Hour Exception:</strong> The time limit is longer
+								than 20 hours.
+							</li>
+						</ul>
+
+						<a
+							href="https://www.w3.org/TR/IMPLEMENTING-ATAG20/#sc_a322"
+							>Implementing A.3.2.2</a>
+					</section>
+
+					<section id="part-a-principle-a.3.2.3">
+						<h5>A.3.2.3 Static Input Components:</h5>
+
+						<p>
+							The [=authoring tool=] does not include moving [=user interface
+							components=] that accept input where the movement of these
+							components cannot be paused by [=authors=].
+						</p>
+                        
+                        <p>(<strong>Level A</strong>)</p>
+
+						<a
+							href="https://www.w3.org/TR/IMPLEMENTING-ATAG20/#sc_a323"
+							>Implementing A.3.2.3</a>
+					</section>
+
+					<section id="part-a-principle-a.3.2.4">
+						<h5>A.3.2.4 Content Edits Saved (Extended):</h5>
+
+						<p>
+							The [=authoring tool=] can be set to automatically save [=web
+							content=] edits made using the authoring tool.
+						</p>
+                            
+                        <p>(<strong>Level AAA</strong>)</p>
+
+						<a
+							href="https://www.w3.org/TR/IMPLEMENTING-ATAG20/#sc_a324"
+							>Implementing A.3.2.4</a>
+					</section>
+				</section>
+
+				<section id="part-a-principle-a.3.3">
+					<h4>
+						Guideline A.3.3: (For the authoring tool user interface) Help
+						authors avoid flashing that could cause seizures.
+					</h4>
+
+					<a
+						href="https://www.w3.org/TR/IMPLEMENTING-ATAG20/#part-a-principle-a.33"
+						>Implementing A.3.3</a>
+
+					<p>
+						Rationale: Flashing can cause seizures in [=authors=] with
+						photosensitive seizure disorder.
+					</p>
+
+					<section id="part-a-principle-a.3.3.1">
+						<h5>A.3.3.1 Static View Option:</h5>
+
+						<p>
+							If an [=editing-view=] can play visual time-based content, then
+							playing is not necessarily automatic upon loading the content and
+							playing can be paused.
+						</p>
+                        
+                        <p>(<strong>Level A</strong>)</p>
+
+						<a
+							href="https://www.w3.org/TR/IMPLEMENTING-ATAG20/#sc_a331"
+							>Implementing A.3.3.1</a>
+					</section>
+				</section>
+
+				<section id="part-a-principle-a.3.4">
+					<h4>
+						Guideline A.3.4: (For the authoring tool user interface) Enhance
+						navigation and editing via content structure.
+					</h4>
+
+					<a
+						href="https://www.w3.org/TR/IMPLEMENTING-ATAG20/#part-a-principle-a.34"
+						>Implementing A.3.4</a>
+
+					<p>
+						Rationale: Some [=authors=] who have difficulty typing or operating
+						the mouse benefit when [=authoring tools=] make use of the structure
+						present in [=web content=] to simplify navigating and editing the
+						content.
+					</p>
+
+					<section id="part-a-principle-a.3.4.1">
+						<h5>A.3.4.1 Navigate By Structure:</h5>
+
+						<p>
+							If [=editing-views=] expose the [=markup=] [=elements=] in the
+							[=web content being edited=], then the markup elements (e.g.
+							source code, content renderings) are selectable and navigation
+							mechanisms are provided to move the selection focus between
+							elements. 
+                        </p>
+                        
+                        <p>(<strong>Level AA</strong>)</p>
+
+						<a
+							href="https://www.w3.org/TR/IMPLEMENTING-ATAG20/#sc_a341"
+							>Implementing A.3.4.1</a>
+					</section>
+
+					<section id="part-a-principle-a.3.4.2">
+						<h5>A.3.4.2 Navigate by Programmatic Relationships:</h5>
+
+						<p>
+							If [=editing-views=] allow editing of programmatic
+							[=relationships=] within [=web content=], then mechanisms are
+							provided that support navigation between the related content.
+						</p>
+                        
+                        <p>(<strong>Level AAA</strong>)</p>
+
+						<div class="note" title="A.3.4.2 Note">
+							<p>
+								Note: Depending on the [=web content technology=] and the nature
+								of the [=authoring tool=], relationships may include, but are
+								not limited to, element nesting, headings, labeling,
+								programmatic definitions, and ID relationships.
+							</p>
+						</div>
+
+						<a
+							href="https://www.w3.org/TR/IMPLEMENTING-ATAG20/#sc_a342"
+							>Implementing A.3.4.2</a>
+					</section>
+				</section>
+
+				<section id="part-a-principle-a.3.5">
+					<h4>
+						Guideline A.3.5: (For the authoring tool user interface) Provide
+						text search of the content.
+					</h4>
+
+					<a
+						href="https://www.w3.org/TR/IMPLEMENTING-ATAG20/#part-a-principle-a.35"
+						>Implementing A.3.5</a>
+
+					<p>
+						Rationale: Some [=authors=] who have difficulty typing or operating
+						the mouse benefit from the ability to use text search to navigate to
+						arbitrary points within the [=web content being edited=].
+					</p>
+
+					<section id="part-a-principle-a.3.5.1">
+						<h5>A.3.5.1 Text Search:</h5>
+
+						<p>
+							If the authoring tool provides an [=editing-view=] of text-based
+							content, then the [=editing-view=] enables text search, such that
+							all of the following are true:
+						</p>
+                        
+                        <p>(<strong>Level AA</strong>)</p>
+
+						<ul>
+							<li>
+								<strong>(a) All Editable Text:</strong> Any text content that is
+								editable by the editing-view is searchable (including
+								[=alternative content=]); and
+							</li>
+							<li>
+								<strong>(b) Match:</strong> Matching results can be presented to
+								authors and given focus; and
+							</li>
+							<li>
+								<strong>(c) No Match:</strong> Authors are informed when no
+								results are found; and
+							</li>
+							<li>
+								<strong>(d) Two-way:</strong> The search can be made forwards or
+								backwards.
+							</li>
+						</ul>
+
+						<a
+							href="https://www.w3.org/TR/IMPLEMENTING-ATAG20/#sc_a351"
+							>Implementing A.3.5.1</a>
+					</section>
+				</section>
+
+				<section id="part-a-principle-a.3.6">
+					<h4>
+						Guideline A.3.6: (For the authoring tool user interface) Manage
+						preference settings.
+					</h4>
+
+					<a
+						href="https://www.w3.org/TR/IMPLEMENTING-ATAG20/#part-a-principle-a.36"
+						>Implementing A.3.6</a>
+
+					<p>
+						Rationale: Some [=authors=] need to set their own [=display
+						settings=] in a way that differs from the [=presentation=] that they
+						want to define for the [=published=] [=web content=]. Providing the
+						ability to save and reload sets of keyboard and display preference
+						settings benefits [=authors=] who have needs that differ over time
+						(e.g. due to fatigue).
+					</p>
+
+					<section id="part-a-principle-a.3.6.1">
+						<h5>A.3.6.1 Independence of Display:</h5>
+
+						<p>
+							If the [=authoring tool=] includes [=display settings=] for
+							[=editing-views=], then the authoring tool allows [=authors=] to
+							adjust these settings without modifying the [=web content being
+							edited=]. 
+                        </p>
+                        
+                        <p>(<strong>Level A</strong>)</p>
+
+						<a
+							href="https://www.w3.org/TR/IMPLEMENTING-ATAG20/#sc_a361"
+							>Implementing A.3.6.1</a>
+					</section>
+
+					<section id="part-a-principle-a.3.6.2">
+						<h5>A.3.6.2 Save Settings:</h5>
+
+						<p>
+							If the [=authoring tool=] includes [=display=] and/or [=control
+							settings=], then these settings can be saved between [=authoring
+							sessions=]. 
+                        </p>
+                        
+                        <p>(<strong>Level AA</strong>)</p>
+
+						<a
+							href="https://www.w3.org/TR/IMPLEMENTING-ATAG20/#sc_a362"
+							>Implementing A.3.6.2</a>
+					</section>
+
+					<section id="part-a-principle-a.3.6.3">
+						<h5>A.3.6.3 Apply Platform Settings:</h5>
+						<p>
+							The [=authoring tool=] respects changes in [=platform=]
+							[=display=] and [=control settings=], unless [=authors=] select
+							more specific display and control settings using the authoring
+							tool. 
+                        </p>
+                        
+                        <p>(<strong>Level AA</strong>)</p>
+
+						<a
+							href="https://www.w3.org/TR/IMPLEMENTING-ATAG20/#sc_a363"
+							>Implementing A.3.6.3</a>
+					</section>
+				</section>
+
+				<section id="part-a-principle-a.3.7">
+					<h4>
+						Guideline A.3.7: (For the authoring tool user interface) Ensure that
+						previews are at least as accessible as in-market user agents.
+					</h4>
+
+					<a href="https://www.w3.org/TR/IMPLEMENTING-ATAG20/#part-a-principle-a.37">
+                        Implementing A.3.7</a>
+
+					<p>
+						Rationale: [=Preview=] features are provided by many [=authoring
+						tools=] because the [=workflow=] of [=authors=] often includes
+						periodically checking how [=user agents=] will display the [=web
+						content=] to [=end users=]. Authors with disabilities need the same
+						opportunity to check their work.
+					</p>
+
+					<section id="part-a-principle-a.3.7.1">
+						<h5>A.3.7.1 Preview (Minimum):</h5>
+
+						<p>
+							If a [=preview=] is provided, then at least one of the following
+							is true: 
+                        </p>
+                        
+                        <p>(<strong>Level A</strong>)</p>
+
+						<ul>
+							<li>
+								<strong>(a) In-Market User Agent:</strong> The preview renders
+								content using a [=user agent=] that is [=in-market=]; or
+							</li>
+							<li>
+								<strong>(b) UAAG (Level A):</strong> The preview conforms to the
+								User Agent Accessibility Guidelines 1.0 Level A [[UAAG10]].
+							</li>
+						</ul>
+
+						<a href="https://www.w3.org/TR/IMPLEMENTING-ATAG20/#sc_a371">
+                            Implementing A.3.7.1</a>
+					</section>
+
+					<section id="part-a-principle-a.3.7.2">
+						<h5>A.3.7.2 Preview (Enhanced):</h5>
+
+						<p>
+							If a [=preview=] is provided, then [=authors=] can specify which
+							[=user agent=] performs the preview.
+						</p>
+                        
+                        <p>(<strong>Level AAA</strong>)</p>
+
+						<a href="https://www.w3.org/TR/IMPLEMENTING-ATAG20/#sc_a372">
+                            Implementing A.3.7.2</a>
+					</section>
+				</section>
+			</section>
+
+			<section id="part-a-principle-a.4">
+				<h3>Principle A.4: Editing-views are understandable</h3>
+
+				<section id="part-a-principle-a.4.1">
+					<h4>
+						Guideline A.4.1: (For the authoring tool user interface) Help
+						authors avoid and correct mistakes.
+					</h4>
+
+					<a href="https://www.w3.org/TR/IMPLEMENTING-ATAG20/#part-a-principle-a.41">
+                        Implementing A.4.1</a>
+
+					<p>
+						Rationale: Some [=authors=] with disabilities may be more
+						susceptible to input errors due to factors such as difficulty making
+						fine movements and speech recognition system errors.
+					</p>
+
+					<section id="part-a-principle-a.4.1.1">
+						<h5>A.4.1.1 Content Changes Reversible (Minimum):</h5>
+
+						<p>
+							All [=authoring actions=] are either [=reversible=] or the
+							[=authoring tool=] requires [=author=] confirmation to proceed.
+							(<strong>Level A</strong>)
+						</p>
+
+						<a href="https://www.w3.org/TR/IMPLEMENTING-ATAG20/#sc_a411">
+                            Implementing A.4.1.1</a>
+					</section>
+
+					<section id="part-a-principle-a.4.1.2">
+						<h5>A.4.1.2 Settings Change Confirmation:</h5>
+
+						<p>
+							If the [=authoring tool=] provides mechanisms for changing
+							[=authoring tool user interface=] settings, then those mechanisms
+							can reverse the setting changes, or the authoring tool requires
+							[=author=] confirmation to proceed. (<strong>Level A</strong>)
+						</p>
+
+						<a href="https://www.w3.org/TR/IMPLEMENTING-ATAG20/#sc_a412">
+                            Implementing A.4.1.2</a>
+					</section>
+
+					<section id="part-a-principle-a.4.1.3">
+						<h5>A.4.1.3 Content Changes Reversible (Enhanced):</h5>
+
+						<p>
+							[=Authors=] can sequentially reverse a series of [=reversible
+							authoring actions=].
+						</p>
+                        
+                        <p>(<strong>Level AAA</strong>)</p>
+
+						<div class="note" title="A.4.1.3 Note">
+							<p>
+								It is acceptable to clear the authoring action history at the
+								[=end of authoring sessions=].
+							</p>
+						</div>
+
+						<a href="https://www.w3.org/TR/IMPLEMENTING-ATAG20/#sc_a413">
+                            Implementing A.4.1.3</a>
+					</section>
+				</section>
+
+				<section id="guidelines-interface-accessible-principle-4-2">
+					<h4>
+						Guideline A.4.2: (For the authoring tool user interface) Document
+						the user interface, including all accessibility features.
+					</h4>
+
+					<a
+						href="https://www.w3.org/TR/IMPLEMENTING-ATAG20/#part-a-principle-a.42"
+						>Implementing A.4.2</a
+					>
+
+					<p>
+						Rationale: Some [=authors=] may not be able to understand or operate
+						the [=authoring tool user interface=] without [=documentation=].
+					</p>
+
+					<section id="part-a-principle-a.4.2.1">
+						<h5>A.4.2.1 Describe Accessibility Features:</h5>
+
+						<p>
+							For each [=authoring tool=] feature that is used to meet
+							<a href="#guidelines-part-a">Part A</a> of ATAG 2.0, at least one of the
+							following is true:
+						</p>
+                        
+                        <p>(<strong>Level A</strong>)</p>
+
+						<ul>
+							<li>
+								<strong>(a) Described in the Documentation:</strong> Use of the
+								feature is explained in the authoring tool's [=documentation=];
+								or
+							</li>
+							<li>
+								<strong>(b) Described in the Interface:</strong> Use of the
+								feature is explained in the [=authoring tool user interface=];
+								or
+							</li>
+							<li>
+								<strong>(c) Platform Service:</strong> The feature is a service
+								provided by an underlying platform; or
+							</li>
+							<li>
+								<strong>(d) Not Used by Authors:</strong> The feature is not
+								used directly by [=authors=] (e.g. passing information to a
+								[=platform accessibility service=]).
+							</li>
+						</ul>
+
+						<div class="note">
+							<p>
+								The accessibility of the documentation is covered by
+								<a href="#part-a-principle-a.1.1">Guideline A.1.1</a> and
+								<a href="#part-a-principle-a.1.2">Guideline A.1.2</a>.
+							</p>
+						</div>
+
+						<a href="https://www.w3.org/TR/IMPLEMENTING-ATAG20/#sc_a421">
+                            Implementing A.4.2.1</a>
+					</section>
+
+					<section id="part-a-principle-a.4.2.2">
+						<h5>A.4.2.2 Document All Features:</h5>
+
+						<p>
+							For each [=authoring tool=] feature, at least one of the following
+							is true: 
+                        </p>
+                        
+                        <p>(<strong>Level AA</strong>)</p>
+
+						<ul>
+							<li>
+								<strong>(a) Described in the Documentation:</strong> Use of the
+								feature is explained in the authoring tool's [=documentation=];
+								or
+							</li>
+							<li>
+								<strong>(b) Described in the Interface:</strong> Use of the
+								feature is explained in the [=authoring tool user interface=];
+								or
+							</li>
+							<li>
+								<strong>(c) Platform Service:</strong> The feature is a service
+								provided by an underlying platform; or
+							</li>
+							<li>
+								<strong>(d) Not Used by Authors:</strong> The feature is not
+								used directly by [=authors=] (e.g. passing information to a
+								[=platform accessibility service=]).
+							</li>
+						</ul>
+
+						<div class="note" title="A.4.2.2 Note">
+							<p>
+								The accessibility of the documentation is covered by
+								<a href="#part-a-principle-a.1.1">Guideline A.1.1</a> and
+								<a href="#part-a-principle-a.1.2">Guideline A.1.2</a>.
+							</p>
+						</div>
+
+						<a href="https://www.w3.org/TR/IMPLEMENTING-ATAG20/#sc_a422">
+                            Implementing A.4.2.2</a>
+					</section>
+				</section>
+			</section>
+        </section>
+
+        <section id="guidelines-part-b">
+			<h2>Guidelines Part B: Support the production of accessible content</h2>
+
+			<section id="part-b-notes">
+				<h3>Part B Conformance Applicability Notes:</h3>
+
+				<ol>
+					<li id="part-b-note-1">
+						<strong>Author availability:</strong> Any Part B success criteria
+						that refer to [=authors=] only apply during [=authoring sessions=].
+					</li>
+					<li id="part-b-note-2">
+						<strong>Developer control:</strong>
+						The Part B success criteria only apply to the [=authoring tool=] as
+						it is provided by the [=developer=]. This does not include
+						subsequent modifications by parties other than the authoring tool
+						developer (e.g. third-party plug-ins, user-defined [=templates=],
+						user modifications of default settings).
+					</li>
+					<li id="part-b-note-3">
+						<strong>Applicability after the end of an authoring session:</strong>
+						[=Authoring tools=] are responsible for the [=web content
+						accessibility (WCAG)=] of [=web content=] that they
+						<span class="sc">[=automatically generate=]</span> after the [=end
+						of an author's authoring session=] (see
+						<a href="#part-b-principle-b.1.1.1">Success Criterion B.1.1.1</a>). For example, if
+						the developer changes the site-wide [=templates=] of a content
+						management system, these would be required to meet the accessibility
+						requirements for automatically-generated content. Authoring tools
+						are not responsible for changes to the accessibility of content that
+						the author causes, whether it is [=author-generated=] or
+						automatically-generated by another system that the author has
+						specified (e.g. a third-party feed).
+					</li>
+					<li id="part-b-note-4">
+						<strong>Authoring systems:</strong>
+						As per the ATAG 2.0 definition of [=authoring tool=], several
+						software tools (identified in any
+						<a href="#conformance-claims">conformance claim</a>) can be used in
+						conjunction to meet the requirements of Part B (e.g. an authoring
+						tool could make use of a third-party software accessibility
+						[=checking=] tool).
+					</li>
+					<li id="part-b-note-5">
+						<strong>Accessibility of features provided to meet Part B:</strong>
+						The <a href="#guidelines-part-a">Part A</a> success criteria apply to the
+						entire [=authoring tool user interface=], including any features
+						that must be present to meet the success criteria in Part B (e.g.
+						checking tools, repair tools, tutorials, documentation).
+					</li>
+					<li id="part-b-note-6">
+						<strong>Multiple authoring roles:</strong>
+						Some [=authoring tools=] include multiple [=author=] roles, each
+						with different views and content editing [= permissions=] (e.g. a
+						content management system may separate the roles of designers,
+						content authors, and quality assurers). In these cases, the Part B
+						success criteria apply to the authoring tool as a whole, not to the
+						view provided to any particular authoring role. [= Accessible
+						content support features=] should be made available to any authoring
+						role where it would be useful.
+					</li>
+					<li id="part-b-note-7">
+						<strong>Unrecognizable content:</strong>
+						When success criteria require authoring tools to treat web content
+						according to semantic criteria, the success criteria only apply when
+						these semantics are encoded programmatically (e.g. text describing
+						an image can only be considered a [=text alternatives for non-text
+						content=] when this role is encoded within markup).
+					</li>
+				</ol>
+			</section>
+
+			<section id="part-b-principle-b.1">
+				<h3>
+					Principle B.1: Fully automatic processes produce accessible content
+				</h3>
+
+				<section id="part-b-principle-b.1.1">
+					<h4>
+						Guideline B.1.1: Ensure that automatically-specified content is
+						accessible.
+					</h4>
+
+					<a href="https://www.w3.org/TR/IMPLEMENTING-ATAG20/#gl_b11">
+                        Implementing B.1.1</a>
+
+					<p>
+						Rationale: If [=authoring tools=]
+						<span class="sc">[=automatically=]</span> produce
+						<span class="sc">[=web content=]</span> that includes
+						[=accessibility problems (WCAG)=], then this will impose additional
+						[=repair=] tasks on [=authors=].
+					</p>
+
+					<section id="part-b-principle-b.1.1.1">
+						<h5>
+							B.1.1.1 Content Auto-Generation After Authoring Sessions (WCAG):
+						</h5>
+
+						<p>
+							The [=authoring tool=] does not [=automatically generate=] [=web
+							content=] after the [=end of an authoring session=], or,
+							[=authors=] can specify that the content be
+							<span>[=accessible web content (WCAG)=]</span>.
+                        </p>
+                        <p>
+                            (<strong>Level A</strong> to meet WCAG 2.0 Level A success 
+                            criteria; <strong>Level AA</strong> to meet WCAG 2.0 Level A and
+							AA success criteria; <strong>Level AAA</strong> to meet all WCAG
+							2.0 success criteria)
+						</p>
+
+						<div class="note" title="B.1.1.1 Note">
+							<p>
+								This success criterion applies only to automatic processes
+								specified by the [=authoring tool developer=]. It does not apply
+								when [=author actions prevent generation of accessible web
+								content (WCAG)=].
+							</p>
+						</div>
+
+						<a href="https://www.w3.org/TR/IMPLEMENTING-ATAG20/#sc_b111">
+                            Implementing B.1.1.1</a>
+					</section>
+
+					<section id="part-b-principle-b.1.1.2">
+						<h5>
+							B.1.1.2 Content Auto-Generation During Authoring Sessions (WCAG):
+						</h5>
+
+						<p>
+							If the <span>[=authoring tool=]</span> provides the functionality
+							for <span>[=automatically generating=]</span>
+							<span>[=web content=]</span> during an [=authoring session=], then
+							at least one of the following is true:
+                        </p>
+                        
+                        <p>
+                            (<strong>Level A</strong> to meet WCAG 2.0 Level A success
+							criteria; <strong>Level AA</strong> to meet WCAG 2.0 Level A and
+							AA success criteria; <strong>Level AAA</strong> to meet all WCAG
+							2.0 success criteria)
+						</p>
+
+						<ul>
+							<li>
+								<strong>(a) Accessible:</strong> The content is
+								<span>[=accessible web content (WCAG) =]</span> without author
+								input; or
+							</li>
+							<li>
+								<strong>(b) Prompting:</strong> During the automatic generation
+								process, <span>[=authors=]</span> are [=prompted=] for any
+								required [=accessibility information (WCAG)=]; or
+							</li>
+							<li>
+								<strong>(c) Automatic Checking:</strong> After the automatic
+								generation process, accessibility [=checking=] is automatically
+								performed; or
+							</li>
+							<li>
+								<strong>(d) Checking Suggested:</strong> After the automatic
+								generation process, the authoring tool prompts authors to
+								perform accessibility checking.
+							</li>
+						</ul>
+
+						<div class="note" title="B.1.1.2 Notes">
+							<ul>
+								<li>
+									<em class="note-handle">Note 1:</em> Automatic generation
+									includes automatically selecting [=templates=] for authors.
+								</li>
+								<li>
+									<em class="note-handle">Note 2:</em> This success criterion
+									applies only to automatic processes specified by the
+									[=authoring tool developer=]. It does not apply when [=author
+									actions prevent generation of accessible web content (WCAG)=].
+								</li>
+							</ul>
+						</div>
+
+						<a href="https://www.w3.org/TR/IMPLEMENTING-ATAG20/#sc_b112">
+                            Implementing B.1.1.2</a>
+					</section>
+				</section>
+
+				<section id="part-b-principle-b.1.2">
+					<h4>
+						Guideline B.1.2: Ensure that accessibility information is preserved.
+					</h4>
+
+					<a href="https://www.w3.org/TR/IMPLEMENTING-ATAG20/#gl_b12">
+                        Implementing B.1.2</a>
+
+					<p>
+						Rationale: [=Accessibility information (WCAG)=] is critical to
+						maintaining comparable levels of [=web content accessibility
+						(WCAG)=] between the input and output of [=web content
+						transformations=].
+					</p>
+
+					<section id="part-b-principle-b.1.2.1">
+						<h5>B.1.2.1 Restructuring and Recoding Transformations (WCAG):</h5>
+
+						<p>
+							If the [=authoring tool=] provides [=restructuring
+							transformations=] or [=re-coding transformations=], and if
+							equivalent mechanisms exist in the web content technology of the
+							output, then at least one of the following is true:
+                        </p>
+                        
+                        <p>
+                            (<strong>Level A</strong> to meet WCAG 2.0 Level A success
+							criteria; <strong>Level AA</strong> to meet WCAG 2.0 Level A and
+							AA success criteria; <strong>Level AAA</strong> to meet all WCAG
+							2.0 success criteria)
+						</p>
+
+						<ul>
+							<li>
+								<strong>(a) Preserve:</strong> [=Accessibility information
+								(WCAG)=] is preserved in the output; or
+							</li>
+							<li>
+								<strong>(b) Warning:</strong> Authors have the
+								<span>[=default option=]</span> to be warned that accessibility
+								information (WCAG) may be lost (e.g. when saving a vector
+								graphic into a raster image format); or
+							</li>
+							<li>
+								<strong>(c) Automatic Checking:</strong> After the
+								transformation, accessibility [=checking=] is automatically
+								performed; or
+							</li>
+							<li>
+								<strong>(d) Checking Suggested:</strong> After the
+								transformation, the authoring tool [=prompts=] authors to
+								perform accessibility checking.
+							</li>
+						</ul>
+
+						<div class="note" title="B.1.2.1 Notes">
+							<ul>
+								<li>
+									<em class="note-handle">Note 1:</em> For [=text alternatives
+									for non-text content=], see
+									<a href="#sc_b124">Success Criterion B.1.2.4</a>.
+								</li>
+								<li>
+									<em class="note-handle">Note 2:</em> This success criteria
+									only applies when the output technology is
+									<a href="#conf-techs-produced">&quot;included&quot;</a> for
+									conformance.
+								</li>
+							</ul>
+						</div>
+
+						<a href="https://www.w3.org/TR/IMPLEMENTING-ATAG20/#sc_b121">
+                            Implementing B.1.2.1</a>
+					</section>
+
+					<section id="part-b-principle-b.1.2.2">
+						<h5>B.1.2.2 Copy-Paste Inside Authoring Tool (WCAG):</h5>
+
+						<p>
+							If the [=authoring tool=] supports copy and paste of [=structured
+							content=], then any [=accessibility information (WCAG)=] in the
+							copied content is preserved when the authoring tool is both the
+							source and destination of the copy-paste and the source and
+							destination use the same [=web content technology=].
+                        </p>
+                        
+                        <p>
+                            (<strong>Level A</strong> to meet WCAG 2.0 Level A success
+							criteria; <strong>Level AA</strong> to meet WCAG 2.0 Level A and
+							AA success criteria; <strong>Level AAA</strong> to meet all WCAG
+							2.0 success criteria)
+						</p>
+
+						<a href="https://www.w3.org/TR/IMPLEMENTING-ATAG20/#sc_b122">
+                            Implementing B.1.2.2</a>
+					</section>
+
+					<section id="part-b-principle-b.1.2.3">
+						<h5>B.1.2.3 Optimizations Preserve Accessibility:</h5>
+
+						<p>
+							If the [=authoring tool=] provides [=optimizing web content
+							transformations=], then any [=accessibility information (WCAG)=]
+							in the input is preserved in the output.
+						</p>
+                        
+                        <p>(<strong>Level A</strong>).</p>
+
+						<a href="https://www.w3.org/TR/IMPLEMENTING-ATAG20/#sc_b123">
+                            Implementing B.1.2.3</a>
+					</section>
+
+					<section id="part-b-principle-b.1.2.4">
+						<h5>
+							B.1.2.4 Text Alternatives for Non-Text Content are Preserved:
+						</h5>
+
+						<p>
+							If the [=authoring tool=] provides [=web content transformations=]
+							that preserve [=non-text content=] in the output, then any [=text
+							alternatives for that non-text content=] are also preserved, if
+							equivalent mechanisms exist in the [=web content technology=] of
+							the output.
+                        </p>
+                        
+                        <p>(<strong>Level A</strong>).</p>
+
+						<div class="note" title="B.1.2.4 Note">
+							<p>
+								This success criterion only applies when the output technology
+								is <a href="#conf-techs-produced">&quot;included&quot;</a> for
+								conformance.
+							</p>
+						</div>
+
+						<a href="https://www.w3.org/TR/IMPLEMENTING-ATAG20/#sc_b124">
+                            Implementing B.1.2.4</a>
+					</section>
+				</section>
+			</section>
+
+			<section id="part-b-principle-b.2">
+				<h3>
+					Principle B.2: Authors are supported in producing accessible content
+				</h3>
+
+				<section id="part-b-principle-b.2.1">
+					<h4>
+						Guideline B.2.1: Ensure that accessible content production is
+						possible.
+					</h4>
+
+					<a href="https://www.w3.org/TR/IMPLEMENTING-ATAG20/#gl_b21">
+                        Implementing B.2.1</a>
+
+					<p>
+						Rationale: To support [=accessible web content (WCAG)=] production,
+						at minimum, it is possible to produce [=web content=] that conforms
+						with [[WCAG20]] using the [=authoring tool=].
+					</p>
+
+					<section id="part-b-principle-b.2.1.1">
+						<h5>B.2.1.1 Accessible Content Possible (WCAG):</h5>
+
+						<p>
+							The [=authoring tool=] does not place [=restrictions=] on the
+							[=web content=] that [=authors=] can specify or those restrictions
+							do not prevent [[WCAG20]] success criteria from being met.
+                        </p>
+                        <p>
+							(<strong>Level A</strong> to meet WCAG 2.0 Level A success
+							criteria; <strong>Level AA</strong> to meet WCAG 2.0 Level A and
+							AA success criteria; <strong>Level AAA</strong> to meet all WCAG
+							2.0 success criteria)
+						</p>
+
+						<a href="https://www.w3.org/TR/IMPLEMENTING-ATAG20/#sc_b211">
+                            Implementing B.2.1.1</a>
+					</section>
+				</section>
+
+				<section id="part-b-principle-b.2.2">
+					<h4>Guideline B.2.2: Guide authors to produce accessible content.</h4>
+
+					<a href="https://www.w3.org/TR/IMPLEMENTING-ATAG20/#gl_b22">
+                        Implementing B.2.2</a>
+
+					<p>
+						Rationale: By guiding [=authors=] from the outset toward the
+						creation and maintenance of [=accessible web content (WCAG)=], [=web
+						content accessibility problems (WCAG)=] are mitigated and less
+						[=repair=] effort is required.
+					</p>
+
+					<section id="part-b-principle-b.2.2.1">
+						<h5>B.2.2.1 Accessible Option Prominence (WCAG):</h5>
+
+						<p>
+							If [=authors=] are provided with a choice of [=authoring actions=]
+							for achieving the same [=authoring outcome=] (e.g. styling text),
+							then [=options=] that will result in [=accessible web content
+							(WCAG)=] are [=at least as prominent=] as options that will not.
+                        </p>
+                        <p>
+                            (<strong>Level A</strong> to meet WCAG 2.0 Level A success
+							criteria; <strong>Level AA</strong> to meet WCAG 2.0 Level A and
+							AA success criteria; <strong>Level AAA</strong> to meet all WCAG
+							2.0 success criteria)
+						</p>
+
+						<a href="https://www.w3.org/TR/IMPLEMENTING-ATAG20/#sc_b221">
+                            Implementing B.2.2.1</a>
+					</section>
+
+					<section id="part-b-principle-b.2.2.2">
+						<h5>B.2.2.2 Setting Accessibility Properties (WCAG):</h5>
+
+						<p>
+							If the authoring tool provides mechanisms to set [=web content
+							properties=] (e.g. attribute values), then mechanisms are also
+							provided to set web content properties related to [=accessibility
+							information (WCAG)=].
+                        </p>
+                        <p>
+                            (<strong>Level A</strong> to meet WCAG 2.0 Level A success
+							criteria; <strong>Level AA</strong> to meet WCAG 2.0 Level A and
+							AA success criteria; <strong>Level AAA</strong> to meet all WCAG
+							2.0 success criteria)
+						</p>
+
+						<div class="note" title="B.2.2.2 Note">
+							<p>
+								For the prominence of the mechanisms, see
+								<a href="#sc_b414">Success Criterion B.4.1.4</a>.
+							</p>
+						</div>
+
+						<a href="https://www.w3.org/TR/IMPLEMENTING-ATAG20/#sc_b222">
+                            Implementing B.2.2.2</a>
+					</section>
+				</section>
+
+				<section id="part-b-principle-b.2.3">
+					<h4>
+						Guideline B.2.3: Assist authors with managing alternative content
+						for non-text content.
+					</h4>
+
+					<a href="https://www.w3.org/TR/IMPLEMENTING-ATAG20/#gl_b23">
+                        Implementing B.2.3</a>
+
+					<p>
+						Rationale: Improperly generated [=alternative content=] can create
+						[=web content accessibility problems (WCAG)=] and interfere with
+						accessibility [=checking=].
+					</p>
+
+					<div class="note" title="B.2.3 Note">
+						<p>
+							This guideline only applies when [=non-text content=] is specified
+							by [=authors=] (e.g. inserting an image). When non-text content is
+							<span class="sc">[=automatically=]</span> added by the [=authoring
+							tool=], see <a href="#part-b-principle-b.1.1">Guideline B.1.1</a>.
+						</p>
+					</div>
+
+					<section id="part-b-principle-b.2.3.1">
+						<h5>B.2.3.1 Alternative Content is Editable (WCAG):</h5>
+
+						<p>
+							If the [=authoring tool=] provides functionality for adding
+							non-text content, then [=authors=] are able to modify
+							[=programmatically associated=] [=text alternatives for non-text
+							content=].
+                        </p>
+                        <p>
+                            (<strong>Level A</strong> to meet WCAG 2.0 Level A success
+							criteria; <strong>Level AA</strong> to meet WCAG 2.0 Level A and
+							AA success criteria; <strong>Level AAA</strong> to meet all WCAG
+							2.0 success criteria)
+						</p>
+
+						<div class="note" title="B.2.3.1 Note">
+							<p>
+								An exception can be made when the non-text content is known to
+								be decoration, formatting, invisible or a CAPTCHA.
+							</p>
+						</div>
+
+						<a href="https://www.w3.org/TR/IMPLEMENTING-ATAG20/#sc_b231">
+                            Implementing B.2.3.1</a>
+					</section>
+
+					<section id="part-b-principle-b.2.3.2">
+						<h5>B.2.3.2 Automating Repair of Text Alternatives:</h5>
+
+						<p>
+							The [=authoring tool=] does not attempt to [=repair=] [=text
+							alternatives for non-text content=] or the following are all true:
+							</p><p>(<strong>Level A</strong>)
+						</p>
+
+						<ul>
+							<li>
+								<strong>(a) No Generic or Irrelevant Strings:</strong> Generic
+								strings (e.g. &quot;image&quot;) and irrelevant strings (e.g.
+								the file name, file format) are not used as text alternatives;
+								and
+							</li>
+							<li>
+								<strong>(b) In-Session Repairs:</strong> If the repair attempt
+								occurs during an authoring session, [=authors=] have the
+								opportunity to accept, modify, or reject the repair attempt
+								prior to insertion of the text alternative into the content; and
+							</li>
+							<li>
+								<strong>(c) Out-of-Session Repairs:</strong> If the repair
+								attempt occurs after an
+								<span>[=authoring session has ended=]</span>, the repaired text
+								alternatives are indicated during subsequent authoring sessions
+								(if any) and authors have the opportunity to accept, modify, or
+								reject the repair strings prior to insertion in the content.
+							</li>
+						</ul>
+
+						<a
+							href="https://www.w3.org/TR/IMPLEMENTING-ATAG20/#sc_b232"
+							>Implementing B.2.3.2</a
+						>
+					</section>
+
+					<section id="part-b-principle-b.2.3.3">
+						<h5>B.2.3.3 Save for Reuse:</h5>
+
+						<p>
+							If the [=authoring tool=] provides the functionality for adding
+							non-text content, when [=authors=] enter [=programmatically
+							associated=] [=text alternatives for non-text content=], then both
+							of the following are true:
+							</p><p>(<strong>Level AAA</strong>)
+						</p>
+
+						<ul>
+							<li>
+								<strong>(a) Save and Suggest:</strong> The text alternatives are
+								automatically saved and suggested by the [=authoring tool=], if
+								the same non-text content is reused; and
+							</li>
+							<li>
+								<strong>(b) Edit Option:</strong> The author has the [=option=]
+								to edit or delete the saved text alternatives.
+							</li>
+						</ul>
+
+						<a
+							href="https://www.w3.org/TR/IMPLEMENTING-ATAG20/#sc_b233"
+							>Implementing B.2.3.3</a
+						>
+					</section>
+				</section>
+
+				<section id="part-b-principle-b.2.4">
+					<h4>Guideline B.2.4: Assist authors with accessible templates.</h4>
+
+					<a href="https://www.w3.org/TR/IMPLEMENTING-ATAG20/#gl_b24">
+                        Implementing B.2.4</a>
+
+					<p>
+						Rationale: Providing [=accessible templates (WCAG)=] can have
+						several benefits, including: immediately improving the
+						[=accessibility of the web content (WCAG)=] of
+						<span class="sc">being edited</span>, reducing the effort required
+						of [=authors=], and demonstrating the importance of accessible web
+						content (WCAG).
+					</p>
+
+					<section id="part-b-principle-b.2.4.1">
+						<h5>B.2.4.1 Accessible Template Options (WCAG):</h5>
+
+						<p>
+							If the [=authoring tool=] provides [=templates=], then there are
+							[=accessible template (WCAG) =] [=options=] for a [=range=] of
+							template uses.
+                        </p>
+                        <p>
+							(<strong>Level A</strong> to meet WCAG 2.0 Level A success
+							criteria; <strong>Level AA</strong> to meet WCAG 2.0 Level A and
+							AA success criteria; <strong>Level AAA</strong> to meet all WCAG
+							2.0 success criteria)
+						</p>
+
+						<a href="https://www.w3.org/TR/IMPLEMENTING-ATAG20/#sc_b241">
+                            Implementing B.2.4.1</a>
+					</section>
+
+					<section id="part-b-principle-b.2.4.2">
+						<h5>B.2.4.2 Identify Template Accessibility:</h5>
+
+						<p>
+							If the [=authoring tool=] includes a [=template selection
+							mechanism=] and provides any non-[=accessible template (WCAG) =]
+							[=options=], then the template selection mechanism can display
+							distinctions between the accessible and non-accessible options.
+						</p>
+                        <p>(<strong>Level AA</strong>)</p>
+
+						<div class="note" title="B.2.4.2 Note">
+							<p>
+								The distinction can involve providing information for the
+								accessible templates, the non-accessible templates or both.
+							</p>
+						</div>
+
+						<a href="https://www.w3.org/TR/IMPLEMENTING-ATAG20/#sc_b242">
+                            Implementing B.2.4.2</a>
+					</section>
+
+					<section id="part-b-principle-b2.4.3">
+						<h5>B.2.4.3 Author-Created Templates:</h5>
+
+						<p>
+							If the [=authoring tool=] includes a [=template selection
+							mechanism=] and allows [=authors=] to create new non-[=accessible
+							templates (WCAG)=], then authors can enable the template selection
+							mechanism to display distinctions between accessible and
+							non-accessible templates that they create.
+						</p>
+                        <p>(<strong>Level AA</strong>)</p>
+
+						<div class="note">
+							<p>
+								The distinction can involve providing information for the
+								accessible templates (WCAG), the non-accessible templates or
+								both.
+							</p>
+						</div>
+
+						<a href="https://www.w3.org/TR/IMPLEMENTING-ATAG20/#sc_b243">
+                            Implementing B.2.4.3</a>
+					</section>
+
+					<section id="part-b-principle-b.2.4.4">
+						<h5>B.2.4.4 Accessible Template Options (Enhanced):</h5>
+
+						<p>
+							If the [=authoring tool=] provides [=templates=], then all of the
+							templates are [=accessible template (to WCAG Level AA)=].
+						</p>
+                        
+                        <p>(<strong>Level AAA</strong>)</p>
+
+						<a href="https://www.w3.org/TR/IMPLEMENTING-ATAG20/#sc_b244">
+                            Implementing B.2.4.4</a>
+					</section>
+				</section>
+
+				<section id="part-b-principle-b.2.5">
+					<h4>
+						Guideline B.2.5: Assist authors with accessible pre-authored
+						content.
+					</h4>
+
+					<a href="https://www.w3.org/TR/IMPLEMENTING-ATAG20/#gl_b25">
+                        Implementing B.2.5</a>
+
+					<p>
+						Rationale: Providing [=accessible pre-authored content (WCAG)=]
+						(e.g. clip art, synchronized media, widgets) can have several
+						benefits, including: immediately improving the
+						<span class="sc">[=accessibility of web content (WCAG)=]</span>
+						being edited, reducing the effort required of [=authors=], and
+						demonstrating the importance of accessibility.
+					</p>
+
+					<section id="part-b-principle-b.2.5.1">
+						<h5>B.2.5.1 Accessible Pre-Authored Content Options:</h5>
+
+						<p>
+							If the [=authoring tool=] provides [=pre-authored content=], then
+							a range of [=accessible pre-authored content (to WCAG Level AA)=]
+							[=options=] are provided.
+						</p>
+                        
+                        <p>(<strong>Level AA</strong>)</p>
+
+						<a href="https://www.w3.org/TR/IMPLEMENTING-ATAG20/#sc_b251">
+                            Implementing B.2.5.1</a>
+					</section>
+
+					<section id="part-b-principle-b.2.5.2">
+						<h5>B.2.5.2 Identify Pre-Authored Content Accessibility:</h5>
+
+						<p>
+							If the [=authoring tool=] includes a [=pre-authored content
+							selection mechanism =] and provides any non-[=accessible
+							pre-authored content (WCAG Level AA) =] [=options=], then the
+							selection mechanism can display distinctions between the
+							accessible and non-accessible options.
+						</p>
+                        
+                        <p>(<strong>Level AA</strong>)</p>
+
+						<div class="note">
+							<p>
+								The distinction can involve providing information for the
+								accessible pre-authored content, the non-accessible pre-authored
+								content or both.
+							</p>
+						</div>
+
+						<a href="https://www.w3.org/TR/IMPLEMENTING-ATAG20/#sc_b252">
+                            Implementing B.2.5.2</a>
+					</section>
+				</section>
+			</section>
+
+			<section id="part-b-principle-b.3">
+				<h3>
+					Principle B.3: Authors are supported in improving the accessibility of
+					existing content
+				</h3>
+
+				<section id="part-b-principle-b.3.1">
+					<h4>
+						Guideline B.3.1: Assist authors in checking for accessibility
+						problems.
+					</h4>
+
+					<a href="https://www.w3.org/TR/IMPLEMENTING-ATAG20/#gl_b31">
+                        Implementing B.3.1</a>
+
+					<p>
+						Rationale: When [=accessibility checking=] is an integrated function
+						of the [=authoring tool=], it helps make [=authors=] aware of [=web
+						content accessibility problems (WCAG)=] during the authoring
+						process, so they can be immediately addressed.
+					</p>
+
+					<section id="part-b-principle-b.3.1.1">
+						<h5>B.3.1.1 Checking Assistance (WCAG):</h5>
+
+						<p>
+							If the [=authoring tool=] provides [=authors=] with the ability to
+							add or modify [=web content=] in such a way that a
+							[[WCAG20]] success criterion can be
+							violated, then accessibility [=checking=] for that success
+							criterion is provided (e.g. an HTML authoring tool that inserts
+							images should check for alternative text; a [=video=] authoring
+							tool with the ability to edit text tracks should check for
+							captions).
+                        </p>
+                        <p>
+                            (<strong>Level A</strong> to meet WCAG 2.0 Level A success
+							criteria; <strong>Level AA</strong> to meet WCAG 2.0 Level A and
+							AA success criteria; <strong>Level AAA</strong> to meet all WCAG
+							2.0 success criteria)
+						</p>
+
+						<div class="note" title="B.3.1.1 Note">
+							<p>
+								[=Automated =] and [=semi-automated checking=] is possible (and
+								encouraged) for many types of [=web content accessibility
+								problems (WCAG)=]. However, [=manual checking=] is the minimum
+								requirement to meet this success criterion. In manual checking,
+								the authoring tool provides [=authors=] with instructions for
+								detecting problems, which authors carry out by themselves. For
+								more information on checking, see
+								<a href="https://www.w3.org/TR/IMPLEMENTING-ATAG20/#checking-types">
+                                    Implementing ATAG 2.0 - Appendix B: Levels of Checking
+									Automation</a>.
+							</p>
+						</div>
+
+						<a href="https://www.w3.org/TR/IMPLEMENTING-ATAG20/#sc_b311">
+                            Implementing B.3.1.1</a>
+					</section>
+
+					<section id="part-b-principle-b.3.1.2">
+						<h5>B.3.1.2 Help Authors Decide:</h5>
+
+						<p>
+							If the [=authoring tool=] provides [=accessibility checking=] that
+							relies on [=authors=] to decide whether potential web content
+							accessibility problems (WCAG) are correctly identified (i.e.
+							[=manual checking=] and [=semi-automated checking=]), then the
+							accessibility checking process provides instructions that describe
+							how to decide.
+						</p>
+                        
+                        <p>(<strong>Level A</strong>)</p>
+
+						<a href="https://www.w3.org/TR/IMPLEMENTING-ATAG20/#sc_b312">
+                            Implementing B.3.1.2</a>
+					</section>
+
+					<section id="part-b-principle-b.3.1.3">
+						<h5>B.3.1.3 Help Authors Locate:</h5>
+
+						<p>
+							If the [=authoring tool=] provides [=checks=] that require
+							[=authors=] to decide whether a potential [=web content
+							accessibility problem (WCAG)=] is correctly identified (i.e.
+							[=manual checking=] and [=semi-automated checking=]), then the
+							relevant content is identified to the authors.
+						</p>
+                        
+                        <p>(<strong>Level A</strong>)</p>
+
+						<div class="note">
+							<p>
+								Depending on the nature of the [=editing-view=] and the scope of
+								the potential web content accessibility problem (WCAG),
+								identification might involve highlighting elements or renderings
+								of elements, displaying line numbers, or providing instructions.
+							</p>
+						</div>
+
+						<a href="https://www.w3.org/TR/IMPLEMENTING-ATAG20/#sc_b313">
+                            Implementing B.3.1.3</a>
+					</section>
+
+					<section id="part-b-principle-b.3.1.4">
+						<h5>B.3.1.4 Status Report:</h5>
+
+						<p>
+							If the [=authoring tool=] provides [=checks=], then [=authors=]
+							can receive an accessibility status report based on the results of
+							the accessibility checks.
+						</p>
+                        
+                        <p>(<strong>Level AA</strong>)</p>
+
+						<div class="note">
+							<p>
+								The format of the accessibility status report is not specified
+								and they might include a listing of [=problems=] detected or a
+								[[WCAG20]] conformance level, etc.
+							</p>
+						</div>
+
+						<a href="https://www.w3.org/TR/IMPLEMENTING-ATAG20/#sc_b314"
+							>Implementing B.3.1.4</a
+						>
+					</section>
+
+					<section id="part-b-principle-b.3.1.5">
+						<h5>B.3.1.5 Programmatic Association of Results:</h5>
+
+						<p>
+							If the [=authoring tool=] provides [=checks=], then the
+							[=authoring tool=] can [=programmatically associate=]
+							accessibility [=checking=] results with the [=web content=] that
+							was checked.
+						</p>
+                        
+                        <p>(<strong>Level AA</strong>)</p>
+
+						<a href="https://www.w3.org/TR/IMPLEMENTING-ATAG20/#sc_b315">
+                            Implementing B.3.1.5</a>
+					</section>
+				</section>
+
+				<section id="part-b-principle-b.3.2">
+					<h4>
+						Guideline B.3.2: Assist authors in repairing accessibility problems.
+					</h4>
+
+					<a href="https://www.w3.org/TR/IMPLEMENTING-ATAG20/#gl_b32">
+                        Implementing B.2.3</a>
+
+					<p>
+						Rationale: When [=repair=] is an integral part of the authoring
+						process, it greatly enhances the utility of [=checking=] and
+						increases the likelihood that [=web content accessibility problems
+						(WCAG)=] will be properly addressed.
+					</p>
+
+					<section id="part-b-principle-b.3.2.1">
+						<h5>B.3.2.1 Repair Assistance (WCAG):</h5>
+
+						<p>
+							If [=checking=] (see
+							<a href="#part-b-principle-b.3.1.1">Success Criterion B.3.1.1</a>) 
+                            can detect that a [[WCAG20]] success criterion is not
+							met, then [=repair=] suggestion(s) are provided:
+                        </p>
+                        
+                        <p>
+                            (<strong>Level A</strong> to meet WCAG 2.0 Level A success
+							criteria; <strong>Level AA</strong> to meet WCAG 2.0 Level A and
+							AA success criteria; <strong>Level AAA</strong> to meet all WCAG
+							2.0 success criteria)
+						</p>
+
+						<div class="note">
+							<p>
+								[=Automated=][= and=] [=semi-automated repair=] is possible (and
+								encouraged) for many types of [=web content accessibility
+								problems (WCAG)=]. However, [=manual repair=] is the minimum
+								requirement to meet this success criterion. In manual repair,
+								the [=authoring tool=] provides [=authors=] with instructions
+								for repairing problems, which authors carry out by themselves.
+								For more information on repair, see
+								<a href="https://www.w3.org/TR/IMPLEMENTING-ATAG20/#repair-types">
+                                    Implementing ATAG 2.0 - Appendix C: Levels of Repair
+									Automation</a>.
+							</p>
+						</div>
+
+						<a href="https://www.w3.org/TR/IMPLEMENTING-ATAG20/#sc_b321">
+                            Implementing B.3.2.1</a>
+					</section>
+				</section>
+			</section>
+
+			<section id="part-b-principle-b.4">
+				<h3>
+					Principle B.4: Authoring tools promote and integrate their
+					accessibility features
+				</h3>
+
+				<section id="part-b-principle-b.4.1">
+					<h4>
+						Guideline B.4.1: Ensure the availability of features that support
+						the production of accessible content.
+					</h4>
+
+					<a href="https://www.w3.org/TR/IMPLEMENTING-ATAG20/#gl_b41">
+                        Implementing B.4.1</a>
+
+					<p>
+						Rationale: The [=accessible content support features=] will be more
+						likely to be used, if they are turned on and are afforded reasonable
+						[=prominence=] within the [=authoring tool user interface=].
+					</p>
+
+					<section id="part-b-principle-b.4.1.1">
+						<h5>B.4.1.1 Features Active by Default:</h5>
+
+						<p>
+							All [=accessible content support feature=] are turned on by
+							default. </p><p>(<strong>Level A</strong>)
+						</p>
+
+						<a href="https://www.w3.org/TR/IMPLEMENTING-ATAG20/#sc_b411">
+                            Implementing B.4.1.1</a>
+					</section>
+
+					<section id="part-b-principle-b.4.1.2">
+						<h5>B.4.1.2 Option to Reactivate Features:</h5>
+
+						<p>
+							The [=authoring tool=] does not include the
+							<span>[=option=]</span> to turn off its [=accessible content
+							support features=] or features which have been turned off can be
+							turned back on.
+						</p>
+                        
+                        <p>(<strong>Level A</strong>)</p>
+
+						<a href="https://www.w3.org/TR/IMPLEMENTING-ATAG20/#sc_b412">
+                            Implementing B.4.1.2</a>
+					</section>
+
+					<section id="part-b-principle-b.4.1.3">
+						<h5>B.4.1.3 Feature Deactivation Warning:</h5>
+
+						<p>
+							The [=authoring tool=] does not include the
+							<span>[=option=]</span> to turn off its [=accessible content
+							support features=] or, if these features can be turned off,
+							[=authors=] are informed that this may increase the risk of
+							[=content accessibility problems (WCAG)=].
+						</p>
+                        
+                        <p>(<strong>Level AA</strong>)</p>
+
+						<a href="https://www.w3.org/TR/IMPLEMENTING-ATAG20/#sc_b413">
+                            Implementing B.4.1.3</a>
+					</section>
+
+					<section id="part-b-principle-b.4.1.4">
+						<h5>B.4.1.4 Feature Prominence:</h5>
+
+						<p>
+							All [= accessible content support features=] are [=at least as
+							prominent=] as features related to either invalid [=markup=],
+							syntax errors, spelling errors or grammar errors.
+						</p>
+                        
+                        <p>(<strong>Level AA</strong>)</p>
+
+						<a href="https://www.w3.org/TR/IMPLEMENTING-ATAG20/#sc_b414">
+                            Implementing B.4.1.4</a>
+					</section>
+				</section>
+
+				<section id="part-b-principle-b.4.2">
+					<h4>
+						Guideline B.4.2: Ensure that documentation promotes the production
+						of accessible content.
+					</h4>
+
+					<a href="https://www.w3.org/TR/IMPLEMENTING-ATAG20/#gl_b42">
+                        Implementing B.4.2</a>
+
+					<p>
+						Rationale: Some [=authors=] need support in determining how to use
+						[=accessible content production features=] (e.g. how to respond to
+						[=prompts=] for <span>[=text alternatives=]</span>, how to use
+						accessibility [=checking=] tools). Demonstrating accessible
+						authoring as routine practice, or at least not demonstrating
+						inaccessible practices, will help to encourage acceptance of
+						accessibility by some authors.
+					</p>
+
+					<section id="part-b-principle-b.4.2.1">
+						<h5>
+							<a id="sc_b421" name="sc_b421"> </a>B.4.2.1 Model Practice (WCAG):
+						</h5>
+
+						<p>
+							A [=range=] of examples in the [=documentation=] (e.g. [=markup=],
+							screen shots of [=WYSIWYG=] [=editing-views=]) demonstrate
+							[=accessible authoring practices (WCAG)=].
+                        </p>
+                        
+                        <p>(<strong>Level A</strong> to meet WCAG 2.0 Level A success
+							criteria; <strong>Level AA</strong> to meet WCAG 2.0 Level A and
+							AA success criteria; <strong>Level AAA</strong> to meet all WCAG
+							2.0 success criteria)
+						</p>
+
+						<a href="https://www.w3.org/TR/IMPLEMENTING-ATAG20/#sc_b421">
+                            Implementing B.4.2.1</a>
+					</section>
+
+					<section id="part-b-principle-b.4.2.2">
+						<h5>B.4.2.2 Feature Instructions:</h5>
+
+						<p>
+							Instructions for using any [= accessible content support
+							features=] appear in the [=documentation=].
+						</p>
+                        
+                        <p>(<strong>Level A</strong>)</p>
+
+						<a href="https://www.w3.org/TR/IMPLEMENTING-ATAG20/#sc_b422">
+                            Implementing B.4.2.2</a>
+					</section>
+
+					<section id="part-b-principle-b.4.2.3">
+						<h5>B.4.2.3 Tutorial:</h5>
+
+						<p>
+							The [=authoring tool=] provides a [=tutorial=] for an accessible
+							authoring process that is specific to that authoring tool.
+						</p>
+                        
+                        <p>(<strong>Level AAA</strong>)</p>
+
+						<a href="https://www.w3.org/TR/IMPLEMENTING-ATAG20/#sc_b423">
+                            Implementing B.4.2.3</a>
+					</section>
+
+					<section id="part-b-principle-b.4.2.4">
+						<h5>B.4.2.4 Instruction Index:</h5>
+
+						<p>
+							The [=authoring tool=] [=documentation=] contains an index to the
+							instructions for using any [= accessible content support
+							features=].
+						</p>
+                        
+                        <p>(<strong>Level AAA</strong>)</p>
+
+						<a href="https://www.w3.org/TR/IMPLEMENTING-ATAG20/#sc_b424">
+                            Implementing B.4.2.4</a>
+					</section>
+				</section>
+			</section>
+		</section>
+
+		<section id="conformance">
+			<h2>Conformance</h2>
+
+			<p>
+				Conformance means that the [=authoring tool=] satisfies the
+				<a href="#conformance-applicable">applicable</a> success criteria defined in the
+				<a href="#guidelines-part-a">guidelines</a> section. This conformance section
+				describes conformance and lists the conformance requirements.
+			</p>
+
+			<section id="conformance-requirements">
+				<h3>Conformance Requirements</h3>
+
+				<section id="conformance-req-satisfaction">
+					<h4>Success Criteria Satisfaction</h4>
+
+					<p>
+						The first step in determining ATAG 2.0 conformance is to assess
+						whether the Success Criteria have been satisfied. The potential
+						answers are:
+					</p>
+
+					<ul>
+						<li id="conformance-applicable">
+							<strong>Not Applicable: </strong>The ATAG 2.0
+							<a href="#def-Authoring-Tool">definition of authoring tool</a> is
+							inclusive and, as such, it covers software with a wide range of
+							capabilities and contexts of operation. In order to take into
+							account authoring tools with limited feature sets (e.g. a photo
+							editor, a CSS editor, a status update field in a social networking
+							application), many of the ATAG 2.0 success criteria are
+							conditional, applying only to authoring tools with the given
+							features(s). If a conformance claim is made, an explanation of why
+							the success criterion is not applicable is
+							<strong>required</strong>.
+						</li>
+						<li>
+							<strong>Yes:</strong> In the case of some success criteria, this
+							will include a <a href="#conformance-requirements-conf-levels">Level</a> 
+                            (A, AA, or AAA) with reference to WCAG 2.0. If a
+							<a href="#conformance-claims">conformance claim</a> is made, an
+							explanation is <strong>optional</strong>, yet strongly
+							recommended.
+						</li>
+						<li>
+							<strong>No:</strong> If a conformance claim is made, an
+							explanation is <strong>optional</strong>, yet strongly
+							recommended.
+						</li>
+					</ul>
+				</section>
+
+				<section id="conformance-requirements-wcag-rel">
+					<h4>
+						Relationship to the Web Content Accessibility Guidelines (WCAG) 2.0
+					</h4>
+
+					<p>
+						At the time of publishing, [[WCAG20]] is the current W3C
+						Recommendation regarding web content accessibility. For this reason,
+						ATAG 2.0 refers to WCAG 2.0 when setting requirements for (1) the
+						accessibility of [=web-based authoring tool user interfaces=] (in
+						<a href="#guidelines-part-a">Part A</a>) and (2) how [=authors=] should be
+						enabled, supported, and guided toward producing web content that is
+						more accessible to [=end users=] with disabilities (in
+						<a href="#guidelines-part-b"> Part B</a>).
+					</p>
+
+					<p>
+						In particular, ATAG 2.0 refers to WCAG 2.0 within its definition of
+						the term &quot;[=accessible content=]&quot; (and related terms, such
+						as &quot;[=accessible template=]&quot;). The definition of
+						&quot;accessible content&quot; is content that would conform to WCAG
+						2.0, at either Level A, AA, or AAA, under the assumption that any
+						web content technologies that are relied upon to satisfy the WCAG
+						2.0 success criteria are accessibility supported. The phrase
+						&quot;at either Level A, AA, or AAA&quot; takes into account that
+						the definition of &quot;accessible content&quot; can differ
+						depending on the context of use (e.g. in a Level A success criterion
+						of ATAG 2.0 versus in a Level AAA success criterion). The definition
+						also includes two notes:
+					</p>
+
+					<ul>
+						<li>
+							The first is &quot;If accessibility support for the relied upon
+							technologies is lacking, then the content will not conform to WCAG
+							2.0 and one or more groups of end-users with disabilities will
+							likely experience difficulty accessing the content.&quot;
+						</li>
+						<li>
+							The second is &quot;Conformance to WCAG 2.0, even at the highest
+							level (i.e. Level AAA), still may not make content 'accessible to
+							individuals with all types, degrees, or combinations of
+							disability'.&quot; In order to highlight success criteria or
+							defined terms in ATAG 2.0 that depend on WCAG 2.0, they are marked
+							with the parenthetical: &quot;(WCAG)&quot;.
+						</li>
+					</ul>
+                        
+					<section id="conformance-requirements-wcag-supported">
+						<h5>
+							Note on &quot;accessibility-supported ways of using
+							technologies&quot;:
+						</h5>
+
+						<p>
+							Part of conformance to WCAG 2.0 is the requirement that &quot;only
+							accessibility-supported ways of using technologies are relied upon
+							to satisfy the WCAG 2.0 success criteria. Any information or
+							functionality that is provided in a way that is not accessibility
+							supported is also available in a way that is
+							<em>accessibility supported</em>.&quot; In broad terms, WCAG 2.0
+							considers a [=web content technology=] to be &quot;accessibility
+							supported&quot; when (1) the way that the web content technology
+							is used is supported by users' [=assistive technology=] and (2)
+							the web content technology has accessibility-supported [=user
+							agents=] that are available to end users.
+						</p>
+
+						<p>
+							This concept is not easily extended to [=authoring tools=] because
+							many authoring tools can be installed and used in a variety of
+							environments with differing availabilities for assistive
+							technologies and user agents (e.g. private intranets versus public
+							websites, monolingual sites versus multilingual sites). Therefore:
+						</p>
+
+						<blockquote>
+							<p>
+								<strong>ATAG 2.0 does not include the accessibility-supported
+								requirement. As a result, ATAG 2.0 success criteria do not
+								refer to WCAG 2.0 &quot;conformance&quot;, and instead refer
+								to &quot;meeting WCAG 2.0 success criteria&quot;.</strong>
+							</p>
+						</blockquote>
+
+						<p>
+							Once an authoring tool has been installed and put into use, it
+							would be possible to assess the WCAG 2.0 conformance of the [=web
+							content=] that the authoring tool produces, including whether the
+							WCAG 2.0 accessibility-supported requirement is met. However, this
+							WCAG 2.0 conformance assessment would be completely independent of
+							the authoring tool's conformance with ATAG 2.0.
+						</p>
+					</section>
+                </section>
+
+				<section id="conformance-requirements-conf-levels">
+					<h4>Conformance Options and Levels</h4>
+
+						<p>There are two types of conformance, each with three levels:</p>
+
+						<section id="conformance-requirements-atag-conf">
+							<h5>ATAG 2.0 Conformance (Level A, AA, or AAA)</h5>
+
+							<p>
+								This conformance option <em>may</em> be selected when an
+								[=authoring tool=] can be used to produce [=accessible web
+								content (WCAG)=] without additional tools or components. The
+								level of conformance is determined as follows:
+							</p>
+
+							<ul>
+								<li>
+									<strong>Level A:</strong> The authoring tool satisfies all of
+									the <a href="#conformance-applicable">applicable</a> 
+                                    Level A success criteria.
+								</li>
+								<li>
+									<strong>Level AA:</strong> The authoring tool satisfies all of
+									the applicable Level A and Level AA success criteria.
+								</li>
+								<li>
+									<strong>Level AAA:</strong> The authoring tool satisfies all
+									of the applicable success criteria.
+								</li>
+							</ul>
+
+							<div class="note" title="Conformance Applicability Notes">
+								<p>
+									The
+									<a href="#part-a-notes">
+                                        Part A Conformance Applicability Notes</a>
+									and
+									<a href="#part-b-notes">
+                                        Part B Conformance Applicability Notes</a>
+									must be applied.
+								</p>
+								<p>
+									If the minimum conformance level (Level A) has not been
+									achieved (i.e. at least one applicable Level A success
+									criterion has not been met), it is still beneficial to publish
+									a statement specifying which success criteria were met.
+								</p>
+							</div>
+						</section>
+
+						<section id="conformance-requirements-atag-partial">
+							<h5>
+								Partial ATAG 2.0 Conformance - Process Component (Level A, AA,
+								or AAA)
+							</h5>
+
+							<p>
+								This conformance option <em>may</em> be selected when an
+								[=authoring tool=] would require additional tools or
+								components in order to conform as a complete
+								authoring system. This option may be used for components with
+								very limited functionality (e.g. a plug-in) up to nearly
+								complete systems (e.g. a markup editor that only lacks
+								accessibility checking functionality).
+							</p>
+
+							<p>
+								The level of conformance (A, AA, or AAA) is determined as above
+								except that, for any &quot;no&quot; answers, the tool must not
+								prevent the success criteria from being met by another authoring
+								process component as part of a complete authoring system.
+							</p>
+
+							<div class="note">
+								<p>
+									Authoring tools would not be able to meet partial conformance
+									if they prevent additional authoring process components from
+									meeting the failed success criteria (e.g. for security
+									reasons).
+								</p>
+
+								<p>
+									The
+									<a href="#part-a-notes">
+                                        Part A Conformance Applicability Notes</a>
+									and
+									<a href="#part-b-notes">
+                                        Part B Conformance Applicability Notes</a>
+									must be applied.
+								</p>
+							</div>
+						</section>
+
+						<section id="conformance-requirements-atag-partial-platform-limits">
+							<h5>
+								Partial ATAG 2.0 Conformance - Platform Limitations (Level A,
+								AA, or AAA)
+							</h5>
+
+							<p>
+								This conformance option may be selected when an [=authoring
+								tool=] is unable to meet one or more success criteria because of
+								intrinsic limitations of the [=platform=] (e.g. lacking a
+								[=platform accessibility service=]). The (optional) explanation
+								of conformance claim results should explain what platform
+								features are missing.
+							</p>
+						</section>
+				</section>
+
+				<section id="conformance-technologies">
+					<h4>Web Content Technologies Produced:</h4>
+
+					<p>
+						[=Authoring tools=] conform to ATAG 2.0 with respect to the
+						production of specific [=web content technologies=] (e.g. Level A
+						Conformance with respect to the production of XHTML 1.0).
+					</p>
+
+					<p>
+						If an authoring tool is capable of producing multiple web content
+						technologies, then the conformance may include only a subset of
+						these technologies as long as the subset includes both any
+						technologies that the [=developer=] sets for
+						[=automatically-generated content=] or that the developer sets as
+						the default for [=author-generated content=]. The subset may
+						include &quot;interim&quot; formats that are not intended for
+						[=publishing=] to [=end users=], though this is not required.
+					</p>
+				</section>
+
+				<section id="conformance-live-publishing">
+					<h4>Live publishing authoring tools:</h4>
+
+					<p>
+						ATAG 2.0 may be applied to authoring tools with workflows that
+						involve live authoring of web content (e.g. some collaborative
+						tools). Due to the challenges inherent in real-time publishing,
+						conformance to <a href="#guidelines-part-b">Part B</a> of ATAG 2.0 for these
+						authoring tools may involve some combination of support before
+						(e.g. support in preparing accessible slides), during (e.g. live
+						captioning as WCAG 2.0 requires at Level AA) and after the live
+						<span class="sc">[=authoring session=]</span> (e.g. the ability to
+						add a transcript to the archive of a presentation that was
+						initially published in real-time). For more information, see
+						<a href="https://www.w3.org/TR/IMPLEMENTING-ATAG20/#realtime-production">
+                            Implementing ATAG 2.0 - Appendix E: Authoring Tools for Live
+							Web Content</a>.
+					</p>
+				</section>
+			</section>
+
+		    <section id="conformance-claims">
+				<h3>Conformance Claims (Optional)</h3>
+
+				<div class="note">
+					<p>
+						As with any software application, authoring tools can be
+						collections of components. A conformance claim can only be made by
+						a responsible entity. Any other attempted &quot;claims&quot; are,
+						in fact, reviews.
+					</p>
+				</div>
+
+				<section id="conformance-claims-components">
+					<h4>Required Components of a Conformance Claim</h4>
+
+					<ol>
+						<li><strong>Date</strong> of the claim.</li>
+						<li>
+							<strong>ATAG 2.0 version</strong> and <strong>URI</strong>
+						</li>
+						<li>
+							<a href="#conformance-requirements-conf-levels"><strong>Conformance 
+                                level</strong></a> satisfied.
+						</li>
+						<li>
+							<strong>Authoring tool information:</strong> The name of the
+							[=authoring tool=] and sufficient additional information to
+							specify the version (e.g. vendor name, version number (or
+							version range), required patches or updates, [=human language=]
+							of the user interface or [=documentation=]).
+							<ul>
+								<li>
+									<em>Note:</em> If the authoring tool is a collection of
+									software applications (e.g. a [=markup=] editor, an image
+									editor, and a validation tool), then information must be
+									provided separately for each application, although the
+									conformance claim will treat them as a whole.
+								</li>
+							</ul>
+						</li>
+						<li>
+							<strong>Platform(s):</strong> The [=platform(s)=] upon which the
+							authoring tool operates:
+							<ul>
+								<li id="conf-user-agents">
+									For <strong>[=user agent=] platform(s)</strong> (used to
+									evaluate [=web-based authoring tool user interfaces=]):
+									provide the name and version information of the user
+									agent(s).
+								</li>
+								<li id="conf-not-user-agents">
+									For <strong>platforms that are not [=user agents=]</strong>
+									(used to evaluate [=non-web-based authoring tool user
+									interfaces=]): provide the name and version information of
+									the platform(s) (e.g. desktop operating system, mobile
+									operating system, cross-OS environment) and the name and
+									version of the [=platform accessibility service(s)=]
+									employed.
+								</li>
+							</ul>
+						</li>
+						<li>
+							A list of the
+							<strong>web content technologies produced by the authoring tool that
+							are included in the claim</strong>. 
+                            If there are any [=web content technologies=]
+							<a href="#conformance-technologies-produced">produced</a> by the authoring
+							tool that are not included in the conformance claim, these must
+							be listed separately. If the authoring tool produces any web
+							content technologies by default, then these must be included.
+						</li>
+						<li>
+							<strong> Results for each of the success criteria:</strong> Yes,
+							No, <a href="#conformance-applicable">Not Applicable</a>
+						</li>
+					</ol>
+				</section>
+
+				<section id="conformance-claims-optional-components">
+						<h4>Optional Components of a Conformance Claim</h4>
+
+						<p>
+							In addition to the required components of a conformance claim
+							above, consider providing additional information to assist
+							authors. Recommended additional information includes:
+						</p>
+
+						<ol>
+							<li id="conformance-explanation-results">
+								An <strong>explanation of the success criteria results</strong>
+								(Yes, No). (strongly recommended)
+							</li>
+							<li>
+								Information about how the web content technologies produced can
+								be used to create [=accessible web content=] (e.g. links to
+								technology-specific WCAG 2.0 techniques).
+							</li>
+							<li>
+								Information about any additional steps taken that go beyond the
+								success criteria to enhance accessibility.
+							</li>
+							<li>
+								A machine-readable metadata version of the conformance claim.
+							</li>
+							<li>
+								A description of the authoring tool that identifies the types of
+								editing-views that it includes.
+							</li>
+						</ol>
+				</section>
+			</section>
+
+			<section id="conformance-disclaimer">
+				<h3>Disclaimer</h3>
+
+				<p>
+					Neither W3C, WAI, nor AUWG take any responsibility for any aspect or
+					result of any ATAG 2.0
+					<a href="#conformance-claims">conformance claim</a> that has not been
+					published under the authority of the W3C, WAI, or AUWG.
+				</p>
+			</section>
+		</section>
+
+		<section id="glossary">
+			<h2>Appendix A: Glossary</h2>
+
+			<p>
+				This appendix contains definitions for all of the
+				significant/important/unfamiliar terms used in the normative parts of
+				this standard, including terms used in the
+				<a href="#conformance">Conformance</a> section. Please consult
+				<a href="https://www.w3.org/TR/qaframe-spec/">http://www.w3.org/TR/qaframe-spec/
+                    </a>
+				for more information on the role of definitions in standards quality.
+			</p>
+
+				<dl>
+					<dt>
+						<dfn>accessibility problems</dfn>
+					</dt>
+					<dd>
+						ATAG 2.0 recognizes two types of accessibility problems:
+						<ul>
+							<li>
+								<dfn>authoring tool user interface accessibility problems</dfn>
+								Aspects of an [=authoring tool user interface=] that does not
+								meet a success criterion in <a href="#guidelines-part-a">Part A</a> of ATAG
+								2.0.
+							</li>
+							<li>
+								<dfn>web content accessibility problems (WCAG)</dfn> Aspects
+								of [=web content=] that does not meet a
+								[[WCAG20]] success criterion (Level A, AA or AAA).
+							</li>
+						</ul>
+					</dd>
+
+					<dt>
+						<dfn data-lt="accessibility information">accessibility information (WCAG)</dfn>
+					</dt>
+					<dd>
+						Information that [=web content=] must contain in order to meet a
+						[[WCAG20]] success criterion (Level A, AA
+						or AAA). Examples include: [=programmatically associated alternative
+						content=] (e.g. text alternatives for images), [=role=], and state
+						information for widgets, [=relationships=] within complex
+						tables).<br />
+						<em>Note:</em> For the purposes of ATAG 2.0, only [=programmatically
+						determinable=] accessibility information qualifies. For additional
+						examples, see
+						<a href="https://www.w3.org/TR/IMPLEMENTING-ATAG20/#prompting-types">
+                            Appendix A of the Implementing ATAG 2.0 document</a>.
+					</dd>
+
+					<dt>
+						<dfn>accessible content support features</dfn>
+					</dt>
+					<dd>
+						Any features of an [=authoring tool=] that directly support
+						[=authors=] in increasing the accessibility of the [= =][=web
+						content being edited=]. These are features that must be present to
+						meet the success criteria in <a href="#guidelines-part-b">Part B</a> of ATAG
+						2.0.
+					</dd>
+
+					<dt>
+						<dfn>alternative content</dfn>
+					</dt>
+					<dd>
+						[=Web content=] that is used in place of other content that some
+						people are not able to access. Alternative content fulfills
+						essentially the same function or purpose as the original content.
+						[[WCAG20]] recognizes several general
+						types of alternative content:
+						<ul>
+							<li>
+								<dfn>text alternatives for non-text content</dfn>:
+								Text that is [=programmatically associated=] with [=non-text
+								content=] or referred to from text that is programmatically
+								associated with non-text content. For example, an image of a
+								chart might have two text alternatives: a description in the
+								paragraph after the chart and a short text alternative for the
+								chart indicating in words that a description follows.
+							</li>
+							<li>
+								<dfn>alternatives for time-based media</dfn>:
+								[=Web content=] that serves the same function or purpose as one
+								or more tracks in a time-based media presentation. This
+								includes: captions, audio descriptions, extended audio
+								descriptions, sign language interpretation as well as correctly
+								sequenced text descriptions of time-based visual and auditory
+								information that also is capable of achieving the outcomes of
+								any interactivity in the time-based presentation.
+							</li>
+							<li>
+								<dfn>media alternative for text</dfn>:
+								Media that presents no more information than is already
+								presented in text (directly or via text alternatives). A media
+								alternative for text is provided for people who benefit from
+								alternate representations of text. Media alternatives for text
+								may be audio-only, video-only (including sign-language video),
+								or audio-video.
+							</li>
+						</ul>
+						Importantly, from the perspective of authoring tools, alternative
+						content may or may not be:
+						<ul>
+							<li>
+								<dfn>programmatically associated alternative content</dfn>:
+								Alternative content whose location and purpose can be
+								[=programmatically determined=] from the original content for
+								which it is serving as an alternative. For example, a paragraph
+								might serve as a text alternative for an image, but it is only
+								programmatically associated if this relationship is properly
+								encoded (e.g. by <code>aria-labelledby</code>). <br />
+								<em>Note:</em> ATAG 2.0 typically refers to programmatically
+								associated alternative content.
+							</li>
+						</ul>
+					</dd>
+
+					<dt>
+						<dfn>assistive technology</dfn>
+						<!-- [adapted from WCAG 2.0] -->
+					</dt>
+					<dd>
+						Software (or hardware), separate from the [=authoring tool=], that
+						provides functionality to meet the requirements of people with
+						disabilities ([=authors=] and [=end users=]). Some authoring tools
+						may also provide [=direct accessibility features=]. Examples
+						include:
+						<ul>
+							<li>
+								screen magnifiers, and other visual reading assistants, which
+								are used by people with visual, perceptual, and physical print
+								disabilities to change text font, size, spacing, color,
+								synchronization with speech, etc. in order improve the visual
+								readability of rendered text and images;
+							</li>
+							<li>
+								screen readers, which are used by people who are blind to read
+								textual information through synthesized speech or Braille;
+							</li>
+							<li>
+								text-to-speech software, which is used by some people with
+								cognitive, language, and learning disabilities to convert text
+								into synthetic speech;
+							</li>
+							<li>
+								speech recognition software, which are used by some people who
+								have some physical disabilities;
+							</li>
+							<li>
+								alternative keyboards, which are used by some people with
+								physical disabilities to simulate the keyboard (including
+								alternate keyboards that use head pointers, single switches,
+								sip/puff, and other special input devices);
+							</li>
+							<li>
+								alternative pointing devices, which are used by some people with
+								physical disabilities to simulate mouse pointing and button
+								activations.
+							</li>
+						</ul>
+					</dd>
+
+					<dt>
+						<dfn>audio</dfn>
+						<!-- [adapted from WCAG 2.0] -->
+					</dt>
+					<dd>
+						The technology of sound reproduction. Audio can be created
+						synthetically (including speech synthesis), recorded from real-world
+						sounds, or both.
+					</dd>
+
+					<dt>
+						<dfn>author actions preventing generation of accessible web
+						content</dfn>
+					</dt>
+					<dd>
+						When the actions of [=authors=] prevent [=authoring tools=] from
+						generating [=accessible web content (WCAG)=]. Examples include:
+						turning off [= accessible content support features=], ignoring
+						[=prompts=] for [=accessibility information (WCAG)=], providing
+						faulty accessibility information (WCAG) at prompts, modifying the
+						authoring tool (e.g. via scripting, macros), and installing
+						[=plug-ins=].
+					</dd>
+
+					<dt>
+						<dfn data-lt="author">authors</dfn>
+					</dt>
+					<dd>
+						People who use [=authoring tools=] to create or modify [=web
+						content=]. The term may cover roles such as content authors,
+						designers, programmers, publishers, testers, etc. (see
+						<a href="#part-b-note-6">Part B Conformance Applicability 
+                            Note 6: Multiple authoring roles</a>). Some authoring 
+                        tools control who may be an author by managing
+						[=author permissions=].
+					</dd>
+
+					<dt>
+						<dfn>author permission</dfn>
+					</dt>
+					<dd>
+						Authorization that allows modification of given [=web content=].
+					</dd>
+
+					<dt>
+						<dfn>authoring action</dfn>
+					</dt>
+					<dd>
+						Any action that [=authors=] can take using the [=authoring tool user
+						interface=] that results in editing [=web content=] (e.g. typing
+						text, deleting, inserting an [=element=], applying a [=template=]).
+						In contrast, most authoring tool user interfaces also enable actions
+						that do not edit content (e.g. saving, [=publishing=], setting
+						preferences, viewing [=documentation=]).
+						<ul>
+							<li>
+								<dfn>reversible authoring action</dfn>: An [=authoring action=] 
+                                that can be immediately and
+								completely undone by the [=authoring tool=] upon a cancel
+								request by an [=author=]. Examples of cancel requests include:
+								&quot;cancel&quot;, &quot;undo&quot;, &quot;redo&quot; (when it
+								used to reverse &quot;undo&quot;), &quot;revert&quot;, and
+								&quot;roll-back&quot;<br />
+								<em>Note:</em> It is acceptable for an authoring tool to collect
+								a series of text entry actions (e.g. typed words, a series of
+								backspaces) into a single reversible authoring action.
+							</li>
+						</ul>
+					</dd>
+
+					<dt>
+						<dfn>authoring outcome</dfn>
+					</dt>
+					<dd>
+						The [=content=] or content modifications that result from
+						[=authoring actions=]. Authoring outcomes are cumulative (e.g. text
+						is entered, then styled, then made into a link, then given a title).
+					</dd>
+
+					<dt>
+						<dfn>authoring practice</dfn>
+					</dt>
+					<dd>
+						An approach that [=authors=] follow to achieve a given [=authoring
+						outcome=] (e.g. controlling [=presentation=] with style sheets).
+						Depending on the design of an [=authoring tool=], authoring
+						practices may be chosen by authors or by the authoring tool.
+						Authoring practices may or may not be:
+						<ul>
+							<li>
+								<dfn>accessible authoring practices (WCAG)</dfn>: An authoring
+								practice in which the [=authoring outcome=] conforms to
+								[[WCAG20]] at Level A, AA, or AAA.
+								Some accessible authoring practices require [=accessibility
+								information (WCAG)=].
+							</li>
+						</ul>
+					</dd>
+
+					<dt>
+						<dfn>authoring session</dfn>
+					</dt>
+					<dd>
+						A state of the [=authoring tool=] in which [=web content=] can be
+						edited by an [=author=].
+						<ul>
+							<li>
+								<dfn>end of an authoring session</dfn>: The point at which the
+								[=author=] has no further opportunity to make [=authoring
+								actions=] without starting another [=session=]. The end of an
+								authoring session may be determined by authors (e.g. closing a
+								document, [=publishing=]) or by the [=authoring tool=] (e.g.
+								when the authoring tool transfers editing permission to another
+								author on a collaborative system). <br />
+								<em>Note:</em> The end of the authoring session is distinct from
+								[=publishing=]. [=Automatic content generation=] may continue
+								after the end of both the authoring session and initial
+								publishing (e.g. content management system updates).
+							</li>
+						</ul>
+					</dd>
+
+					<dt>
+						<dfn data-lt="authoring tool developer">authoring tool</dfn>
+					</dt>
+					<dd>
+						Any web-based or non-web-based application(s) that can be used by
+						[=authors=] (alone or collaboratively) to create or modify [=web
+						content=] for use by other people (other authors or [=end user=]s).
+						<br />
+						<em>Note 1: &quot;application(s)&quot;: </em>ATAG 2.0 may be
+						conformed to by stand-alone applications or by collections of
+						applications. If a conformance claim is made, then the claim must
+						provide identifying information for each application and also for
+						any required extensions, plug-ins, etc.<br />
+						<em>Note 2: &quot;alone or collaboratively&quot;: </em>Multiple
+						authors may contribute to the creation of web content and, depending
+						on the authoring tool, each author may work with different views of
+						the content and different [=author permissions=].<br />
+						<em>Note 3: &quot;to create or modify web content&quot;: </em>This
+						clause rules out software that collects data from a person for other
+						purposes (e.g. online grocery order form) and then creates web
+						content from that data (e.g. a web-based warehouse order) without
+						informing the person (however,
+						[[WCAG20]] would still apply). This
+						clause also rules out software used to create content exclusively in
+						non-web content technologies.<br />
+						<em>Note 4: &quot;for use by other people&quot;: </em>This clause
+						rules out the many web applications that allow people to modify web
+						content that only they themselves experience (e.g. web-based email
+						display settings) or that only provide input to automated processes
+						(e.g. library catalog search page). Examples of software that are
+						generally considered authoring tools under ATAG 2.0:
+						<ul>
+							<li>web page authoring tools (e.g. [=WYSIWYG=] HTML editors)</li>
+							<li>software for directly editing source code</li>
+							<li>
+								software for converting to [=web content technologies=] (e.g.
+								&quot;Save as HTML&quot; features in office document
+								applications)
+							</li>
+							<li>
+								integrated development environments (e.g. for web application
+								development)
+							</li>
+							<li>
+								software that generates web content on the basis of
+								[=templates=], scripts, command-line input or
+								&quot;wizard&quot;-type processes
+							</li>
+							<li>
+								software for rapidly updating portions of web pages (e.g.
+								blogging, wikis, online forums)
+							</li>
+							<li>
+								software for generating/managing entire websites (e.g. content
+								management systems, courseware tools, content aggregators)
+							</li>
+							<li>
+								email clients that send messages using web content technologies
+							</li>
+							<li>multimedia authoring tools</li>
+							<li>software for creating mobile web applications</li>
+						</ul>
+						Examples of software that are not considered authoring tools under
+						ATAG 2.0 (in all cases, WCAG 2.0 still applies if the software is
+						web-based):
+						<ul>
+							<li>
+								customizable personal portals: ATAG 2.0 does not apply because
+								the web content being edited is only available to the owner of
+								the portal
+							</li>
+							<li>
+								e-commerce order forms: ATAG 2.0 does not apply because the
+								purpose of an e-commerce order form is to order a product, not
+								communicate with other people via web content, even if the data
+								collected by the form actually does result in web content (e.g.
+								online tracking pages)
+							</li>
+							<li>
+								stand-alone accessibility checkers: ATAG 2.0 does not apply
+								because a stand-alone accessibility checker with no automated or
+								semi-automated repair functionality does not actually modify web
+								content. An accessibility checker with repair functionality or
+								that is considered as part of a larger authoring process would
+								be considered an authoring tool.
+							</li>
+						</ul>
+					</dd>
+
+					<dt>
+						<dfn>authoring tool user interface</dfn>
+					</dt>
+					<dd>
+						The display and control mechanism that [=authors=] use to operate
+						the [=authoring tool=] software. User interfaces may be
+						non-web-based or web-based or a combination (e.g. a non-web-based
+						authoring tool might have web-based help pages):
+						<ul>
+							<li>
+								<dfn>authoring tool user interface (non-web-based)</dfn>: Any
+								parts of an authoring tool user interface that are not
+								implemented as [=web content=] and instead run directly on a
+								[=platform=] that is not a [=user agent=] (e.g. Windows, Mac OS,
+								Java Virtual Machine, iOS, Android).
+							</li>
+							<li>
+                                <dfn>authoring tool user interface (web-based)</dfn>: Any parts
+								of an authoring tool user interface that are implemented using
+								[=web content technologies=] and are accessed by [=authors=] via
+								a [=user agent=].
+							</li>
+						</ul>
+						Authoring tool user interfaces may or may not be:
+						<ul>
+							<li>
+								<dfn>accessible authoring tool user interfaces:</dfn>
+								Authoring tool user interfaces that meet the success criteria of
+								a level in <a href="#guidelines-part-a">Part A</a> of ATAG 2.0.
+							</li>
+						</ul>
+					</dd>
+
+					<dt>
+						<dfn>checking, accessibility </dfn>
+						<!-- [harmonized with EARL 1.0] -->
+					</dt>
+					<dd>
+						The process by which [=web content=] is evaluated for [=web content
+						accessibility problems (WCAG)=]. ATAG 2.0 recognizes three types of
+						checking, based on increasing levels of automation of the tests:
+						<ul>
+							<li>
+								<dfn>manual checking</dfn>: Checking in which the tests are
+								carried out by [=authors=]. This includes the case where authors
+								are aided by instructions or guidance provided by the
+								[=authoring tool=], but where authors must carry out the actual
+								test procedure.
+							</li>
+							<li>
+								<dfn>semi-automated checking</dfn>: Checking in which the tests
+								are partially carried out by the authoring tool, but where
+								authors' input or judgment is still required to decide or help
+								decide the outcome of the tests.
+							</li>
+							<li>
+								<dfn>automated checking</dfn>: Checking in which the tests are
+								carried out automatically by the authoring tool without any
+								intervention by authors.
+							</li>
+						</ul>
+						An authoring tool may support any combination of checking types.
+					</dd>
+
+					<dt>
+						<dfn data-lt="content|web content">content (web content)</dfn>
+						<!-- [adapted from WCAG 2.0] -->
+					</dt>
+					<dd>
+						Information and sensory experience to be communicated to the [=end
+						user=] by means of a [=user agent=], including code or [=markup=]
+						that defines the content's structure, presentation, and
+						interactions. In ATAG 2.0, the term is primarily used to refer to
+						the output that is produced by the [=authoring tool=]. Content
+						produced by authoring tools may include web applications, including
+						those that act as [=web-based=] authoring tools. Content may or may
+						not be:
+						<ul>
+							<li>
+								<dfn data-lt="accessible content|WCAG">accessible content (WCAG)</dfn>:
+								Content that would conform to
+								[[WCAG20]], at either Level A, AA, or
+								AAA, assuming that any [=web content technologies=] relied upon
+								to satisfy the WCAG 2.0 success criteria are accessibility
+								supported.
+								<ul>
+									<li>
+										<em>Note 1:</em> If accessibility support for the relied
+										upon technologies is lacking, then the content will not
+										conform to WCAG 2.0 and one or more groups of end users with
+										disabilities will likely experience difficulty accessing the
+										content.
+									</li>
+									<li>
+										<em>Note 2:</em> Conformance to WCAG 2.0, even at the
+										highest level (i.e. Level AAA), still may not make content
+										&quot;accessible to individuals with all types, degrees, or
+										combinations of disability&quot;.
+									</li>
+								</ul>
+							</li>
+							<li>
+								<dfn>content being edited</dfn>:
+								The web content that an [=author=] can modify during an
+								[=authoring session=]. The content being edited may be a
+								complete piece of content (e.g. image, style sheet) or only part
+								of a larger piece of content (e.g. a status update). The content
+								being edited only includes content in [=web content
+								technologies=] that the [=authoring tool=] supports (e.g. a
+								WYSIWYG HTML editor allows editing of the HTML content of a web
+								page editable, but not the images).
+							</li>
+						</ul>
+					</dd>
+
+					<dt>
+						<dfn>content properties</dfn>
+					</dt>
+					<dd>
+						The individual pieces of information that make up the [=web
+						content=] (e.g. the attributes and contents of elements, style sheet
+						information).
+					</dd>
+
+					<dt>
+						<dfn>content (structured)</dfn>
+					</dt>
+					<dd>
+						[=Web content=] that includes machine-readable internal structure
+						(e.g. [=markup=] [=elements=]), as opposed to unstructured content,
+						such as raster image formats or plain [=human language=] text.
+					</dd>
+
+					<dt>
+						<dfn data-lt="content generation|content authoring|content editing">content generation (content authoring, content editing)</dfn>
+					</dt>
+					<dd>
+						The act of specifying the actual [=web content=] that will be
+						rendered, played or executed by the [=end user's=] [=user agent=].
+						While the precise details of how content is created in any given
+						system may vary widely, responsibility for the generation of content
+						can be any combination of the following:
+						<ul>
+							<li>
+								<dfn>author generated content</dfn>:
+								[=Web content=] for which [=author=]s are fully responsible. The
+								author may only be responsible down to a particular level (e.g.
+								when asked to type a text label, the author is responsible for
+								the text, but not for how the label is marked up; when typing
+								[=markup=] in a source [=editing-view=], the author is not
+								responsible for the fact that UNICODE is used to encode the
+								text).
+							</li>
+							<li>
+								<dfn>automatically-generated content</dfn>:
+								Web content for which [=developer=]-programmed functionality is
+								fully responsible (e.g. what markup to output when an author
+								requests to start a new document, automatically correcting
+								markup errors).
+							</li>
+							<li>
+								<dfn>third-party content generation</dfn>: Web content for which
+								a third-party author is responsible (e.g. community shared
+								[=templates=]).
+							</li>
+						</ul>
+					</dd>
+
+					<dt>
+						<dfn>content rendering</dfn>
+					</dt>
+					<dd>
+						[=User interface=] functionality that [=authoring tools=] present if
+						they render, play or execute the [=web content being edited=]. ATAG
+						2.0 recognizes several types of content renderings:
+						<ul>
+							<li>
+								<dfn data-lt="WYSIWYG">conventional renderings (or &quot;WYSIWYG&quot;)</dfn>:
+								When content is rendered in a way that is similar to the default
+								rendering a [=user agent=] would create from the same content.
+								While &quot;WYSIWYG&quot;, standing for
+								&quot;What-you-see-is-what-you-get&quot; is the common term,
+								differences between user agents and end user settings mean that
+								in reality there is no single typical [=end user=] experience;
+								or
+							</li>
+							<li>
+								<dfn>unconventional renderings</dfn>:
+								When content is rendered differently than it would be in a
+								typical user agent (e.g. rendering an audio file as a graphical
+								waveform); or
+							</li>
+							<li>
+								<dfn>partial renderings</dfn>: When some aspects of the content
+								are rendered, played, or executed, but not others (e.g. a
+								frame-by-frame [=video=] editor renders the graphical, but not
+								the timing aspects, of a video).
+							</li>
+						</ul>
+					</dd>
+
+					<dt>
+						<dfn>content transformations</dfn>
+					</dt>
+					<dd>
+						Processes that take [=content=] in one [=web content technology=] or
+						non-web content technology (e.g. a word processing format) as input
+						and produce content that has been optimized, restructured or
+						recoded:
+						<ul>
+							<li>
+								<dfn>Optimizing Content Transformations</dfn>:
+								Transformations in which the content technology is not changed
+								and the structural features of the content technology that are
+								employed also stay the same. Changes would not be expected to
+								result in information loss (e.g. removing whitespace, replacing
+								in-line styles with an external style sheet).
+							</li>
+							<li>
+								<dfn>Restructuring Content Transformations</dfn>:
+								Transformations in which the content technology stays the same,
+								but the structural features of the technology used to markup the
+								content are changed (e.g. linearizing tables, splitting a
+								document into pages).
+							</li>
+							<li>
+						        <dfn>Recoding Content Transformations</dfn>:
+								Transformations in which the content technology used to encode
+								the content is changed (e.g. HTML to XHTML, a word processing
+								format to HTML).
+							</li>
+						</ul>
+						<em>Note:</em> Clipboard operations, in which content is copied to
+						or pasted from the platform clipboard, are not considered content
+						transformations.
+					</dd>
+
+					<dt>
+						<dfn>control settings</dfn>
+					</dt>
+					<dd>
+						Settings that relate to how [=authors=] operate the [=authoring
+						tool=], for example using the keyboard or mouse.
+					</dd>
+
+					<dt>
+						<dfn>developer</dfn>
+					</dt>
+					<dd>
+						Any entities or individuals responsible for programming the
+						[=authoring tool=]. This includes the programmers of any additional
+						software components included by the Claimant in the
+						<a href="#conformance-claims">conformance claim</a>. In some cases,
+						development of the authoring tool is complete before [=authors=] can
+						use it to [=publish=] [=web content=]. However, in other cases (e.g.
+						some [=web-based authoring tools=]), the developer may continue to
+						modify the authoring tool even after content has been published,
+						such that the content experienced by the [=end user=] is modified.
+					</dd>
+
+					<dt>
+						<dfn>direct accessibility features</dfn>
+					</dt>
+					<dd>
+						Features of an [=authoring tool=] that provide functionality to meet
+						the requirements of [=authors=] with disabilities (e.g. keyboard
+						navigation, zoom features, text-to-speech). Additional or
+						specialized functionality may still be provided by external
+						[=assistive technology=].
+					</dd>
+
+					<dt>
+						<dfn>display settings</dfn>
+					</dt>
+					<dd>
+						Settings that relate to how [=authors=] perceive the authoring tool.
+						These include:
+						<ul>
+							<li>
+								<dfn>audio display settings</dfn>:
+								the characteristics of [=audio=] output of music, sounds, and
+								speech. Examples include volume, speech voices, voice speed, and
+								voice emphasis.
+							</li>
+							<li>
+								<dfn>visual display settings</dfn>:
+								the characteristics of the on-screen rendering of text and
+								graphics. Examples include fonts, sizes, colors, spacing,
+								positioning, and contrast.
+							</li>
+							<li>
+								<dfn>tactile display settings</dfn>:
+								the characteristics of haptic output. Examples include the
+								magnitude of the haptic forces and the types of vibration.
+							</li>
+						</ul>
+					</dd>
+
+					<dt>
+						<dfn>documentation</dfn>
+					</dt>
+					<dd>
+						Any information that supports the use of an [=authoring tool=]. This
+						information may be provided electronically or otherwise and includes
+						help, manuals, installation instructions, sample [=work flows=],
+						[=tutorials=], etc.
+					</dd>
+
+					<dt>
+						<dfn>document object</dfn>
+					</dt>
+					<dd>
+						The internal representation of data in the [=source=] by a [=non-web
+						based authoring tool=] or [=user agent=]. The document object may
+						form part of a [=platform accessibility service =] that enables
+						communication with [=assistive technologies=]. [=Web-based authoring
+						tools=] are considered to make use of the document object that is
+						maintained by the [=user agent=].
+					</dd>
+
+					<dt>
+						<dfn>element</dfn>
+					</dt>
+					<dd>
+						A pair of [=markup=] tags and its content, or an &quot;empty
+						tag&quot; (one that requires no closing tag or content).
+					</dd>
+
+					<dt>
+						<dfn>end user</dfn>
+					</dt>
+					<dd>
+						A person who interacts with [=web content=] once it has been
+						authored. This includes people using [=assistive technologies=].
+					</dd>
+
+					<dt>
+						<dfn>human language</dfn>
+						<!-- [adapted from WCAG 2.0] -->
+					</dt>
+					<dd>
+						Language that is spoken, written or signed (through visual or
+						tactile means) to communicate with humans.
+					</dd>
+
+					<dt>
+						<dfn>informative</dfn>
+						<!-- [adapted from WCAG 2.0] -->
+					</dt>
+					<dd>For information purposes and not required for conformance.</dd>
+
+					<dt>
+						<dfn>keyboard interface</dfn>
+						<!-- [adapted from WCAG 2.0] -->
+					</dt>
+					<dd>
+						Keyboard interfaces are programmatic services provided by many
+						platforms that allow operation in a device independent manner. A
+						keyboard interface can allow keystroke input even if particular
+						devices do not contain a hardware keyboard (e.g. a
+						touchscreen-controlled device can have a keyboard interface built
+						into its operating system to support onscreen keyboards as well as
+						external keyboards that may be connected). <br />
+						<em>Note:</em> Keyboard-operated mouse emulators, such as MouseKeys,
+						do not qualify as operation through a keyboard interface because
+						these emulators use pointing device interfaces, not keyboard
+						interfaces.
+					</dd>
+
+					<dt>
+						<dfn>keyboard trap</dfn>
+					</dt>
+					<dd>
+						A user interface situation in which a [=keyboard interface=] may be
+						used to move focus to, but not from, a [=user interface component=]
+						or group of components.
+					</dd>
+
+					<dt>
+						<dfn>label</dfn>
+						<!-- [adapted from WCAG 2.0] -->
+					</dt>
+					<dd>
+						Text or other [=component=] with a text alternative that is
+						presented to users to identify a component. A label is presented to
+						all users whereas the [=name=] may be hidden and only exposed by
+						[=assistive technology=]. In many (but not all) cases the name and
+						the label are the same.
+					</dd>
+
+					<dt>
+						<dfn>live</dfn>
+						<!-- [adapted from WCAG 2.0] -->
+					</dt>
+					<dd>
+						Information captured from a real-world event that is [=published=]
+						with no more than a broadcast delay.
+						<br />
+						<em> Note:</em> A broadcast delay is a short (usually automated)
+						delay, for example used in order to give the broadcaster time to
+						queue or censor the audio (or video) feed, but not sufficient to
+						allow significant editing.
+					</dd>
+
+					<dt>
+						<dfn>markup language</dfn>
+					</dt>
+					<dd>
+						A system of text annotations (e.g. [=elements=] in HTML) and
+						processing rules that may be used to specify the structure,
+						presentation or semantics of [=content=]. Examples of markup
+						languages include HTML and SVG.
+						<ul>
+							<li>
+								<dfn>markup</dfn> of
+								some content is the set of annotations that appear in the
+								content.
+							</li>
+						</ul>
+					</dd>
+
+					<dt>
+						<dfn>name</dfn>
+						<!-- [adapted from WCAG 2.0] -->
+					</dt>
+					<dd>
+						Text by which software can identify a [=user interface component=]
+						to the [=author=] or [=end user=]. The name may be hidden and only
+						exposed by [=assistive technology=], whereas a [=label=] is
+						presented to all users. In many (but not all) cases, the label and
+						the name are the same.
+					</dd>
+
+					<dt>
+						<dfn>non-text content</dfn>
+						<!-- [adapted from WCAG 2.0] -->
+					</dt>
+					<dd>
+						Any [=content=] that is not a sequence of characters that can be
+						[=programmatically determined=] or where the sequence is not
+						expressing something in [=human language=]. This includes ASCII Art
+						(which is a pattern of characters), emoticons, and images
+						representing text.
+					</dd>
+
+					<dt>
+						<dfn>normative</dfn>
+						<!-- [harmonized with WCAG 2.0, UAAG 2.0] -->
+					</dt>
+					<dd>
+						Required for conformance. One may conform in a variety of
+						well-defined ways to ATAG 2.0. Content identified as
+						&quot;[=informative=]&quot; or &quot;non-normative&quot; is never
+						required for conformance.
+					</dd>
+
+					<dt>
+						<dfn>option</dfn>
+					</dt>
+					<dd>
+						When an [=author=] is presented with choices.
+						<ul>
+							<li>
+								<dfn>default option</dfn>:
+								A setting or value for an [=option=] that is assigned
+								automatically by the [=authoring tool=] and remains in effect
+								unless canceled or changed by the [=author=].
+							</li>
+						</ul>
+					</dd>
+
+					<dt>
+						<dfn>platform</dfn>
+					</dt>
+					<dd>
+						The software environment within which the [=authoring tool=]
+						operates. Platforms provide a consistent operational environment on
+						top of lower level software platforms or hardware. For [=web-based
+						authoring user interfaces=], the most relevant platform will be a
+						[=user agent=] (e.g. browser). For [=non-web-based user
+						interfaces=], the range of platforms includes, but may not be
+						limited to, desktop operating systems (e.g. GNOME desktop on Linux,
+						Mac OS, Windows), mobile operating systems (e.g. Android,
+						BlackBerry, iOS, Windows Phone), or cross-OS environments (e.g.
+						Java), etc.<br />
+						<em>Note 1:</em> Many platforms mediate communication between
+						applications operating on the platform and assistive technology via
+						a [=platform accessibility service=]. <br />
+						<em>Note 2:</em> Accessibility guidelines for [=developers=] exist
+						for many platforms.
+					</dd>
+
+					<dt>
+						<dfn>platform accessibility service</dfn>
+					</dt>
+					<dd>
+						A programmatic interface that is specifically engineered to provide
+						communication between applications and [=assistive technologies=]
+						(e.g. MSAA, IAccessible2 and UI Automation for Windows applications,
+						AXAPI for Mac OS X applications, GNOME Accessibility Toolkit API for
+						GNOME applications, Java Access for Java applications). On some
+						[=platforms=], it may be conventional to enhance communication
+						further by implementing a [=document object=].
+					</dd>
+
+					<dt>
+						<dfn>plug-in</dfn>
+						<!-- [adapted from UAAG 2.0] -->
+					</dt>
+					<dd>
+						A program that runs as part of the [=authoring tool=] (e.g. a
+						third-party checking and [=repair=] tool) and that is not part of
+						[=web content being edited=]. [=Authors=] generally choose to
+						include or exclude plug-ins from their authoring tool.
+					</dd>
+
+					<dt>
+						<dfn>pre-authored content</dfn>
+					</dt>
+					<dd>
+						Pieces of [=web content=], created prior to an [=authoring
+						session=], that the authoring tool [=developer=] makes available to
+						[=authors=] to use in the [=content being edited=]. Examples include
+						clip art, sample videos, user interface widgets.<br />
+						<em>Note 1:</em> For [=templates=], an incomplete form of
+						pre-authored content, see
+						<a href="#part-b-principle-b.2.4">Guideline B.2.4</a>.<br />
+						<em>Note 2:</em> If the authoring tool uses pre-authored content
+						automatically, see <a href="#part-b-principle-b.1.1">Guideline B.1.1</a>.
+						<ul>
+							<li>
+								<dfn>accessible pre-authored content (WCAG):</dfn>
+								[=Pre-authored content=] that is either already [=accessible web
+								content (WCAG)=] or would be accessible, if it was appropriately
+								inserted into an empty document. <br />
+								<em>Note:</em> If extensive [=author=] input is required to make
+								use of pre-authored content, then the content may in fact be a
+								[=template=].
+							</li>
+						</ul>
+					</dd>
+
+					<dt>
+						<dfn>pre-authored content selection mechanism</dfn>
+					</dt>
+					<dd>
+						A function beyond standard file selection that allows [=authors=] to
+						select [=pre-authored content=] to use in an [=authoring session=]
+						(e.g. clip art gallery, widget palette).
+					</dd>
+
+					<dt>
+						<dfn>presentation</dfn>
+						<!-- [adapted from WCAG 2.0] -->
+					</dt>
+					<dd>
+						Rendering of the [=content=] in a form to be perceived by
+						[=authors=] or [=end users=].
+					</dd>
+
+					<dt>
+						<dfn data-lt="programmatically determined|programmatically determinable">programmatically determined (programmatically determinable)</dfn>
+						<!-- [adapted from WCAG 2.0] -->
+					</dt>
+					<dd>
+						Information that is encoded in a way that allows different software,
+						including [=assistive technologies=], to extract and present the
+						information in different modalities. ATAG 2.0 uses this term in two
+						contexts:<br />
+						<ul>
+							<li>
+								Processing content: Whether the [=authoring tool=] is able to
+								extract information from the [=web content=] (e.g. to extract
+								the language of content from the [=markup=]).
+							</li>
+							<li>
+								Communication between the authoring tool and assistive
+								technology: For [=non-web-based user interfaces=], this means
+								making use of [=platform accessibility services=], APIs, and, in
+								some cases, document object models. For [=web-based user
+								interfaces=], this means ensuring that the [=user agent=] can
+								pass on the information (e.g. through the use of WAI-ARIA).
+							</li>
+						</ul>
+					</dd>
+
+					<dt>
+						<dfn>prominence</dfn>
+					</dt>
+					<dd>
+						A heuristic measure of how likely [=authors=] are to notice a [=user
+						interface component=] in a user interface that they are operating.
+						Prominence is affected by numerous factors, including: the number of
+						navigation steps required, the reading order position, visual
+						properties (e.g. size, spacing, color), and even the modality of use
+						(e.g. mouse vs. keyboard use).
+						<ul>
+							<li>
+								<dfn>at least as prominent:</dfn>
+								For ATAG 2.0, a [=user interface component=] A is considered to
+								be &quot;at least as prominent&quot; as another component B
+								when, from a default state, component A becomes displayed (and
+								enabled) with the same number or less &quot;opening&quot;
+								actions than are required for component B to become displayed
+								(and enabled).<br />
+								<em>Note 1:</em> When a container is open, all of the enabled
+								components in the container (e.g. items in a list, items in a
+								menu, buttons in a toolbar, all components in a dialog box) are
+								considered to be displayed (and therefore are at least as
+								prominent as each other), even if the container must be scrolled
+								for them to become visible. This takes into account that
+								different screen sizes and [=author=] settings will affect which
+								components are visible at a given time.<br />
+								<em>Note 2:</em> &quot;Opening actions&quot; are actions made by
+								authors on components within the user interface that result in
+								new components becoming displayed or enabled. For example: (a)
+								keyboard shortcut to a top-level menu item to display a
+								sub-menu, (b) keyboard selection on a button to display a dialog
+								box, (c) mouse click on a checkbox to enable previously disabled
+								sub-items, etc. Actions that do not cause new components to
+								become actionable (e.g. moving focus, scrolling a list), are not
+								counted as &quot;opening actions&quot;.<br />
+								<em>Note 3:</em> Keyboard shortcuts to components in closed
+								containers are not counted as &quot;opening actions&quot;
+								because the components have no prominence when they are not
+								displayed. The same is true when authors must use
+								&quot;search&quot; to reveal components in closed containers.<br />
+								<em>Note 4:</em> The &quot;default state&quot; is the state of
+								the [=authoring tool=] at the beginning of an authoring session
+								as set by the developer. The default state of many document
+								authoring tools is an [=editing-view=].
+							</li>
+						</ul>
+					</dd>
+
+					<dt>
+					    <dfn>prompt</dfn>
+					</dt>
+					<dd>
+						Any [=authoring tool=] initiated request for a decision or piece of
+						information from [=authors=]. The term covers both requests that
+						must be responded to immediately (e.g. modal dialog boxes) as well
+						as less urgent requests (e.g. underlining a misspelled word).
+					</dd>
+
+					<dt>
+						<dfn>publishing</dfn>
+					</dt>
+					<dd>
+						Any point at which the [=authors=] or [=authoring tool=] make [= web
+						content=] available to [=end users=] (e.g. uploading a web page,
+						committing a change in a wiki, live streaming).
+					</dd>
+
+					<dt>
+                        <dfn>range</dfn>
+                    </dt>
+					<dd>
+						More than one item within a multi-item set.<br />
+						<em>Informative Note:</em> ATAG 2.0 uses the term &quot;range&quot;
+						where absolute measurements may not be practical (e.g. the set of
+						all help [=documentation=] examples, the set of all [=templates=]).
+						While the strict testable requirement is the definition &quot;More
+						than one item within a multi-item set&quot;, implementers are
+						strongly encouraged to implement the success criteria more broadly.
+					</dd>
+
+					<dt>
+						<dfn>relationships</dfn>
+						<!-- [adapted from WCAG 2.0] -->
+					</dt>
+					<dd>
+						Meaningful associations between distinct pieces of [= content=].
+					</dd>
+
+					<dt>
+						<dfn data-lt="repair">repair (accessibility)</dfn>
+						<!-- [harmonized with EARL 1.0] -->
+					</dt>
+					<dd>
+						The process by which [=web content accessibility problems=] that
+						have been identified within [= web content=] are resolved. ATAG 2.0
+						recognizes three types of repair, based on increasing levels of
+						automation:
+						<ul>
+							<li>
+								<dfn>manual repair</dfn>: Where the repairs are carried out by
+								[=authors=]. This includes the case where authors are aided by
+								instructions or guidance provided by the [=authoring tool=], but
+								where authors carry out the actual repair procedure;
+							</li>
+							<li>
+								<dfn>semi-automated repair</dfn>: Where the repairs are
+								partially carried out by the authoring tool, but where authors'
+								input or judgment is still required to complete the repair; and
+							</li>
+							<li>
+								<dfn>automated repair</dfn>: Where the repairs are carried out
+								automatically by the authoring tool without any intervention by
+								authors.
+							</li>
+						</ul>
+					</dd>
+
+					<dt>
+						<dfn data-lt="restrictions|restricted web content authoring">restrictions, restricted web content authoring</dfn>
+					</dt>
+					<dd>
+						When the [=web content=] that [=authors=] can specify with an[=
+						authoring tool=] either must include or must not include certain
+						content (e.g. elements, attributes, widgets). Many authoring tools
+						restrict authoring in some way, which can either benefit
+						accessibility (e.g. if text alternatives for non-text content are
+						required) or detract from accessibility (e.g. if attributes for
+						defining text alternatives are not available). In contrast,
+						authoring tools that allow unrestricted web content authoring do not
+						require any particular content to be included or not included (e.g.
+						many [=source editing-views=]).
+					</dd>
+
+					<dt>
+						<dfn>role</dfn>
+						<!-- [adapted from WCAG 2.0] -->
+					</dt>
+					<dd>
+						Text or a number by which software can identify the function of a
+						component within [=web content=] (e.g. a string that indicates
+						whether an image functions as a hyperlink, command button, or check
+						box).
+					</dd>
+
+					<dt>
+						<dfn>sequential keyboard access</dfn>
+						<!-- [adapted from UAAG 1.0] -->
+					</dt>
+					<dd>
+						Using a [=keyboard interface=] to navigate the focus one-by-one
+						through all of the items in an ordered set (e.g. menu items, form
+						fields) until the desired item is reached and activated. This is in
+						contrast to direct keyboard access methods such as keyboard
+						shortcuts and the use of bypass links.
+					</dd>
+
+					<dt>
+						<dfn>technology (web content)</dfn>
+						<!-- [harmonized with WCAG 2.0] -->
+					</dt>
+					<dd>
+						A mechanism for encoding instructions to be rendered, played or
+						executed by [=user agents=]. Web content technologies may include
+						[=markup languages=], data formats, or programming languages that
+						[=authors=] may use alone or in combination to create [=end user=]
+						experiences that range from static web pages to multimedia
+						presentations to dynamic web applications. Some common examples of
+						web content technologies include HTML, CSS, SVG, PNG, PDF, Flash,
+						Silverlight, Flex, and JavaScript.
+					</dd>
+
+					<dt>
+						<dfn>template</dfn>
+					</dt>
+					<dd>
+						Content patterns that are filled in by [=authors=] or the
+						[=authoring tool=] to produce [=web content=] for [=end users=]
+						(e.g. document templates, content management templates, presentation
+						themes). Often templates will pre-specify at least some authoring
+						decisions.
+						<ul>
+							<li>
+								<dfn>accessible templates (WCAG)</dfn>:
+								Templates that can be filled in to create web content that meets
+								the [[WCAG20]] success criteria
+								(Level A, AA or AAA), when both of the following are true:
+								<ol type="a">
+									<li>
+										The author correctly follows any instructions provided (e.g.
+										correctly responding to [=prompts=], correctly replacing
+										highlighted placeholders); and
+									</li>
+									<li>No further authoring occurs</li>
+								</ol>
+								<em>Note:</em> Under these conditions, some templates will
+								result in completely empty documents, which are considered
+								accessible by default.
+							</li>
+						</ul>
+					</dd>
+
+					<dt>
+						<dfn>template selection mechanism</dfn>
+					</dt>
+					<dd>
+						A function beyond standard file selection that allows [=authors=] to
+						select [=templates=] to use as the basis for new [=content=] or to
+						apply to existing content.
+					</dd>
+
+					<dt>
+						<dfn>time limit</dfn>
+					</dt>
+					<dd>
+						The amount of time that an [=authoring tool=] provides to
+						[=authors=] to perform a task (e.g. read a message, select an item,
+						save a change). Examples include: authoring session timeouts,
+						time-based presentations (e.g. tutorial video).
+					</dd>
+
+					<dt>
+						<dfn>tutorial</dfn>
+					</dt>
+					<dd>
+						A type of [=documentation=] that provides step-by-step instructions
+						for performing multi-part tasks.
+					</dd>
+
+					<dt>
+						<dfn>user agent</dfn>
+						<!-- [adapted from WCAG 2.0] -->
+					</dt>
+					<dd>
+						Any software that retrieves, renders and facilitates [=end user=]
+						interaction with [=web content=] (e.g. web browsers, browser
+						plug-ins, media players)
+						<ul>
+							<li>
+								<dfn>In-Market User Agent</dfn>: A user agent that can be
+								procured by members of the public (free or otherwise). Usually,
+								an in-market user agent will be a separate software from the
+								[=authoring tool=]; however, sometimes a software may combine
+								user agent and authoring tool functionality. These cases
+								include:
+								<ul>
+									<li>
+										<dfn>Preview-Only</dfn>: If the user agent can only render
+										web content that it receives from the associated authoring
+										functionality, then the software is an authoring tool with a
+										[=preview=] feature. Such preview-only features are
+										<em>not considered in-market user agents</em>.
+									</li>
+									<li>
+										<dfn>User Agent with Authoring Tool Mode</dfn>: If the user
+										agent functionality must retrieve and open web content
+										before it can be sent to the authoring tool functionality,
+										then the software is a user agent with an authoring tool
+										mode. If the user agent is used to preview content produced
+										by the authoring tool mode, then it is to be considered an
+										in-market user agent.
+									</li>
+									<li>
+										<dfn>Combined User Agent/Authoring Tool</dfn>: A user agent
+										in which the default mode of user interaction enables
+										editing the web content. These tools do not need previews
+										because the author is already experiencing the content in
+										the same way as end users.
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</dd>
+
+					<dt>
+						<dfn>user interface component</dfn>
+						<!-- [adapted from WCAG 2.0] -->
+					</dt>
+					<dd>
+						A part of the [=user interface=] or content display (including
+						[=content renderings=]) that is perceived by [=authors=] as a single
+						control for a distinct function.
+					</dd>
+
+					<dt>
+						<dfn>video</dfn>
+						<!-- [adapted from WCAG 2.0] -->
+					</dt>
+					<dd>
+						The technology of moving pictures or images. Video can be made up of
+						animated or photographic images, or both.
+					</dd>
+
+					<dt>
+						<dfn>view</dfn>
+					</dt>
+					<dd>
+						A user interface function that [=authors=] use to interact with the
+						[=web content being edited=]. ATAG 2.0 categorizes views according
+						to whether they support editing:
+						<ul>
+							<li>
+								<dfn>editing-views</dfn>: Views in which some or all of the
+								content is editable; or
+							</li>
+							<li>
+								<dfn>previews</dfn>: Views in which no [=authoring actions=]
+								are provided (i.e. the view is not editable). Previews are
+								provided to present the web content being edited by the
+								[=authoring tool=] as it would appear to [=end users=] of [=user
+								agents=]. Previews may be implemented using actual [=in-market
+								user agents=], but this is not necessary.
+							</li>
+						</ul>
+						ATAG 2.0 also recognizes several approaches to presenting the
+						content in a view:
+						<ul>
+							<li>
+								<dfn>source views</dfn>: The content is presented in
+								unrendered form (e.g. plain text editors); or
+							</li>
+							<li>
+								<dfn>rendered views</dfn>: [=Content renderings=]
+								(conventional, unconventional or partial) are presented; or
+							</li>
+							<li>
+								<dfn>property views</dfn>: Only properties of the content are
+								presented. The authoring tool then uses these properties to
+								[=automatically generate=] the content to be [=published=] (e.g.
+								CMS calendar widget that generates a calendar from the numeric
+								month and year).
+							</li>
+						</ul>
+					</dd>
+
+					<dt>
+						<dfn>workflow</dfn>
+					</dt>
+					<dd>
+						A customary sequence of steps or tasks that [=authors=] follow to
+						produce a [=content=] deliverable. If an [=authoring tool=] is
+						composed of a collection of applications (e.g. [=markup=] editor,
+						image editor, and validation tool), then its workflows may include
+						use of one or more of the applications.
+					</dd>
+				</dl>
+			</section>
+
+			<section id="references">
+				<h2>Appendix B: References</h2>
+
+				<p>
+					For the <strong>latest version</strong> of any
+					<acronym title="the World Wide Web Consortium">W3C</acronym> standards
+					please consult the list of
+					<a href="https://www.w3.org/TR/">W3C Technical Reports</a> at
+					http://www.w3.org/TR/. Some documents listed below may have been
+					superseded since the publication of this document.
+				</p>
+
+				<dl>
+					<dt>
+						[[UAAG10]]
+					</dt>
+					<dd>
+						&quot;<a href="https://www.w3.org/TR/2002/REC-UAAG10-20021217/"
+							>User Agent Accessibility Guidelines 1.0</a
+						>,&quot;, I. Jacobs, J. Gunderson, and E. Hansen, eds.17 December
+						2002.
+					</dd>
+
+					<dt>[[WCAG20]]</dt>
+					<dd>
+						&quot;<a href="https://www.w3.org/TR/2008/REC-WCAG20-20081211/"
+							>Web Content Accessibility Guidelines 2.0 </a
+						>&quot;, B. Caldwell, M. Cooper, L. Guarino Reid, and G.
+						Vanderheiden, eds. 11 December 2008.
+					</dd>
+				</dl>
+
+				<dl>
+					<dt>
+						[[ATAG10]]
+					</dt>
+					<dd>
+						&quot;<a href="https://www.w3.org/TR/2000/REC-ATAG10-20000203/"
+							>Authoring Tool Accessibility Guidelines 1.0</a
+						>&quot;, J. Treviranus, C. McCathieNevile, I. Jacobs, and J.
+						Richards, eds., 3 February 2000.
+					</dd>
+				</dl>
+			</section>
+
+			<section id="acknowledgments">
+				<h2>Appendix C: Acknowledgments</h2>
+
+				<h3 id="active-participants">
+					Participants active in the AUWG at the time of publication:
+				</h3>
+
+				<ul>
+					<li>Tom Babinszki (IBM)</li>
+					<li>Tim Boland (National Institute for Standards and Technology)</li>
+					<li>Alastair Campbell (Nomensa)</li>
+					<li>Alessandro Miele (Invited Expert)</li>
+					<li>Jan Richards (Inclusive Design Institute, OCAD University)</li>
+					<li>Jeanne Spellman (W3C)</li>
+					<li>
+						Jutta Treviranus (WG Chair; Inclusive Design Institute, OCAD
+						University)
+					</li>
+				</ul>
+
+				<h3 id="atag-testers">
+					ATAG Candidate Recommendation Testing Volunteers
+				</h3>
+
+				<ul>
+					<li>Victoria Clark</li>
+					<li>Maria Carmen C. Cruz</li>
+					<li>Emanuela Gorla</li>
+					<li>Michael Gower</li>
+					<li>Anne Jackson</li>
+					<li>Taliesin Love Smith</li>
+				</ul>
+
+				<h3 id="previous-participants">
+					Other previously active AUWG participants and other contributors 
+                    to ATAG2.0:
+				</h3>
+
+				<dl>
+					<dt>Previous Editors:</dt>
+					<dd>Tim Boland, NIST</dd>
+					<dd>
+						Matt May (until June 2005 while at
+						<abbr title="World Wide Web Consortium">W3C</abbr>)
+					</dd>
+				</dl>
+
+				<p>
+					Kynn Bartlett, Giorgio Brajnik, Judy Brewer, Wendy Chisholm, Daniel
+					Dardailler, Geoff Deering, Cherie Ekholm, Barry A. Feigenbaum, Katie
+					Haritos-Shea, Kip Harris, Phill Jenkins, Len Kasday, Marjolein Katsma,
+					Alex Li, William Loughborough, Karen Mardahl, Matt May, Charles
+					McCathieNevile, Ann McMeekin, Matthias M&uuml;ller-Prove, Liddy
+					Nevile, Sueann Nichols, Graham Oliver, Greg Pisocky, Wendy Porch,
+					Sarah Pulis, Bob Regan, Chris Ridpath, Andrew Ronksley, Gregory
+					Rosmaita, Roberto Scano, Dana Simberkoff, Reed Shaffner, Michael
+					Squillace, Heather Swayne, Gregg Vanderheiden, Carlos Velasco, and
+					Jason White.
+				</p>
+
+				<p>
+					This document would not have been possible without the work of
+					<a href="https://www.w3.org/TR/ATAG10/#acknowledgments">
+						those who contributed to ATAG 1.0</a>.
+				</p>
+
+				<p>
+					This publication has been funded in part with Federal funds from the
+					U.S. Department of Education, National Institute on Disability and
+					Rehabilitation Research (NIDRR) under contract number
+					ED-OSE-10-C-0067. The content of this publication does not necessarily
+					reflect the views or policies of the U.S. Department of Education, nor
+					does mention of trade names, commercial products, or organizations
+					imply endorsement by the U.S. Government.
+				</p>
+			</section>
+
+			<section>
+				<p align="center">[<a href="#contents">Contents</a>]</p>
+			</section>
+		</section>
+	</body>
+</html>
