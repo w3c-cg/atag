@@ -59,10 +59,10 @@
 
 		<section id="sotd"></section>
 
-		<section id="introduction" class="informative">
+	<section id="intro" class="informative">
 			<h2>Introduction</h2>
 
-			<p>
+		<p>
 				This is W3C Recommendation (standard) of the Authoring Tool
 				Accessibility Guidelines (ATAG) version 2.0. This document includes
 				recommendations for assisting [=authoring tool developers=] to make
@@ -80,13 +80,13 @@
 				<li>
 					[=authors=] of [=web content=], whose needs are met by ensuring that
 					[=authoring tool user interfaces=] are more accessible (addressed by
-					<a href="#guidelines-part-a">Part A of the Guidelines</a>), and
+					<a href="#part_a">Part A of the Guidelines</a>), and
 				</li>
 				<li>
 					[=end users=] of web content, whose needs are met by ensuring that all
 					authors are enabled, supported, and guided by the authoring tools that
 					they use toward producing [=accessible web content (WCAG)=] (addressed
-					by <a href="#guidelines-guidelines-part-b">Part B of the Guidelines</a>).
+					by <a href="#part_b">Part B of the Guidelines</a>).
 				</li>
 			</ul>
 
@@ -113,7 +113,7 @@
 						The term &quot;[=accessible content (WCAG)=]&quot; and related
 						terms, such as &quot;[=accessible template (WCAG)=]&quot; is used by
 						ATAG 2.0 to refer to &quot;content that would conform to
-						[[WCAG20]]&quot;, at either Level A, AA,
+						<a href="#conf-rel-wcag">WCAG 2.0</a>&quot;, at either Level A, AA,
 						or AAA, assuming that any [=web content technologies=] relied upon
 						to satisfy the WCAG 2.0 success criteria are accessibility
 						supported. The definition of the term reflects the WCAG 2.0 note
@@ -122,8 +122,8 @@
 						types, degrees, or combinations of disability&quot;. For more
 						information, see &quot;<a href="#conf-rel-wcag"
 							>Relationship to the Web Content Accessibility Guidelines (WCAG)
-							2.0</a
-						>&quot;.
+							2.0</a>
+						&quot;.
 					</li>
 					<li>
 						ATAG 2.0 does not include standard usability recommendations, except
@@ -172,18 +172,18 @@
 					<li>
 						<strong>Parts:</strong> ATAG 2.0 is divided into two parts, each
 						reflecting a key aspect of accessibility with respect to authoring
-						tools. <a href="#guidelines-part-a">Part A</a> relates to the accessibility of
+						tools. <a href="#part_a">Part A</a> relates to the accessibility of
 						[=authoring tool user interfaces=] to authors with disabilities.
-						<a href="#guidelines-part-b">Part B</a> relates to support by authoring tools
+						<a href="#part_b">Part B</a> relates to support by authoring tools
 						for the creation, by any author (not just those with disabilities),
 						of [=web content=] that is more accessible to [=end users=] with
 						disabilities. Both parts include [=normative=] &quot;Conformance
 						Applicability Notes&quot; that apply to all of the success criteria
 						within that part:
-						<a href="#part-a-notes">
+						<a href="#part_a_applic_notes">
                             Part A Conformance Applicability Notes</a>
 						and
-						<a href="#part-b-notes">
+						<a href="#part_b_applic_notes">
                             Part B Conformance Applicability Notes</a>.
 					</li>
 					<li>
@@ -234,7 +234,7 @@
 
 				<p>
 					In order to ensure that the process of using ATAG 2.0 and
-					[[WCAG20]] together in the development of
+					<a href="#conf-rel-wcag">WCAG 2.0</a> together in the development of
 					[=authoring tools=] is as simple as possible, ATAG 2.0 shares
 					[[WCAG20]]'s three level conformance model:
 					Level A (lowest), AA (middle), AAA (highest). For more information,
@@ -265,10 +265,10 @@
 			</section>
 		</section>
 
-		<section id="guidelines-part-a">
+		<section id="part_a">
 			<h2>Guidelines Part A: Make the authoring tool user interface accessible</h2>
 
-			<section id="part-a-notes">
+			<section id="part_a_applic_notes">
 				<h3>Conformance Applicability Notes</h3>
 				<ol>
 					<li id="part-a-note-1">
@@ -276,7 +276,7 @@
 						Scope of &quot;authoring tool user interface&quot;:</strong>
 						The Part A success criteria apply to all aspects of the [=authoring
 						tool user interface=] that are concerned with producing the
-						<a href="#conf-techs-produced">&quot;included&quot; web content 
+						<a href="#conformance-technologies">&quot;included&quot; web content 
                         technologies</a>. This includes [=views=] of the [=web content 
                         being edited=] and features that are independent of the content 
                         being edited (e.g. menus, button bars, status bars, user 
@@ -302,7 +302,7 @@
 						(e.g. user modifications of default settings, third-party plug-ins).
 					</li>
 					<li id="part-a-note-4">
-						<strong>User agent features:</strong> [=Web-based authoring tools=]
+						<strong>User agent features:</strong> [=authoring tool user interface (web-based)|Web-based authoring tools=]
 						may rely on [=user agent=] features (e.g. keyboard navigation, find
 						functions, display preferences, undo features) to satisfy success
 						criteria. <a href="#conformance-claims">Conformance claims</a> are optional,
@@ -315,7 +315,7 @@
 						user interface=], including any features added to meet the success
 						criteria in Part A (e.g. documentation, search functions). The only
 						exemption is for [=preview=] features, as long as they meet the
-						relevant success criteria in <a href="#part-a-principle-a.37">Guideline A.3.7</a>.
+						relevant success criteria in <a href="#part-a-principle-a.3.7">Guideline A.3.7</a>.
 						Previews are treated differently than editing-views because all
 						authors, including those with disabilities, benefit when preview
 						features accurately reflect the functionality of user agents that
@@ -339,12 +339,12 @@
 				</h3>
 
 				<section id="part-a-principle-a.1.1">
-					<h4>
+					<h4 id="gl_a11">
 						Guideline A.1.1: (For the authoring tool user interface) Ensure that
 						web-based functionality is accessible.
 					</h4>
 
-					<a href="https://www.w3.org/TR/IMPLEMENTING-ATAG20/#part-a-principle-a.11">
+					<a href="https://www.w3.org/TR/IMPLEMENTING-ATAG20/#gl_a11">
                         Implementing A.1.1</a>
 
 					<p>
@@ -355,12 +355,12 @@
 					</p>
 
 					<section id="part-a-principle-a.1.1.1">
-						<h5>A.1.1.1 Web-Based Accessible (WCAG)</h5>
+						<h5 id="sc_a111">A.1.1.1 Web-Based Accessible (WCAG)</h5>
 
 						<p>
 							If the [=authoring tool=] contains [=web-based user interfaces=],
 							then those web-based user interfaces meet the
-							[[WCAG20]] success criteria.
+							<a href="#conf-rel-wcag">WCAG 2.0</a> success criteria.
 						</p>
                         <p>
                             (<strong>Level A</strong> to meet WCAG 2.0 Level A success
@@ -376,13 +376,13 @@
 				</section>
 
 				<section id="part-a-principle-a.1.2">
-					<h4>
+					<h4 id="gl_a12">
 						Guideline A.1.2: (For the authoring tool user interface) Ensure that
 						non-web-based functionality is accessible.
 					</h4>
 
 					<a
-						href="https://www.w3.org/TR/IMPLEMENTING-ATAG20/#part-a-principle-a.12"
+						href="https://www.w3.org/TR/IMPLEMENTING-ATAG20/#gl_a12"
 						>Implementing A.1.2</a>
 
 					<p>
@@ -394,7 +394,7 @@
 					</p>
 
 					<section id="part-a-principle-a.1.2.1">
-						<h5>A.1.2.1 Accessibility Guidelines:</h5>
+						<h5 id="sc_a121">A.1.2.1 Accessibility Guidelines:</h5>
 
 						<p>
 							If the [=authoring tool=] contains [=non-web-based user
@@ -406,7 +406,7 @@
 						<div class="note" title="A.1.2.1 Note">
 							<p>
 								The (optional)
-								<a href="#conf-explanation-results">
+								<a href="#conformance-explanation-results">
                                 explanation of conformance claim results</a>
 								should record the user interface accessibility guidelines that
 								were followed.
@@ -419,7 +419,7 @@
 					</section>
 
 					<section id="part-a-principle-a.1.2.2">
-						<h5>A.1.2.2 Platform Accessibility Services:</h5>
+						<h5 id="sc_a122">A.1.2.2 Platform Accessibility Services:</h5>
 
 						<p>
 							If the [=authoring tool=] contains [=non-web-based user
@@ -433,7 +433,7 @@
 						<div class="note" title="A.1.2.2 Note">
 							<p>
 								The (optional)
-								<a href="#conf-explanation-results"
+								<a href="#conformance-explanation-results"
 									>explanation of conformance claim results</a>
 								should record the platform accessibility service(s) that were
 								implemented.
@@ -451,13 +451,13 @@
 				<h3>Principle A.2: Editing-views are perceivable</h3>
 
 				<section id="part-a-principle-a.2.1">
-					<h4>
+					<h4 id="gl_a21">
 						Guideline A.2.1: (For the authoring tool user interface) Make
 						alternative content available to authors.
 					</h4>
 
 					<a
-						href="https://www.w3.org/TR/IMPLEMENTING-ATAG20/#part-a-principle-a.21"
+						href="https://www.w3.org/TR/IMPLEMENTING-ATAG20/#gl_a21"
 						>Implementing A.2.1</a>
 
 					<p>
@@ -467,7 +467,7 @@
 					</p>
 
 					<section id="part-a-principle-a.2.1.1">
-						<h5>A.2.1.1 Text Alternatives for Rendered Non-Text Content:</h5>
+						<h5 id="sc_a211">A.2.1.1 Text Alternatives for Rendered Non-Text Content:</h5>
 
 						<p>
 							If an [=editing-view=] [=renders=] [=non-text content=], then any
@@ -482,7 +482,7 @@
 					</section>
 
 					<section id="part-a-principle-a.2.1.2">
-						<h5>A.2.1.2 Alternatives for Rendered Time-Based Media:</h5>
+						<h5 id="sc_a212">A.2.1.2 Alternatives for Rendered Time-Based Media:</h5>
 
 						<p>
 							If an [=editing-view=] [=renders=] time-based media, then at least
@@ -511,13 +511,13 @@
 				</section>
 
 				<section id="part-a-principle-a.2.2">
-					<h4>
+					<h4 id="gl_a22">
 						Guideline A.2.2: (For the authoring tool user interface) Ensure that
 						editing-view presentation can be programmatically determined.
 					</h4>
 
 					<a
-						href="https://www.w3.org/TR/IMPLEMENTING-ATAG20/#part-a-principle-a.22"
+						href="https://www.w3.org/TR/IMPLEMENTING-ATAG20/#gl_a22"
 						>Implementing A.2.2</a>
 
 					<p>
@@ -529,7 +529,7 @@
 					</p>
 
 					<section id="part-a-principle-a.2.2.1">
-						<h5>A.2.2.1 Editing-View Status Indicators:</h5>
+						<h5 id="sc_a221">A.2.2.1 Editing-View Status Indicators:</h5>
 
 						<p>
 							If an [=editing-view=] adds status indicators to the
@@ -553,7 +553,7 @@
 					</section>
 
 					<section id="part-a-principle-a.2.2.2">
-						<h5>A.2.2.2 Access to Rendered Text Properties:</h5>
+						<h5 id="sc_a222">A.2.2.2 Access to Rendered Text Properties:</h5>
 
 						<p>
 							If an [=editing-view=] renders any text formatting [=properties=]
@@ -574,13 +574,13 @@
 				<h3>Principle A.3: Editing-views are operable</h3>
 
 				<section id="part-a-principle-a.3.1">
-					<h4>
+					<h4 id="gl_a31">
 						Guideline A.3.1: (For the authoring tool user interface) Provide
 						keyboard access to authoring features.
 					</h4>
 
 					<a
-						href="https://www.w3.org/TR/IMPLEMENTING-ATAG20/#part-a-principle-a.31"
+						href="https://www.w3.org/TR/IMPLEMENTING-ATAG20/#gl_a31"
 						>Implementing A.3.1</a>
 
 					<p>
@@ -591,7 +591,7 @@
 					</p>
 
 					<section id="part-a-principle-a.3.1.1">
-						<h5>A.3.1.1 Keyboard Access (Minimum):</h5>
+						<h5 id="sc_a311">A.3.1.1 Keyboard Access (Minimum):</h5>
 
 						<p>
 							All functionality of the [=authoring tool=] is operable through a
@@ -634,7 +634,7 @@
 					</section>
 
 					<section id="part-a-principle-a.3.1.2">
-						<h5>A.3.1.2 No Keyboard Traps:</h5>
+						<h5 id="sc_a312">A.3.1.2 No Keyboard Traps:</h5>
 
 						<p>
 							If keyboard focus can be moved to a [=component=] using a
@@ -653,7 +653,7 @@
 					</section>
 
 					<section id="part-a-principle-a.3.1.3">
-						<h5>A.3.1.3 Efficient Keyboard Access:</h5>
+						<h5 id="sc_a313">A.3.1.3 Efficient Keyboard Access:</h5>
 
 						<p>
 							The [=authoring tool user interface=] includes mechanisms to make
@@ -669,7 +669,7 @@
 					</section>
 
 					<section id="part-a-principle-a.3.1.4">
-						<h5>A.3.1.4 Keyboard Access (Enhanced):</h5>
+						<h5 id="sc_a314">A.3.1.4 Keyboard Access (Enhanced):</h5>
 
 						<p>
 							All functionality of the [=authoring tool=] is operable through a
@@ -685,7 +685,7 @@
 					</section>
 
 					<section id="part-a-principle-a.3.1.5">
-						<h5>A.3.1.5 Customize Keyboard Access:</h5>
+						<h5 id="sc_a315">A.3.1.5 Customize Keyboard Access:</h5>
 
 						<p>
 							If the [=authoring tool=] includes keyboard commands, then those
@@ -700,7 +700,7 @@
 					</section>
 
 					<section id="part-a-principle-a.3.1.6">
-						<h5>A.3.1.6 Present Keyboard Commands:</h5>
+						<h5 id="sc_a316">A.3.1.6 Present Keyboard Commands:</h5>
 
 						<p>
 							If the [=authoring tool=] includes keyboard commands, then the
@@ -718,13 +718,13 @@
 				</section>
 
 				<section id="part-a-principle-a.3.2">
-					<h4>
+					<h4 id="gl_a32">
 						Guideline A.3.2: (For the authoring tool user interface) Provide
 						authors with enough time.
 					</h4>
 
 					<a
-						href="https://www.w3.org/TR/IMPLEMENTING-ATAG20/#part-a-principle-a.32"
+						href="https://www.w3.org/TR/IMPLEMENTING-ATAG20/#gl_a32"
 						>Implementing A.3.2</a>
 
 					<p>
@@ -735,7 +735,7 @@
 					</p>
 
 					<section id="part-a-principle-a.3.2.1">
-						<h5>A.3.2.1 Auto-Save (Minimum):</h5>
+						<h5 id="sc_a321">A.3.2.1 Auto-Save (Minimum):</h5>
 
 						<p>
 							The [=authoring tool=] does not include [=session=] [=time
@@ -751,7 +751,7 @@
 					</section>
 
 					<section id="part-a-principle-a.3.2.2">
-						<h5>A.3.2.2 Timing Adjustable:</h5>
+						<h5 id="sc_a322">A.3.2.2 Timing Adjustable:</h5>
 
 						<p>
 							The [=authoring tool=] does not include [=time limits=] or at
@@ -799,7 +799,7 @@
 					</section>
 
 					<section id="part-a-principle-a.3.2.3">
-						<h5>A.3.2.3 Static Input Components:</h5>
+						<h5 id="sc_a323">A.3.2.3 Static Input Components:</h5>
 
 						<p>
 							The [=authoring tool=] does not include moving [=user interface
@@ -815,7 +815,7 @@
 					</section>
 
 					<section id="part-a-principle-a.3.2.4">
-						<h5>A.3.2.4 Content Edits Saved (Extended):</h5>
+						<h5 id="sc_a324">A.3.2.4 Content Edits Saved (Extended):</h5>
 
 						<p>
 							The [=authoring tool=] can be set to automatically save [=web
@@ -831,13 +831,13 @@
 				</section>
 
 				<section id="part-a-principle-a.3.3">
-					<h4>
+					<h4 id="gl_a33">
 						Guideline A.3.3: (For the authoring tool user interface) Help
 						authors avoid flashing that could cause seizures.
 					</h4>
 
 					<a
-						href="https://www.w3.org/TR/IMPLEMENTING-ATAG20/#part-a-principle-a.33"
+						href="https://www.w3.org/TR/IMPLEMENTING-ATAG20/#gl_a33"
 						>Implementing A.3.3</a>
 
 					<p>
@@ -846,7 +846,7 @@
 					</p>
 
 					<section id="part-a-principle-a.3.3.1">
-						<h5>A.3.3.1 Static View Option:</h5>
+						<h5 id="sc_a331">A.3.3.1 Static View Option:</h5>
 
 						<p>
 							If an [=editing-view=] can play visual time-based content, then
@@ -863,13 +863,13 @@
 				</section>
 
 				<section id="part-a-principle-a.3.4">
-					<h4>
+					<h4 id="gl_a34">
 						Guideline A.3.4: (For the authoring tool user interface) Enhance
 						navigation and editing via content structure.
 					</h4>
 
 					<a
-						href="https://www.w3.org/TR/IMPLEMENTING-ATAG20/#part-a-principle-a.34"
+						href="https://www.w3.org/TR/IMPLEMENTING-ATAG20/#gl_a34"
 						>Implementing A.3.4</a>
 
 					<p>
@@ -880,7 +880,7 @@
 					</p>
 
 					<section id="part-a-principle-a.3.4.1">
-						<h5>A.3.4.1 Navigate By Structure:</h5>
+						<h5 id="sc_a341">A.3.4.1 Navigate By Structure:</h5>
 
 						<p>
 							If [=editing-views=] expose the [=markup=] [=elements=] in the
@@ -898,7 +898,7 @@
 					</section>
 
 					<section id="part-a-principle-a.3.4.2">
-						<h5>A.3.4.2 Navigate by Programmatic Relationships:</h5>
+						<h5 id="sc_a342">A.3.4.2 Navigate by Programmatic Relationships:</h5>
 
 						<p>
 							If [=editing-views=] allow editing of programmatic
@@ -924,13 +924,13 @@
 				</section>
 
 				<section id="part-a-principle-a.3.5">
-					<h4>
+					<h4 id="gl_a35">
 						Guideline A.3.5: (For the authoring tool user interface) Provide
 						text search of the content.
 					</h4>
 
 					<a
-						href="https://www.w3.org/TR/IMPLEMENTING-ATAG20/#part-a-principle-a.35"
+						href="https://www.w3.org/TR/IMPLEMENTING-ATAG20/#gl_a35"
 						>Implementing A.3.5</a>
 
 					<p>
@@ -940,7 +940,7 @@
 					</p>
 
 					<section id="part-a-principle-a.3.5.1">
-						<h5>A.3.5.1 Text Search:</h5>
+						<h5 id="sc_a351">A.3.5.1 Text Search:</h5>
 
 						<p>
 							If the authoring tool provides an [=editing-view=] of text-based
@@ -977,13 +977,13 @@
 				</section>
 
 				<section id="part-a-principle-a.3.6">
-					<h4>
+					<h4 id="gl_a36">
 						Guideline A.3.6: (For the authoring tool user interface) Manage
 						preference settings.
 					</h4>
 
 					<a
-						href="https://www.w3.org/TR/IMPLEMENTING-ATAG20/#part-a-principle-a.36"
+						href="https://www.w3.org/TR/IMPLEMENTING-ATAG20/#gl_a36"
 						>Implementing A.3.6</a>
 
 					<p>
@@ -996,7 +996,7 @@
 					</p>
 
 					<section id="part-a-principle-a.3.6.1">
-						<h5>A.3.6.1 Independence of Display:</h5>
+						<h5 id="sc_a361">A.3.6.1 Independence of Display:</h5>
 
 						<p>
 							If the [=authoring tool=] includes [=display settings=] for
@@ -1013,7 +1013,7 @@
 					</section>
 
 					<section id="part-a-principle-a.3.6.2">
-						<h5>A.3.6.2 Save Settings:</h5>
+						<h5 id="sc_a362">A.3.6.2 Save Settings:</h5>
 
 						<p>
 							If the [=authoring tool=] includes [=display=] and/or [=control
@@ -1029,7 +1029,7 @@
 					</section>
 
 					<section id="part-a-principle-a.3.6.3">
-						<h5>A.3.6.3 Apply Platform Settings:</h5>
+						<h5 id="sc_a363">A.3.6.3 Apply Platform Settings:</h5>
 						<p>
 							The [=authoring tool=] respects changes in [=platform=]
 							[=display=] and [=control settings=], unless [=authors=] select
@@ -1046,12 +1046,12 @@
 				</section>
 
 				<section id="part-a-principle-a.3.7">
-					<h4>
+					<h4 id="gl_a37">
 						Guideline A.3.7: (For the authoring tool user interface) Ensure that
 						previews are at least as accessible as in-market user agents.
 					</h4>
 
-					<a href="https://www.w3.org/TR/IMPLEMENTING-ATAG20/#part-a-principle-a.37">
+					<a href="https://www.w3.org/TR/IMPLEMENTING-ATAG20/#gl_a37">
                         Implementing A.3.7</a>
 
 					<p>
@@ -1063,7 +1063,7 @@
 					</p>
 
 					<section id="part-a-principle-a.3.7.1">
-						<h5>A.3.7.1 Preview (Minimum):</h5>
+						<h5 id="sc_a371">A.3.7.1 Preview (Minimum):</h5>
 
 						<p>
 							If a [=preview=] is provided, then at least one of the following
@@ -1088,7 +1088,7 @@
 					</section>
 
 					<section id="part-a-principle-a.3.7.2">
-						<h5>A.3.7.2 Preview (Enhanced):</h5>
+						<h5 id="sc_a372">A.3.7.2 Preview (Enhanced):</h5>
 
 						<p>
 							If a [=preview=] is provided, then [=authors=] can specify which
@@ -1107,12 +1107,12 @@
 				<h3>Principle A.4: Editing-views are understandable</h3>
 
 				<section id="part-a-principle-a.4.1">
-					<h4>
+					<h4 id="gl_a41">
 						Guideline A.4.1: (For the authoring tool user interface) Help
 						authors avoid and correct mistakes.
 					</h4>
 
-					<a href="https://www.w3.org/TR/IMPLEMENTING-ATAG20/#part-a-principle-a.41">
+					<a href="https://www.w3.org/TR/IMPLEMENTING-ATAG20/#gl_a41">
                         Implementing A.4.1</a>
 
 					<p>
@@ -1122,7 +1122,7 @@
 					</p>
 
 					<section id="part-a-principle-a.4.1.1">
-						<h5>A.4.1.1 Content Changes Reversible (Minimum):</h5>
+						<h5 id="sc_a411">A.4.1.1 Content Changes Reversible (Minimum):</h5>
 
 						<p>
 							All [=authoring actions=] are either [=reversible=] or the
@@ -1135,7 +1135,7 @@
 					</section>
 
 					<section id="part-a-principle-a.4.1.2">
-						<h5>A.4.1.2 Settings Change Confirmation:</h5>
+						<h5 id="sc_a412">A.4.1.2 Settings Change Confirmation:</h5>
 
 						<p>
 							If the [=authoring tool=] provides mechanisms for changing
@@ -1149,7 +1149,7 @@
 					</section>
 
 					<section id="part-a-principle-a.4.1.3">
-						<h5>A.4.1.3 Content Changes Reversible (Enhanced):</h5>
+						<h5 id="sc_a413">A.4.1.3 Content Changes Reversible (Enhanced):</h5>
 
 						<p>
 							[=Authors=] can sequentially reverse a series of [=reversible
@@ -1171,13 +1171,13 @@
 				</section>
 
 				<section id="guidelines-interface-accessible-principle-4-2">
-					<h4>
+					<h4 id="gl_a42">
 						Guideline A.4.2: (For the authoring tool user interface) Document
 						the user interface, including all accessibility features.
 					</h4>
 
 					<a
-						href="https://www.w3.org/TR/IMPLEMENTING-ATAG20/#part-a-principle-a.42"
+						href="https://www.w3.org/TR/IMPLEMENTING-ATAG20/#gl_a42"
 						>Implementing A.4.2</a
 					>
 
@@ -1187,11 +1187,11 @@
 					</p>
 
 					<section id="part-a-principle-a.4.2.1">
-						<h5>A.4.2.1 Describe Accessibility Features:</h5>
+						<h5 id="sc_a421">A.4.2.1 Describe Accessibility Features:</h5>
 
 						<p>
 							For each [=authoring tool=] feature that is used to meet
-							<a href="#guidelines-part-a">Part A</a> of ATAG 2.0, at least one of the
+							<a href="#part_a">Part A</a> of ATAG 2.0, at least one of the
 							following is true:
 						</p>
                         
@@ -1232,7 +1232,7 @@
 					</section>
 
 					<section id="part-a-principle-a.4.2.2">
-						<h5>A.4.2.2 Document All Features:</h5>
+						<h5 id="sc_a422">A.4.2.2 Document All Features:</h5>
 
 						<p>
 							For each [=authoring tool=] feature, at least one of the following
@@ -1278,10 +1278,10 @@
 			</section>
         </section>
 
-        <section id="guidelines-part-b">
+        <section id="part_b">
 			<h2>Guidelines Part B: Support the production of accessible content</h2>
 
-			<section id="part-b-notes">
+			<section id="part_b_applic_notes">
 				<h3>Part B Conformance Applicability Notes:</h3>
 
 				<ol>
@@ -1323,7 +1323,7 @@
 					</li>
 					<li id="part-b-note-5">
 						<strong>Accessibility of features provided to meet Part B:</strong>
-						The <a href="#guidelines-part-a">Part A</a> success criteria apply to the
+						The <a href="#part_a">Part A</a> success criteria apply to the
 						entire [=authoring tool user interface=], including any features
 						that must be present to meet the success criteria in Part B (e.g.
 						checking tools, repair tools, tutorials, documentation).
@@ -1331,11 +1331,11 @@
 					<li id="part-b-note-6">
 						<strong>Multiple authoring roles:</strong>
 						Some [=authoring tools=] include multiple [=author=] roles, each
-						with different views and content editing [= permissions=] (e.g. a
+						with different views and content editing [=permissions=] (e.g. a
 						content management system may separate the roles of designers,
 						content authors, and quality assurers). In these cases, the Part B
 						success criteria apply to the authoring tool as a whole, not to the
-						view provided to any particular authoring role. [= Accessible
+						view provided to any particular authoring role. [=Accessible
 						content support features=] should be made available to any authoring
 						role where it would be useful.
 					</li>
@@ -1356,7 +1356,7 @@
 				</h3>
 
 				<section id="part-b-principle-b.1.1">
-					<h4>
+					<h4 id="gl_b11">
 						Guideline B.1.1: Ensure that automatically-specified content is
 						accessible.
 					</h4>
@@ -1373,7 +1373,7 @@
 					</p>
 
 					<section id="part-b-principle-b.1.1.1">
-						<h5>
+						<h5 id="sc_b111">
 							B.1.1.1 Content Auto-Generation After Authoring Sessions (WCAG):
 						</h5>
 
@@ -1404,7 +1404,7 @@
 					</section>
 
 					<section id="part-b-principle-b.1.1.2">
-						<h5>
+						<h5 id="sc_b112">
 							B.1.1.2 Content Auto-Generation During Authoring Sessions (WCAG):
 						</h5>
 
@@ -1425,7 +1425,7 @@
 						<ul>
 							<li>
 								<strong>(a) Accessible:</strong> The content is
-								<span>[=accessible web content (WCAG) =]</span> without author
+								<span>[=accessible web content (WCAG)=]</span> without author
 								input; or
 							</li>
 							<li>
@@ -1466,7 +1466,7 @@
 				</section>
 
 				<section id="part-b-principle-b.1.2">
-					<h4>
+					<h4 id="gl_b12">
 						Guideline B.1.2: Ensure that accessibility information is preserved.
 					</h4>
 
@@ -1481,7 +1481,7 @@
 					</p>
 
 					<section id="part-b-principle-b.1.2.1">
-						<h5>B.1.2.1 Restructuring and Recoding Transformations (WCAG):</h5>
+						<h5 id="sc_b121">B.1.2.1 Restructuring and Recoding Transformations (WCAG):</h5>
 
 						<p>
 							If the [=authoring tool=] provides [=restructuring
@@ -1525,12 +1525,12 @@
 								<li>
 									<em class="note-handle">Note 1:</em> For [=text alternatives
 									for non-text content=], see
-									<a href="#sc_b124">Success Criterion B.1.2.4</a>.
+									<a href="#part-b-principle-b.1.2.4">Success Criterion B.1.2.4</a>.
 								</li>
 								<li>
 									<em class="note-handle">Note 2:</em> This success criteria
 									only applies when the output technology is
-									<a href="#conf-techs-produced">&quot;included&quot;</a> for
+									<a href="#conformance-technologies">&quot;included&quot;</a> for
 									conformance.
 								</li>
 							</ul>
@@ -1541,7 +1541,7 @@
 					</section>
 
 					<section id="part-b-principle-b.1.2.2">
-						<h5>B.1.2.2 Copy-Paste Inside Authoring Tool (WCAG):</h5>
+						<h5 id="sc_b122">B.1.2.2 Copy-Paste Inside Authoring Tool (WCAG):</h5>
 
 						<p>
 							If the [=authoring tool=] supports copy and paste of [=structured
@@ -1563,7 +1563,7 @@
 					</section>
 
 					<section id="part-b-principle-b.1.2.3">
-						<h5>B.1.2.3 Optimizations Preserve Accessibility:</h5>
+						<h5 id="sc_b123">B.1.2.3 Optimizations Preserve Accessibility:</h5>
 
 						<p>
 							If the [=authoring tool=] provides [=optimizing web content
@@ -1578,7 +1578,7 @@
 					</section>
 
 					<section id="part-b-principle-b.1.2.4">
-						<h5>
+						<h5 id="sc_b124">
 							B.1.2.4 Text Alternatives for Non-Text Content are Preserved:
 						</h5>
 
@@ -1595,7 +1595,7 @@
 						<div class="note" title="B.1.2.4 Note">
 							<p>
 								This success criterion only applies when the output technology
-								is <a href="#conf-techs-produced">&quot;included&quot;</a> for
+								is <a href="#conformance-technologies">&quot;included&quot;</a> for
 								conformance.
 							</p>
 						</div>
@@ -1612,7 +1612,7 @@
 				</h3>
 
 				<section id="part-b-principle-b.2.1">
-					<h4>
+					<h4 id="gl_b21">
 						Guideline B.2.1: Ensure that accessible content production is
 						possible.
 					</h4>
@@ -1627,7 +1627,7 @@
 					</p>
 
 					<section id="part-b-principle-b.2.1.1">
-						<h5>B.2.1.1 Accessible Content Possible (WCAG):</h5>
+						<h5 id="sc_b211">B.2.1.1 Accessible Content Possible (WCAG):</h5>
 
 						<p>
 							The [=authoring tool=] does not place [=restrictions=] on the
@@ -1647,7 +1647,7 @@
 				</section>
 
 				<section id="part-b-principle-b.2.2">
-					<h4>Guideline B.2.2: Guide authors to produce accessible content.</h4>
+					<h4 id="gl_b22">Guideline B.2.2: Guide authors to produce accessible content.</h4>
 
 					<a href="https://www.w3.org/TR/IMPLEMENTING-ATAG20/#gl_b22">
                         Implementing B.2.2</a>
@@ -1660,7 +1660,7 @@
 					</p>
 
 					<section id="part-b-principle-b.2.2.1">
-						<h5>B.2.2.1 Accessible Option Prominence (WCAG):</h5>
+						<h5 id="sc_b221">B.2.2.1 Accessible Option Prominence (WCAG):</h5>
 
 						<p>
 							If [=authors=] are provided with a choice of [=authoring actions=]
@@ -1680,7 +1680,7 @@
 					</section>
 
 					<section id="part-b-principle-b.2.2.2">
-						<h5>B.2.2.2 Setting Accessibility Properties (WCAG):</h5>
+						<h5 id="sc_b222">B.2.2.2 Setting Accessibility Properties (WCAG):</h5>
 
 						<p>
 							If the authoring tool provides mechanisms to set [=web content
@@ -1698,7 +1698,7 @@
 						<div class="note" title="B.2.2.2 Note">
 							<p>
 								For the prominence of the mechanisms, see
-								<a href="#sc_b414">Success Criterion B.4.1.4</a>.
+								<a href="#part-b-principle-b.4.1.4">Success Criterion B.4.1.4</a>.
 							</p>
 						</div>
 
@@ -1708,7 +1708,7 @@
 				</section>
 
 				<section id="part-b-principle-b.2.3">
-					<h4>
+					<h4 id="gl_b23">
 						Guideline B.2.3: Assist authors with managing alternative content
 						for non-text content.
 					</h4>
@@ -1732,7 +1732,7 @@
 					</div>
 
 					<section id="part-b-principle-b.2.3.1">
-						<h5>B.2.3.1 Alternative Content is Editable (WCAG):</h5>
+						<h5 id="sc_b231">B.2.3.1 Alternative Content is Editable (WCAG):</h5>
 
 						<p>
 							If the [=authoring tool=] provides functionality for adding
@@ -1759,7 +1759,7 @@
 					</section>
 
 					<section id="part-b-principle-b.2.3.2">
-						<h5>B.2.3.2 Automating Repair of Text Alternatives:</h5>
+						<h5 id="sc_b232">B.2.3.2 Automating Repair of Text Alternatives:</h5>
 
 						<p>
 							The [=authoring tool=] does not attempt to [=repair=] [=text
@@ -1797,7 +1797,7 @@
 					</section>
 
 					<section id="part-b-principle-b.2.3.3">
-						<h5>B.2.3.3 Save for Reuse:</h5>
+						<h5 id="sc_b233">B.2.3.3 Save for Reuse:</h5>
 
 						<p>
 							If the [=authoring tool=] provides the functionality for adding
@@ -1827,7 +1827,7 @@
 				</section>
 
 				<section id="part-b-principle-b.2.4">
-					<h4>Guideline B.2.4: Assist authors with accessible templates.</h4>
+					<h4 id="gl_b24">Guideline B.2.4: Assist authors with accessible templates.</h4>
 
 					<a href="https://www.w3.org/TR/IMPLEMENTING-ATAG20/#gl_b24">
                         Implementing B.2.4</a>
@@ -1842,11 +1842,11 @@
 					</p>
 
 					<section id="part-b-principle-b.2.4.1">
-						<h5>B.2.4.1 Accessible Template Options (WCAG):</h5>
+						<h5 id="sc_b241">B.2.4.1 Accessible Template Options (WCAG):</h5>
 
 						<p>
 							If the [=authoring tool=] provides [=templates=], then there are
-							[=accessible template (WCAG) =] [=options=] for a [=range=] of
+							[=accessible template (WCAG)=] [=options=] for a [=range=] of
 							template uses.
                         </p>
                         <p>
@@ -1861,11 +1861,11 @@
 					</section>
 
 					<section id="part-b-principle-b.2.4.2">
-						<h5>B.2.4.2 Identify Template Accessibility:</h5>
+						<h5 id="sc_b242">B.2.4.2 Identify Template Accessibility:</h5>
 
 						<p>
 							If the [=authoring tool=] includes a [=template selection
-							mechanism=] and provides any non-[=accessible template (WCAG) =]
+							mechanism=] and provides any non-[=accessible template (WCAG)=]
 							[=options=], then the template selection mechanism can display
 							distinctions between the accessible and non-accessible options.
 						</p>
@@ -1883,7 +1883,7 @@
 					</section>
 
 					<section id="part-b-principle-b2.4.3">
-						<h5>B.2.4.3 Author-Created Templates:</h5>
+						<h5 id="sc_b243">B.2.4.3 Author-Created Templates:</h5>
 
 						<p>
 							If the [=authoring tool=] includes a [=template selection
@@ -1907,7 +1907,7 @@
 					</section>
 
 					<section id="part-b-principle-b.2.4.4">
-						<h5>B.2.4.4 Accessible Template Options (Enhanced):</h5>
+						<h5 id="sc_b244">B.2.4.4 Accessible Template Options (Enhanced):</h5>
 
 						<p>
 							If the [=authoring tool=] provides [=templates=], then all of the
@@ -1922,7 +1922,7 @@
 				</section>
 
 				<section id="part-b-principle-b.2.5">
-					<h4>
+					<h4 id="gl_b25">
 						Guideline B.2.5: Assist authors with accessible pre-authored
 						content.
 					</h4>
@@ -1940,7 +1940,7 @@
 					</p>
 
 					<section id="part-b-principle-b.2.5.1">
-						<h5>B.2.5.1 Accessible Pre-Authored Content Options:</h5>
+						<h5 id="sc_b251">B.2.5.1 Accessible Pre-Authored Content Options:</h5>
 
 						<p>
 							If the [=authoring tool=] provides [=pre-authored content=], then
@@ -1955,12 +1955,10 @@
 					</section>
 
 					<section id="part-b-principle-b.2.5.2">
-						<h5>B.2.5.2 Identify Pre-Authored Content Accessibility:</h5>
+						<h5 id="sc_b252">B.2.5.2 Identify Pre-Authored Content Accessibility:</h5>
 
 						<p>
-							If the [=authoring tool=] includes a [=pre-authored content
-							selection mechanism =] and provides any non-[=accessible
-							pre-authored content (WCAG Level AA) =] [=options=], then the
+							If the [=authoring tool=] includes a [=pre-authored content selection mechanism=] and provides any non-[=accessible pre-authored content (WCAG Level AA)=] [=options=], then the
 							selection mechanism can display distinctions between the
 							accessible and non-accessible options.
 						</p>
@@ -1988,7 +1986,7 @@
 				</h3>
 
 				<section id="part-b-principle-b.3.1">
-					<h4>
+					<h4 id="gl_b31">
 						Guideline B.3.1: Assist authors in checking for accessibility
 						problems.
 					</h4>
@@ -2004,7 +2002,7 @@
 					</p>
 
 					<section id="part-b-principle-b.3.1.1">
-						<h5>B.3.1.1 Checking Assistance (WCAG):</h5>
+						<h5 id="sc_b311">B.3.1.1 Checking Assistance (WCAG):</h5>
 
 						<p>
 							If the [=authoring tool=] provides [=authors=] with the ability to
@@ -2025,7 +2023,7 @@
 
 						<div class="note" title="B.3.1.1 Note">
 							<p>
-								[=Automated =] and [=semi-automated checking=] is possible (and
+								[=Automated=] and [=semi-automated checking=] is possible (and
 								encouraged) for many types of [=web content accessibility
 								problems (WCAG)=]. However, [=manual checking=] is the minimum
 								requirement to meet this success criterion. In manual checking,
@@ -2043,7 +2041,7 @@
 					</section>
 
 					<section id="part-b-principle-b.3.1.2">
-						<h5>B.3.1.2 Help Authors Decide:</h5>
+						<h5 id="sc_b312">B.3.1.2 Help Authors Decide:</h5>
 
 						<p>
 							If the [=authoring tool=] provides [=accessibility checking=] that
@@ -2061,7 +2059,7 @@
 					</section>
 
 					<section id="part-b-principle-b.3.1.3">
-						<h5>B.3.1.3 Help Authors Locate:</h5>
+						<h5 id="sc_b313">B.3.1.3 Help Authors Locate:</h5>
 
 						<p>
 							If the [=authoring tool=] provides [=checks=] that require
@@ -2087,7 +2085,7 @@
 					</section>
 
 					<section id="part-b-principle-b.3.1.4">
-						<h5>B.3.1.4 Status Report:</h5>
+						<h5 id="sc_b314">B.3.1.4 Status Report:</h5>
 
 						<p>
 							If the [=authoring tool=] provides [=checks=], then [=authors=]
@@ -2111,7 +2109,7 @@
 					</section>
 
 					<section id="part-b-principle-b.3.1.5">
-						<h5>B.3.1.5 Programmatic Association of Results:</h5>
+						<h5 id="sc_b315">B.3.1.5 Programmatic Association of Results:</h5>
 
 						<p>
 							If the [=authoring tool=] provides [=checks=], then the
@@ -2128,7 +2126,7 @@
 				</section>
 
 				<section id="part-b-principle-b.3.2">
-					<h4>
+					<h4 id="gl_b32">
 						Guideline B.3.2: Assist authors in repairing accessibility problems.
 					</h4>
 
@@ -2143,7 +2141,7 @@
 					</p>
 
 					<section id="part-b-principle-b.3.2.1">
-						<h5>B.3.2.1 Repair Assistance (WCAG):</h5>
+						<h5 id="sc_b321">B.3.2.1 Repair Assistance (WCAG):</h5>
 
 						<p>
 							If [=checking=] (see
@@ -2161,7 +2159,7 @@
 
 						<div class="note">
 							<p>
-								[=Automated=][= and=] [=semi-automated repair=] is possible (and
+								[=automated repair|Automated=] and [=semi-automated repair=] is possible (and
 								encouraged) for many types of [=web content accessibility
 								problems (WCAG)=]. However, [=manual repair=] is the minimum
 								requirement to meet this success criterion. In manual repair,
@@ -2187,7 +2185,7 @@
 				</h3>
 
 				<section id="part-b-principle-b.4.1">
-					<h4>
+					<h4 id="gl_b41">
 						Guideline B.4.1: Ensure the availability of features that support
 						the production of accessible content.
 					</h4>
@@ -2202,7 +2200,7 @@
 					</p>
 
 					<section id="part-b-principle-b.4.1.1">
-						<h5>B.4.1.1 Features Active by Default:</h5>
+						<h5 id="sc_b411">B.4.1.1 Features Active by Default:</h5>
 
 						<p>
 							All [=accessible content support feature=] are turned on by
@@ -2214,7 +2212,7 @@
 					</section>
 
 					<section id="part-b-principle-b.4.1.2">
-						<h5>B.4.1.2 Option to Reactivate Features:</h5>
+						<h5 id="sc_b412">B.4.1.2 Option to Reactivate Features:</h5>
 
 						<p>
 							The [=authoring tool=] does not include the
@@ -2230,7 +2228,7 @@
 					</section>
 
 					<section id="part-b-principle-b.4.1.3">
-						<h5>B.4.1.3 Feature Deactivation Warning:</h5>
+						<h5 id="sc_b413">B.4.1.3 Feature Deactivation Warning:</h5>
 
 						<p>
 							The [=authoring tool=] does not include the
@@ -2247,10 +2245,10 @@
 					</section>
 
 					<section id="part-b-principle-b.4.1.4">
-						<h5>B.4.1.4 Feature Prominence:</h5>
+						<h5 id="sc_b414">B.4.1.4 Feature Prominence:</h5>
 
 						<p>
-							All [= accessible content support features=] are [=at least as
+							All [=accessible content support features=] are [=at least as
 							prominent=] as features related to either invalid [=markup=],
 							syntax errors, spelling errors or grammar errors.
 						</p>
@@ -2263,7 +2261,7 @@
 				</section>
 
 				<section id="part-b-principle-b.4.2">
-					<h4>
+					<h4 id="gl_b42">
 						Guideline B.4.2: Ensure that documentation promotes the production
 						of accessible content.
 					</h4>
@@ -2282,9 +2280,7 @@
 					</p>
 
 					<section id="part-b-principle-b.4.2.1">
-						<h5>
-							<a id="sc_b421" name="sc_b421"> </a>B.4.2.1 Model Practice (WCAG):
-						</h5>
+						<h5 id="sc_b421">B.4.2.1 Model Practice (WCAG):</h5>
 
 						<p>
 							A [=range=] of examples in the [=documentation=] (e.g. [=markup=],
@@ -2303,10 +2299,10 @@
 					</section>
 
 					<section id="part-b-principle-b.4.2.2">
-						<h5>B.4.2.2 Feature Instructions:</h5>
+						<h5 id="sc_b422">B.4.2.2 Feature Instructions:</h5>
 
 						<p>
-							Instructions for using any [= accessible content support
+							Instructions for using any [=accessible content support
 							features=] appear in the [=documentation=].
 						</p>
                         
@@ -2317,7 +2313,7 @@
 					</section>
 
 					<section id="part-b-principle-b.4.2.3">
-						<h5>B.4.2.3 Tutorial:</h5>
+						<h5 id="sc_b423">B.4.2.3 Tutorial:</h5>
 
 						<p>
 							The [=authoring tool=] provides a [=tutorial=] for an accessible
@@ -2331,11 +2327,11 @@
 					</section>
 
 					<section id="part-b-principle-b.4.2.4">
-						<h5>B.4.2.4 Instruction Index:</h5>
+						<h5 id="sc_b424">B.4.2.4 Instruction Index:</h5>
 
 						<p>
 							The [=authoring tool=] [=documentation=] contains an index to the
-							instructions for using any [= accessible content support
+							instructions for using any [=accessible content support
 							features=].
 						</p>
                         
@@ -2348,13 +2344,13 @@
 			</section>
 		</section>
 
-		<section id="conformance">
+	<section id="Conformance">
 			<h2>Conformance</h2>
 
-			<p>
+		<p>
 				Conformance means that the [=authoring tool=] satisfies the
 				<a href="#conformance-applicable">applicable</a> success criteria defined in the
-				<a href="#guidelines-part-a">guidelines</a> section. This conformance section
+				<a href="#part_a">guidelines</a> section. This conformance section
 				describes conformance and lists the conformance requirements.
 			</p>
 
@@ -2373,7 +2369,7 @@
 					<ul>
 						<li id="conformance-applicable">
 							<strong>Not Applicable: </strong>The ATAG 2.0
-							<a href="#def-Authoring-Tool">definition of authoring tool</a> is
+							<a href="#dfn-authoring-tool">definition of authoring tool</a> is
 							inclusive and, as such, it covers software with a wide range of
 							capabilities and contexts of operation. In order to take into
 							account authoring tools with limited feature sets (e.g. a photo
@@ -2400,7 +2396,7 @@
 					</ul>
 				</section>
 
-				<section id="conformance-requirements-wcag-rel">
+				<section id="conf-rel-wcag">
 					<h4>
 						Relationship to the Web Content Accessibility Guidelines (WCAG) 2.0
 					</h4>
@@ -2410,10 +2406,10 @@
 						Recommendation regarding web content accessibility. For this reason,
 						ATAG 2.0 refers to WCAG 2.0 when setting requirements for (1) the
 						accessibility of [=web-based authoring tool user interfaces=] (in
-						<a href="#guidelines-part-a">Part A</a>) and (2) how [=authors=] should be
+						<a href="#part_a">Part A</a>) and (2) how [=authors=] should be
 						enabled, supported, and guided toward producing web content that is
 						more accessible to [=end users=] with disabilities (in
-						<a href="#guidelines-part-b"> Part B</a>).
+						<a href="#part_b"> Part B</a>).
 					</p>
 
 					<p>
@@ -2530,10 +2526,10 @@
 							<div class="note" title="Conformance Applicability Notes">
 								<p>
 									The
-									<a href="#part-a-notes">
+									<a href="#part_a_applic_notes">
                                         Part A Conformance Applicability Notes</a>
 									and
-									<a href="#part-b-notes">
+									<a href="#part_b_applic_notes">
                                         Part B Conformance Applicability Notes</a>
 									must be applied.
 								</p>
@@ -2579,10 +2575,10 @@
 
 								<p>
 									The
-									<a href="#part-a-notes">
+									<a href="#part_a_applic_notes">
                                         Part A Conformance Applicability Notes</a>
 									and
-									<a href="#part-b-notes">
+									<a href="#part_b_applic_notes">
                                         Part B Conformance Applicability Notes</a>
 									must be applied.
 								</p>
@@ -2634,7 +2630,7 @@
 						ATAG 2.0 may be applied to authoring tools with workflows that
 						involve live authoring of web content (e.g. some collaborative
 						tools). Due to the challenges inherent in real-time publishing,
-						conformance to <a href="#guidelines-part-b">Part B</a> of ATAG 2.0 for these
+						conformance to <a href="#part_b">Part B</a> of ATAG 2.0 for these
 						authoring tools may involve some combination of support before
 						(e.g. support in preparing accessible slides), during (e.g. live
 						captioning as WCAG 2.0 requires at Level AA) and after the live
@@ -2714,7 +2710,7 @@
 							<strong>web content technologies produced by the authoring tool that
 							are included in the claim</strong>. 
                             If there are any [=web content technologies=]
-							<a href="#conformance-technologies-produced">produced</a> by the authoring
+							<a href="#conformance-technologies">produced</a> by the authoring
 							tool that are not included in the conformance claim, these must
 							be listed separately. If the authoring tool produces any web
 							content technologies by default, then these must be included.
@@ -2779,7 +2775,7 @@
 				This appendix contains definitions for all of the
 				significant/important/unfamiliar terms used in the normative parts of
 				this standard, including terms used in the
-				<a href="#conformance">Conformance</a> section. Please consult
+				<a href="#Conformance">Conformance</a> section. Please consult
 				<a href="https://www.w3.org/TR/qaframe-spec/">http://www.w3.org/TR/qaframe-spec/
                     </a>
 				for more information on the role of definitions in standards quality.
@@ -2787,7 +2783,7 @@
 
 				<dl>
 					<dt>
-						<dfn>accessibility problems</dfn>
+						<dfn data-lt="accessibility problems|problems">accessibility problems</dfn>
 					</dt>
 					<dd>
 						ATAG 2.0 recognizes two types of accessibility problems:
@@ -2795,11 +2791,11 @@
 							<li>
 								<dfn>authoring tool user interface accessibility problems</dfn>
 								Aspects of an [=authoring tool user interface=] that does not
-								meet a success criterion in <a href="#guidelines-part-a">Part A</a> of ATAG
+								meet a success criterion in <a href="#part_a">Part A</a> of ATAG
 								2.0.
 							</li>
 							<li>
-								<dfn>web content accessibility problems (WCAG)</dfn> Aspects
+								<dfn data-lt="web content accessibility problems (WCAG)|web content accessibility problem (WCAG)|accessibility problems (WCAG)|web content accessibility problems|content accessibility problems (WCAG)">web content accessibility problems (WCAG)</dfn> Aspects
 								of [=web content=] that does not meet a
 								[[WCAG20]] success criterion (Level A, AA or AAA).
 							</li>
@@ -2824,13 +2820,13 @@
 					</dd>
 
 					<dt>
-						<dfn>accessible content support features</dfn>
+						<dfn data-lt="accessible content support features|accessible content production features">accessible content support features</dfn>
 					</dt>
 					<dd>
 						Any features of an [=authoring tool=] that directly support
-						[=authors=] in increasing the accessibility of the [= =][=web
+						[=authors=] in increasing the accessibility of the [=web
 						content being edited=]. These are features that must be present to
-						meet the success criteria in <a href="#guidelines-part-b">Part B</a> of ATAG
+						meet the success criteria in <a href="#part_b">Part B</a> of ATAG
 						2.0.
 					</dd>
 
@@ -2845,7 +2841,7 @@
 						types of alternative content:
 						<ul>
 							<li>
-								<dfn>text alternatives for non-text content</dfn>:
+								<dfn data-lt="text alternatives for non-text content|text alternatives|text alternatives for the non-text content|text alternatives for that non-text content">text alternatives for non-text content</dfn>:
 								Text that is [=programmatically associated=] with [=non-text
 								content=] or referred to from text that is programmatically
 								associated with non-text content. For example, an image of a
@@ -2854,7 +2850,7 @@
 								chart indicating in words that a description follows.
 							</li>
 							<li>
-								<dfn>alternatives for time-based media</dfn>:
+								<dfn class="lint-ignore">alternatives for time-based media</dfn>: <!-- TODO ATAG: Remove lint-ignore if this definition is used -->
 								[=Web content=] that serves the same function or purpose as one
 								or more tracks in a time-based media presentation. This
 								includes: captions, audio descriptions, extended audio
@@ -2864,7 +2860,7 @@
 								any interactivity in the time-based presentation.
 							</li>
 							<li>
-								<dfn>media alternative for text</dfn>:
+								<dfn class="lint-ignore">media alternative for text</dfn>: <!-- TODO ATAG: Remove lint-ignore if this definition is used -->
 								Media that presents no more information than is already
 								presented in text (directly or via text alternatives). A media
 								alternative for text is provided for people who benefit from
@@ -2877,7 +2873,7 @@
 						content may or may not be:
 						<ul>
 							<li>
-								<dfn>programmatically associated alternative content</dfn>:
+								<dfn data-lt="programmatically associated alternative content|programmatically associated|programmatically associate">programmatically associated alternative content</dfn>:
 								Alternative content whose location and purpose can be
 								[=programmatically determined=] from the original content for
 								which it is serving as an alternative. For example, a paragraph
@@ -2946,13 +2942,13 @@
 					</dd>
 
 					<dt>
-						<dfn>author actions preventing generation of accessible web
+						<dfn data-lt="author actions preventing generation of accessible web content|author actions prevent generation of accessible web content (WCAG)">author actions preventing generation of accessible web
 						content</dfn>
 					</dt>
 					<dd>
 						When the actions of [=authors=] prevent [=authoring tools=] from
 						generating [=accessible web content (WCAG)=]. Examples include:
-						turning off [= accessible content support features=], ignoring
+						turning off [=accessible content support features=], ignoring
 						[=prompts=] for [=accessibility information (WCAG)=], providing
 						faulty accessibility information (WCAG) at prompts, modifying the
 						authoring tool (e.g. via scripting, macros), and installing
@@ -2973,7 +2969,7 @@
 					</dd>
 
 					<dt>
-						<dfn>author permission</dfn>
+						<dfn data-lt="author permission|permissions">author permission</dfn>
 					</dt>
 					<dd>
 						Authorization that allows modification of given [=web content=].
@@ -2991,7 +2987,7 @@
 						preferences, viewing [=documentation=]).
 						<ul>
 							<li>
-								<dfn>reversible authoring action</dfn>: An [=authoring action=] 
+								<dfn data-lt="reversible authoring action|reversible">reversible authoring action</dfn>: An [=authoring action=] 
                                 that can be immediately and
 								completely undone by the [=authoring tool=] upon a cancel
 								request by an [=author=]. Examples of cancel requests include:
@@ -3015,7 +3011,7 @@
 					</dd>
 
 					<dt>
-						<dfn>authoring practice</dfn>
+						<dfn class="lint-ignore">authoring practice</dfn> <!-- TODO ATAG: Remove lint-ignore if this definition is used -->
 					</dt>
 					<dd>
 						An approach that [=authors=] follow to achieve a given [=authoring
@@ -3035,14 +3031,14 @@
 					</dd>
 
 					<dt>
-						<dfn>authoring session</dfn>
+						<dfn data-lt="authoring session|session">authoring session</dfn>
 					</dt>
 					<dd>
 						A state of the [=authoring tool=] in which [=web content=] can be
 						edited by an [=author=].
 						<ul>
 							<li>
-								<dfn>end of an authoring session</dfn>: The point at which the
+								<dfn data-lt="end of an authoring session|end of authoring sessions|end of an author's authoring session|authoring session has ended">end of an authoring session</dfn>: The point at which the
 								[=author=] has no further opportunity to make [=authoring
 								actions=] without starting another [=session=]. The end of an
 								authoring session may be determined by authors (e.g. closing a
@@ -3058,7 +3054,7 @@
 					</dd>
 
 					<dt>
-						<dfn data-lt="authoring tool developer">authoring tool</dfn>
+						<dfn data-lt="authoring tool|Web-based authoring tools|non-web based authoring tool|web-based authoring tools">authoring tool</dfn>
 					</dt>
 					<dd>
 						Any web-based or non-web-based application(s) that can be used by
@@ -3147,7 +3143,7 @@
 					</dd>
 
 					<dt>
-						<dfn>authoring tool user interface</dfn>
+						<dfn data-lt="authoring tool user interface|User interface">authoring tool user interface</dfn>
 					</dt>
 					<dd>
 						The display and control mechanism that [=authors=] use to operate
@@ -3156,14 +3152,14 @@
 						authoring tool might have web-based help pages):
 						<ul>
 							<li>
-								<dfn>authoring tool user interface (non-web-based)</dfn>: Any
+								<dfn data-lt="authoring tool user interface (non-web-based)|non-web-based user interfaces|non-web-based|non-web-based authoring tool user interfaces">authoring tool user interface (non-web-based)</dfn>: Any
 								parts of an authoring tool user interface that are not
 								implemented as [=web content=] and instead run directly on a
 								[=platform=] that is not a [=user agent=] (e.g. Windows, Mac OS,
 								Java Virtual Machine, iOS, Android).
 							</li>
 							<li>
-                                <dfn>authoring tool user interface (web-based)</dfn>: Any parts
+                                <dfn data-lt="authoring tool user interface (web-based)|web-based user interfaces|web-based authoring tool user interfaces|web-based authoring user interfaces|web-based">authoring tool user interface (web-based)</dfn>: Any parts
 								of an authoring tool user interface that are implemented using
 								[=web content technologies=] and are accessed by [=authors=] via
 								a [=user agent=].
@@ -3172,15 +3168,15 @@
 						Authoring tool user interfaces may or may not be:
 						<ul>
 							<li>
-								<dfn>accessible authoring tool user interfaces:</dfn>
+								<dfn class="lint-ignore">accessible authoring tool user interfaces:</dfn> <!-- TODO ATAG: Remove lint-ignore if this definition is used -->
 								Authoring tool user interfaces that meet the success criteria of
-								a level in <a href="#guidelines-part-a">Part A</a> of ATAG 2.0.
+								a level in <a href="#part_a">Part A</a> of ATAG 2.0.
 							</li>
 						</ul>
 					</dd>
 
 					<dt>
-						<dfn>checking, accessibility </dfn>
+						<dfn data-lt="checking, accessibility|checking|accessibility checking|checks">checking, accessibility </dfn>
 						<!-- [harmonized with EARL 1.0] -->
 					</dt>
 					<dd>
@@ -3202,7 +3198,7 @@
 								decide the outcome of the tests.
 							</li>
 							<li>
-								<dfn>automated checking</dfn>: Checking in which the tests are
+								<dfn data-lt="automated checking|Automated">automated checking</dfn>: Checking in which the tests are
 								carried out automatically by the authoring tool without any
 								intervention by authors.
 							</li>
@@ -3225,7 +3221,7 @@
 						not be:
 						<ul>
 							<li>
-								<dfn data-lt="accessible content|WCAG">accessible content (WCAG)</dfn>:
+								<dfn data-lt="accessible content|WCAG|accessible web content (WCAG)|accessibility of the web content (WCAG)|accessibility of web content (WCAG)|accessible web content|web content accessibility (WCAG)">accessible content (WCAG)</dfn>:
 								Content that would conform to
 								[[WCAG20]], at either Level A, AA, or
 								AAA, assuming that any [=web content technologies=] relied upon
@@ -3248,7 +3244,7 @@
 								</ul>
 							</li>
 							<li>
-								<dfn>content being edited</dfn>:
+								<dfn data-lt="content being edited|web content being edited">content being edited</dfn>:
 								The web content that an [=author=] can modify during an
 								[=authoring session=]. The content being edited may be a
 								complete piece of content (e.g. image, style sheet) or only part
@@ -3262,7 +3258,7 @@
 					</dd>
 
 					<dt>
-						<dfn>content properties</dfn>
+						<dfn data-lt="content properties|web content properties|properties">content properties</dfn>
 					</dt>
 					<dd>
 						The individual pieces of information that make up the [=web
@@ -3271,7 +3267,7 @@
 					</dd>
 
 					<dt>
-						<dfn>content (structured)</dfn>
+						<dfn data-lt="content (structured)|structured content">content (structured)</dfn>
 					</dt>
 					<dd>
 						[=Web content=] that includes machine-readable internal structure
@@ -3280,7 +3276,7 @@
 					</dd>
 
 					<dt>
-						<dfn data-lt="content generation|content authoring|content editing">content generation (content authoring, content editing)</dfn>
+						<dfn class="lint-ignore" data-lt="content generation|content authoring|content editing">content generation (content authoring, content editing)</dfn> <!-- TODO ATAG: Remove lint-ignore if this definition is used -->
 					</dt>
 					<dd>
 						The act of specifying the actual [=web content=] that will be
@@ -3290,7 +3286,7 @@
 						can be any combination of the following:
 						<ul>
 							<li>
-								<dfn>author generated content</dfn>:
+								<dfn data-lt="author generated content|author-generated|author-generated content">author generated content</dfn>:
 								[=Web content=] for which [=author=]s are fully responsible. The
 								author may only be responsible down to a particular level (e.g.
 								when asked to type a text label, the author is responsible for
@@ -3300,14 +3296,14 @@
 								text).
 							</li>
 							<li>
-								<dfn>automatically-generated content</dfn>:
+								<dfn data-lt="automatically-generated content|automatically generate|automatically|automatically generating|Automatic content generation">automatically-generated content</dfn>:
 								Web content for which [=developer=]-programmed functionality is
 								fully responsible (e.g. what markup to output when an author
 								requests to start a new document, automatically correcting
 								markup errors).
 							</li>
 							<li>
-								<dfn>third-party content generation</dfn>: Web content for which
+								<dfn class="lint-ignore">third-party content generation</dfn>: <!-- TODO ATAG: Remove lint-ignore if this definition is used --> Web content for which
 								a third-party author is responsible (e.g. community shared
 								[=templates=]).
 							</li>
@@ -3315,7 +3311,7 @@
 					</dd>
 
 					<dt>
-						<dfn>content rendering</dfn>
+						<dfn data-lt="content rendering|renders">content rendering</dfn>
 					</dt>
 					<dd>
 						[=User interface=] functionality that [=authoring tools=] present if
@@ -3333,13 +3329,13 @@
 								or
 							</li>
 							<li>
-								<dfn>unconventional renderings</dfn>:
+								<dfn class="lint-ignore">unconventional renderings</dfn>: <!-- TODO ATAG: Remove lint-ignore if this definition is used -->
 								When content is rendered differently than it would be in a
 								typical user agent (e.g. rendering an audio file as a graphical
 								waveform); or
 							</li>
 							<li>
-								<dfn>partial renderings</dfn>: When some aspects of the content
+								<dfn class="lint-ignore">partial renderings</dfn>: <!-- TODO ATAG: Remove lint-ignore if this definition is used --> When some aspects of the content
 								are rendered, played, or executed, but not others (e.g. a
 								frame-by-frame [=video=] editor renders the graphical, but not
 								the timing aspects, of a video).
@@ -3348,7 +3344,7 @@
 					</dd>
 
 					<dt>
-						<dfn>content transformations</dfn>
+						<dfn data-lt="content transformations|web content transformations">content transformations</dfn>
 					</dt>
 					<dd>
 						Processes that take [=content=] in one [=web content technology=] or
@@ -3357,7 +3353,7 @@
 						recoded:
 						<ul>
 							<li>
-								<dfn>Optimizing Content Transformations</dfn>:
+								<dfn data-lt="Optimizing Content Transformations|optimizing web content transformations">Optimizing Content Transformations</dfn>:
 								Transformations in which the content technology is not changed
 								and the structural features of the content technology that are
 								employed also stay the same. Changes would not be expected to
@@ -3365,14 +3361,14 @@
 								in-line styles with an external style sheet).
 							</li>
 							<li>
-								<dfn>Restructuring Content Transformations</dfn>:
+								<dfn data-lt="Restructuring Content Transformations|restructuring transformations">Restructuring Content Transformations</dfn>:
 								Transformations in which the content technology stays the same,
 								but the structural features of the technology used to markup the
 								content are changed (e.g. linearizing tables, splitting a
 								document into pages).
 							</li>
 							<li>
-						        <dfn>Recoding Content Transformations</dfn>:
+						        <dfn data-lt="Recoding Content Transformations|re-coding transformations">Recoding Content Transformations</dfn>:
 								Transformations in which the content technology used to encode
 								the content is changed (e.g. HTML to XHTML, a word processing
 								format to HTML).
@@ -3392,7 +3388,7 @@
 					</dd>
 
 					<dt>
-						<dfn>developer</dfn>
+						<dfn data-lt="developer|authoring tool developer|authoring tool developers">developer</dfn>
 					</dt>
 					<dd>
 						Any entities or individuals responsible for programming the
@@ -3418,26 +3414,26 @@
 					</dd>
 
 					<dt>
-						<dfn>display settings</dfn>
+						<dfn data-lt="display settings|display">display settings</dfn>
 					</dt>
 					<dd>
 						Settings that relate to how [=authors=] perceive the authoring tool.
 						These include:
 						<ul>
 							<li>
-								<dfn>audio display settings</dfn>:
+								<dfn class="lint-ignore">audio display settings</dfn>: <!-- TODO ATAG: Remove lint-ignore if this definition is used -->
 								the characteristics of [=audio=] output of music, sounds, and
 								speech. Examples include volume, speech voices, voice speed, and
 								voice emphasis.
 							</li>
 							<li>
-								<dfn>visual display settings</dfn>:
+								<dfn class="lint-ignore">visual display settings</dfn>: <!-- TODO ATAG: Remove lint-ignore if this definition is used -->
 								the characteristics of the on-screen rendering of text and
 								graphics. Examples include fonts, sizes, colors, spacing,
 								positioning, and contrast.
 							</li>
 							<li>
-								<dfn>tactile display settings</dfn>:
+								<dfn class="lint-ignore">tactile display settings</dfn>: <!-- TODO ATAG: Remove lint-ignore if this definition is used -->
 								the characteristics of haptic output. Examples include the
 								magnitude of the haptic forces and the types of vibration.
 							</li>
@@ -3462,7 +3458,7 @@
 						based authoring tool=] or [=user agent=]. The document object may
 						form part of a [=platform accessibility service =] that enables
 						communication with [=assistive technologies=]. [=Web-based authoring
-						tools=] are considered to make use of the document object that is
+						tools=] are considered to make use of the documnt object that is
 						maintained by the [=user agent=].
 					</dd>
 
@@ -3475,7 +3471,7 @@
 					</dd>
 
 					<dt>
-						<dfn>end user</dfn>
+						<dfn data-lt="end user|end user's">end user</dfn>
 					</dt>
 					<dd>
 						A person who interacts with [=web content=] once it has been
@@ -3516,7 +3512,7 @@
 					</dd>
 
 					<dt>
-						<dfn>keyboard trap</dfn>
+						<dfn class="lint-ignore">keyboard trap</dfn> <!-- TODO ATAG: Remove lint-ignore if this definition is used -->
 					</dt>
 					<dd>
 						A user interface situation in which a [=keyboard interface=] may be
@@ -3537,7 +3533,7 @@
 					</dd>
 
 					<dt>
-						<dfn>live</dfn>
+						<dfn class="lint-ignore">live</dfn> <!-- TODO ATAG: Remove lint-ignore if this definition is used -->
 						<!-- [adapted from WCAG 2.0] -->
 					</dt>
 					<dd>
@@ -3618,7 +3614,7 @@
 					</dd>
 
 					<dt>
-						<dfn>platform</dfn>
+						<dfn data-lt="platform|platform(s)">platform</dfn>
 					</dt>
 					<dd>
 						The software environment within which the [=authoring tool=]
@@ -3639,7 +3635,7 @@
 					</dd>
 
 					<dt>
-						<dfn>platform accessibility service</dfn>
+						<dfn data-lt="platform accessibility service|platform accessibility service(s)">platform accessibility service</dfn>
 					</dt>
 					<dd>
 						A programmatic interface that is specifically engineered to provide
@@ -3677,7 +3673,7 @@
 						automatically, see <a href="#part-b-principle-b.1.1">Guideline B.1.1</a>.
 						<ul>
 							<li>
-								<dfn>accessible pre-authored content (WCAG):</dfn>
+								<dfn data-lt="accessible pre-authored content (WCAG):|accessible pre-authored content (WCAG)|accessible pre-authored content (to WCAG Level AA)|accessible pre-authored content (WCAG Level AA)">accessible pre-authored content (WCAG):</dfn>
 								[=Pre-authored content=] that is either already [=accessible web
 								content (WCAG)=] or would be accessible, if it was appropriately
 								inserted into an empty document. <br />
@@ -3744,7 +3740,7 @@
 						(e.g. mouse vs. keyboard use).
 						<ul>
 							<li>
-								<dfn>at least as prominent:</dfn>
+								<dfn data-lt="at least as prominent:|at least as prominent">at least as prominent:</dfn>
 								For ATAG 2.0, a [=user interface component=] A is considered to
 								be &quot;at least as prominent&quot; as another component B
 								when, from a default state, component A becomes displayed (and
@@ -3782,7 +3778,7 @@
 					</dd>
 
 					<dt>
-					    <dfn>prompt</dfn>
+					    <dfn data-lt="prompt|prompted">prompt</dfn>
 					</dt>
 					<dd>
 						Any [=authoring tool=] initiated request for a decision or piece of
@@ -3792,10 +3788,10 @@
 					</dd>
 
 					<dt>
-						<dfn>publishing</dfn>
+						<dfn data-lt="publishing|published|publish">publishing</dfn>
 					</dt>
 					<dd>
-						Any point at which the [=authors=] or [=authoring tool=] make [= web
+						Any point at which the [=authors=] or [=authoring tool=] make [=web
 						content=] available to [=end users=] (e.g. uploading a web page,
 						committing a change in a wiki, live streaming).
 					</dd>
@@ -3818,7 +3814,7 @@
 						<!-- [adapted from WCAG 2.0] -->
 					</dt>
 					<dd>
-						Meaningful associations between distinct pieces of [= content=].
+						Meaningful associations between distinct pieces of [=content=].
 					</dd>
 
 					<dt>
@@ -3827,7 +3823,7 @@
 					</dt>
 					<dd>
 						The process by which [=web content accessibility problems=] that
-						have been identified within [= web content=] are resolved. ATAG 2.0
+						have been identified within [=web content=] are resolved. ATAG 2.0
 						recognizes three types of repair, based on increasing levels of
 						automation:
 						<ul>
@@ -3890,7 +3886,7 @@
 					</dd>
 
 					<dt>
-						<dfn>technology (web content)</dfn>
+						<dfn data-lt="technology (web content)|web content technologies|web content technology">technology (web content)</dfn>
 						<!-- [harmonized with WCAG 2.0] -->
 					</dt>
 					<dd>
@@ -3915,7 +3911,7 @@
 						decisions.
 						<ul>
 							<li>
-								<dfn>accessible templates (WCAG)</dfn>:
+								<dfn data-lt="accessible templates (WCAG)|accessible template (WCAG)|accessible template (to WCAG Level AA)|accessible template">accessible templates (WCAG)</dfn>:
 								Templates that can be filled in to create web content that meets
 								the [[WCAG20]] success criteria
 								(Level A, AA or AAA), when both of the following are true:
@@ -3971,7 +3967,7 @@
 						plug-ins, media players)
 						<ul>
 							<li>
-								<dfn>In-Market User Agent</dfn>: A user agent that can be
+								<dfn data-lt="In-Market User Agent|in-market">In-Market User Agent</dfn>: A user agent that can be
 								procured by members of the public (free or otherwise). Usually,
 								an in-market user agent will be a separate software from the
 								[=authoring tool=]; however, sometimes a software may combine
@@ -3979,14 +3975,14 @@
 								include:
 								<ul>
 									<li>
-										<dfn>Preview-Only</dfn>: If the user agent can only render
+										<dfn class="lint-ignore">Preview-Only</dfn>: <!-- TODO ATAG: Remove lint-ignore if this definition is used --> If the user agent can only render
 										web content that it receives from the associated authoring
 										functionality, then the software is an authoring tool with a
 										[=preview=] feature. Such preview-only features are
 										<em>not considered in-market user agents</em>.
 									</li>
 									<li>
-										<dfn>User Agent with Authoring Tool Mode</dfn>: If the user
+										<dfn data-lt="User Agent with Authoring Tool Mode|User Agents with Authoring Tool Modes">User Agent with Authoring Tool Mode</dfn>: If the user
 										agent functionality must retrieve and open web content
 										before it can be sent to the authoring tool functionality,
 										then the software is a user agent with an authoring tool
@@ -3995,7 +3991,7 @@
 										in-market user agent.
 									</li>
 									<li>
-										<dfn>Combined User Agent/Authoring Tool</dfn>: A user agent
+										<dfn class="lint-ignore">Combined User Agent/Authoring Tool</dfn>: <!-- TODO ATAG: Remove lint-ignore if this definition is used --> A user agent
 										in which the default mode of user interaction enables
 										editing the web content. These tools do not need previews
 										because the author is already experiencing the content in
@@ -4007,7 +4003,7 @@
 					</dd>
 
 					<dt>
-						<dfn>user interface component</dfn>
+						<dfn data-lt="user interface component|component|components">user interface component</dfn>
 						<!-- [adapted from WCAG 2.0] -->
 					</dt>
 					<dd>
@@ -4050,15 +4046,15 @@
 						content in a view:
 						<ul>
 							<li>
-								<dfn>source views</dfn>: The content is presented in
+								<dfn data-lt="source views|source|source editing-views">source views</dfn>: The content is presented in
 								unrendered form (e.g. plain text editors); or
 							</li>
 							<li>
-								<dfn>rendered views</dfn>: [=Content renderings=]
+								<dfn class="lint-ignore">rendered views</dfn>: <!-- TODO ATAG: Remove lint-ignore if this definition is used --> [=Content renderings=]
 								(conventional, unconventional or partial) are presented; or
 							</li>
 							<li>
-								<dfn>property views</dfn>: Only properties of the content are
+								<dfn class="lint-ignore">property views</dfn>: <!-- TODO ATAG: Remove lint-ignore if this definition is used --> Only properties of the content are
 								presented. The authoring tool then uses these properties to
 								[=automatically generate=] the content to be [=published=] (e.g.
 								CMS calendar widget that generates a calendar from the numeric
@@ -4068,7 +4064,7 @@
 					</dd>
 
 					<dt>
-						<dfn>workflow</dfn>
+						<dfn data-lt="workflow|work flows">workflow</dfn>
 					</dt>
 					<dd>
 						A customary sequence of steps or tasks that [=authors=] follow to
@@ -4203,8 +4199,14 @@
 			</section>
 
 			<section>
-				<p align="center">[<a href="#contents">Contents</a>]</p>
+				<p align="center">[<a href="#toc">Contents</a>]</p>
 			</section>
 		</section>
 	</body>
 </html>
+
+
+
+
+
+
