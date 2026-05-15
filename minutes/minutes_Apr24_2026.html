@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8" />
+	<title>
+		Authoring Tools Accessibility Guidelines CG Meeting &ndash; 24 April 2026
+	</title>
+	<meta name="viewport" content="width=device-width" />
+	<link rel="stylesheet" type="text/css" title="2018" href="https://www.w3.org/StyleSheets/scribe2/public.css" />
+	<link rel="alternate stylesheet" type="text/css" title="2004" href="https://www.w3.org/StyleSheets/base.css" />
+	<link rel="alternate stylesheet" type="text/css" title="2004" href="https://www.w3.org/StyleSheets/public.css" />
+	<link rel="alternate stylesheet" type="text/css" title="2004" href="https://www.w3.org/2004/02/minutes-style.css" />
+	<link rel="alternate stylesheet" type="text/css" title="Fancy"
+		href="https://www.w3.org/StyleSheets/scribe2/fancy.css" />
+	<link rel="alternate stylesheet" type="text/css" title="Typewriter"
+		href="https://www.w3.org/StyleSheets/scribe2/tt-member.css" />
+	<style>
+		.chat {
+			margin-left: 1em;
+			font-style: italic;
+		}
+	</style>
+</head>
+
+<body>
+	<header>
+		<p>
+			<a href="https://www.w3.org/"><img src="https://www.w3.org/assets/logos/w3c-2025/svg/w3c-white.svg"
+					alt="W3C" border="0" height="60" width="60" /></a>
+		</p>
+
+		<h1>Authoring Tools Accessibility Guidelines CG Meeting</h1>
+		<h2>24 April 2026</h2>
+	</header>
+
+	<div id="prelims">
+		<div id="attendees">
+			<h2>Attendees</h2>
+			<dl class="intro">
+				<dt>Present:</dt>
+				<dd>
+
+				</dd>
+				<dt>Regrets:</dt>
+				<dd>Wendy Reid</dd>
+				<dt>Chair</dt>
+				<dd>Lisa Liskovoi</dd>
+			</dl>
+		</div>
+
+		<nav id="toc">
+			<h2>Contents</h2>
+			<ol>
+				<li><a href="#minutes">Meeting Minutes</a></li>
+			</ol>
+		</nav>
+	</div>
+
+	<main id="meeting" class="meeting">
+		<section id="minutes">
+			<h2>Meeting Minutes</h2>
+			<p class="message"><cite class="speaker">Lisa Liskovoi: </cite><span class="text">We&#x27;re at about 5
+					minutes past, so I&#x27;ll get started. so Wendy is away today, so she sends her regrets for not
+					being here, and we&#x27;ll be talking about research. So I&#x27;m just going to drop the framing
+					question in the chat.<br>Broadly speaking, we&#x27;re looking at. Looking at the current version of
+					ATAG, what are some things that we want to research and what are some methodologies that we want to
+					use in order to support that research?<br>Looking at the current version and future improvements,
+					what research can we do to support that work? What methodologies or approaches should we try?<br>and
+					I&#x27;ll also drop some of the questions that have come up in our discussions.<br>that we mentioned
+					that we might want to address through research. So this is just to get you thinking, but just as a
+					starting point, if you have burning questions that you want us to talk about, don&#x27;t feel like
+					you have to stick to the list at all.<br>So with that, I&#x27;ll pass it to the room.</span></p>
+			<p class="chat"><cite class="speaker">Lisa Liskovoi: </cite><span class="text">Why was ATAG not successful in being adopted by policy
+					around the world?<br>Why was ATAG not successful in being adopted into procurement policy?<br>What
+					is the relationship between policy and downstream considerations like procurement?<br>Will browsers
+					and AI chat apps soon have inherent AI-based capabilities to make everything accessible? (Can they
+					build such features reliably?)<br>What are the implications of security and privacy in AI-integrated
+					authoring tool interfaces or browsing experiences?<br>If generative UI becomes a first-class feature
+					in something like a web browser, or through a website that browses on your behalf, does it become an
+					authoring tool?<br>Abhinav Kannan:👍</span></p>
+			<p class="message"><cite class="speaker">Ned Zimmerman: </cite><span class="text">Yeah, thanks,
+					Lisa.<br>Something that I have come across in starting to do some<br>research around this
+					topic.<br>is the<br>So, I guess to say, particularly with respect to the<br>use of LLMs and AI in
+					authoring tools that becomes challenging.<br>is<br>I think it would be worthwhile to
+					research<br>what existing<br>standardization is<br>out there around<br>or our standards are out
+					there around natural natural language interfaces.<br>Because when we&#x27;re talking about AI
+					authoring, a lot of that is done using either voice or text prompts in natural language.<br>A tag 2
+					doesn&#x27;t touch on that at all, for obvious reasons.<br>but<br>Because that&#x27;s something that
+					we&#x27;re trying to address.<br>in an upcoming version, I think<br>understanding what&#x27;s out
+					there around natural language.<br>interfaces would be really helpful to inform<br>any parts of a
+					newer ATAG standard that address that.<br>I did do<br>a preliminary scan of some standards and found
+					a few.<br>ISO standards related to language interfaces, but specifically they are<br>language
+					interfaces that don&#x27;t use natural language processing, so they involve, like,
+					predefined<br>commands, which is not applicable to LLMs because they&#x27;re non-deterministic
+					and<br>respond differently to the same prompt, depending on, you know,<br>a number of factors. So, I
+					think it&#x27;s an interesting area that<br>would be valuable for us to research,<br>towards this
+					newer version of ATAG.</span></p>
+			<p class="message"><cite class="speaker">Jutta Treviranus: </cite><span class="text">Yeah, I think,<br>given
+					that ATAG was very much<br>quite formulaic in terms of create content that adheres to WCAG.<br>it
+					would be good in this round, especially knowing what&#x27;s happening on the,<br>the WCAG 3.0 and
+					other areas to tackle<br>the notion of,<br>And the very gnarly and somewhat difficult notion
+					of<br>personalization or individualization of interfaces, and so<br>rather than I mean<br>Do we want
+					to open up that debate again, especially given the messiness of what&#x27;s happened with overlays?
+					but divorcing<br>the business practices from the actual opportunities that are offered by<br>being
+					responsive to the individual needs of the<br>the user, or whatever<br>I think it would be good to
+					explore that.<br>I&#x27;m not sure exactly how to state the question, but or the research
+					question.</span></p>
+			<p class="message"><cite class="speaker">Andrew Puchle: </cite><span class="text">something that comes to my
+					mind in this kind of builds on the non-deterministic<br>case that was mentioned earlier, that it and
+					it&#x27;s true, like, every time you tell it something, it&#x27;ll be slightly different than the
+					time before it.<br>what is the delta between its actual outputs and its claims made about it, right?
+					So there&#x27;s a lot of, like,<br>you know grandiose claims about how it&#x27;s gonna do all these
+					things, and does them well, and so forth.<br>But it in practicality, it really doesn&#x27;t. And so,
+					you know, what<br>What is that delta?<br>current state, and then what can be done from an authoring
+					tool perspective to ensure that<br>it&#x27;s mediated, right? So<br>You know, if you tell the AI to
+					make something following accessibility guidelines how consistent is it in doing that, right?</span>
+			</p>
+			<p class="chat"><cite class="speaker">Lisa Liskovoi: </cite><span class="text">Looking at the current version
+					and future improvements, what research can we do to support that work? What methodologies or
+					approaches should we try?</span></p>
+			<p class="message"><cite class="speaker">Miriam Fukushima: </cite><span class="text">yeah, what I would like
+					to know would be kind of like some hard data on from actual companies in, like.<br>Kind of a
+					questionnaire or something, a survey on how familiar they are with ATAG, if they know if it even
+					applies to their products, or why. And then maybe if they answer that with yes, then some more
+					detailed questions about specific areas of ATAG, and.<br>Maybe a scale from 0 to 10 on how difficult
+					to implement or to understand. They found that a specific part of ATAG, and then we have some hard
+					data on which areas need most work.</span></p>
+			<p class="message"><cite class="speaker">Ned Zimmerman: </cite><span class="text">Thanks, Lisa. the other
+					thing that I have been thinking about a bit is the<br>change in the content authoring landscape
+					since ATAG 2 was published.<br>I think what we see now is a lot more of the sort of full-site
+					editing,<br>full site builder interfaces along the lines of Squarespace and other tools like
+					that.<br>But we&#x27;re also seeing in the AI realm, we&#x27;re seeing these<br>just type a prompt
+					and we&#x27;ll build and design and lay out your whole website.<br>offering experiences that
+					are<br>completely different from what I think ATAG2 would have conceptualized.<br>And so, I
+					think<br>I guess understanding the different constraints and requirements around<br>a full-site
+					editing experience versus a more<br>old-fashioned content management system where
+					you&#x27;re<br>editing pages in a CMS that are associated with templates that have been built
+					elsewhere.<br>I don&#x27;t really know what the best research approach for that was. Lisa and I were
+					chatting about that earlier, but<br>I think maybe some sort of<br>even, like, a scan of what</span>
+			</p>
+			<p class="chat"><cite class="speaker">Saif Altalib: </cite><span class="text">ATAG for Vibe Coding and
+					Agentic AI</span></p>
+			<p class="message"><cite class="speaker">Ned Zimmerman: </cite><span class="text">vendors are prominent now in
+					the CMS<br>space I know there are there&#x27;s always the stats about WordPress&#x27;s usage that
+					are<br>that are available, and how how dominant WordPress is by market share in content management
+					systems, but it would be interesting to see<br>like, what the top content management systems or
+					authoring tools are that are in use globally at the present moment.<br>And how they<br>where they
+					fit into that spectrum between<br>an old-fashioned, I&#x27;ll say old-fashioned and scare quotes,
+					CMS and a full-site editor.<br>along the lines of a Squarespace or something.</span></p>
+			<p class="chat"><cite class="speaker">Mike Gifford (CivicActions): </cite><span
+					class="text">https://almanac.httparchive.org/en/2025/cms</span></p>
+			<p class="message"><cite class="speaker">Ned Zimmerman: </cite><span class="text">Yeah, oh, that&#x27;s
+					great.<br>If that&#x27;s what I think it is, fantastic.</span></p>
+			<p class="chat"><cite class="speaker">Mike Gifford (CivicActions): </cite><span class="text">Also, in that
+					regard https://almanac.httparchive.org/en/2025/accessibility</span></p>
+			<p class="message"><cite class="speaker">Jutta Treviranus: </cite><span class="text">Yeah, I think one thing
+					that I&#x27;m not sure if this is a research question, or if it&#x27;s a,<br>some framing that needs
+					to be done before we actually<br>refresh ATAG.<br>And it&#x27;s revisiting that, uh<br>Division
+					between what is authoring, what is user agent, what is<br>web content because, of course, it&#x27;s
+					always been somewhat of a messy<br>area, or<br>delineation but it&#x27;s becoming even messier now
+					in terms of<br>reformulating the content post<br>whoever is determined to be the author, etc.
+					So<br>working on or looking at,<br>How we delineate that at this point.</span></p>
+			<p class="message"><cite class="speaker">Mary Ann (MJ) Jawili: </cite><span class="text">Yeah, I think maybe
+					related to what Jutta was just saying,<br>What I<br>would like and I don&#x27;t know if this was a
+					WCAG thing, but<br>I would<br>The example that comes to mind is, like,<br>Live captions showing up,
+					or being available in the browser or an operating systems, and<br>like, author<br>content authors,
+					like, saying, well, we don&#x27;t need to specify the captions anymore, because you could just turn
+					it on.<br>We don&#x27;t need to provide captions, because you can just turn it on on your operating
+					system or browser, and<br>I guess I would love to underst-<br>I don&#x27;t know, I guess I&#x27;d
+					like for us to ex<br>explore, like<br>How much of that would be is acceptable now, or if any of it
+					is acceptable?<br>or what do we still expect people to<br>to at the authoring level. So maybe
+					related to what Yuta was saying?<br>and regarding how to do that kind of research,<br>I don&#x27;t
+					know, like<br>asking people,<br>if what their experience has been like, and<br>trying out<br>AI
+					solutions and seeing if they&#x27;re<br>adequate whatever adequate means.<br>Yeah.</span></p>
+			<p class="message"><cite class="speaker">Lisa Liskovoi: </cite><span class="text">I think this is a thought
+					that&#x27;s related to what both you and Yuta have said, and also a little bit of our discussion
+					before, and that distinction between what is the authoring and what is the user agent? You mentioned
+					personalization earlier on, and I think maybe one of the things that we can think about
+					is.<br>Again, thinking about the two sections of ATAG, like personalization for the author, and then
+					personalization like what needs to be in place in order to allow for personalization that&#x27;s of
+					a certain level of quality for the end user, and because I think there&#x27;s still a little bit of
+					a.<br>maybe misunderstanding about how much has to go into the creation process in order for the
+					content to be.<br>adjusted or modified or presented in different ways.</span></p>
+			<p class="message"><cite class="speaker">Jutta Treviranus: </cite><span class="text">Yeah, just to comment on
+					that, I think this goes back to the old debate when WCAG 2.0 was being finalized of, is it
+					compliance at the page level or at the site level? And it was decided to go to the page
+					level.<br>where the site level would have allowed for<br>all of the criteria to be met by the site
+					dependent upon and that would have allowed for that individualization of</span></p>
+			<p class="chat"><cite class="speaker">Charles Hall: </cite><span class="text">From WCAG:<br><br>only
+					accessibility-supported ways of using technologies can be relied upon for conformance<br><br>Relied
+					upon<br>the content would not conform if that technology is turned off or is not supported</span>
+			</p>
+			<p class="message"><cite class="speaker">Jutta Treviranus: </cite><span class="text">of content and I
+					don&#x27;t know if there&#x27;s appetite to reopen that debate.</span></p>
+			<p class="chat"><cite class="speaker">Laura Staniland: </cite><span class="text">I would love to see it be
+					focused on the site level because if the site isn’t accessible, then nothing else is really
+					accessible</span></p>
+			<p class="message"><cite class="speaker">Charles Hall: </cite><span class="text">I just pasted this in the
+					Zoom chat from WCAG. But if we&#x27;re.<br>If we&#x27;re looking at where that proverbial line is
+					between author and agent and content.</span></p>
+			<p class="chat"><cite class="speaker">Laura Staniland: </cite><span class="text">If the platform can’t do
+					WCAG 2.1…then it’s not accessible.</span></p>
+			<p class="message"><cite class="speaker">Charles Hall: </cite><span class="text">and saying that the user
+					agent provides the solution so the author doesn&#x27;t have to. We have to look at existing
+					definitions.<br>that helps support us, and WCAG has relied upon.<br>So, if the agent provides it,
+					that&#x27;s fine. But if that&#x27;s a setting, and you turn it off.<br>Or in some scenario. where
+					it&#x27;s it&#x27;s not supported for Whatever reason.<br>premium tier, or authenticated or
+					something, then the the agent isn&#x27;t universally providing that. It can&#x27;t be relied
+					upon.</span></p>
+			<p class="chat"><cite class="speaker">Sambhavi Chandrashekar: </cite><span class="text">Page-level has
+					never made sense to me. Workflows matter, regardless of the path in the site a user follows. So, I
+					support site level.</span></p>
+			<p class="message"><cite class="speaker">Lisa Liskovoi: </cite><span class="text">I&#x27;m also thinking about
+					sort of quality or accuracy requirements for anything that is automated or provided by the platform.
+					Like, I know a big issue in WCAG is that it requires captions, but there&#x27;s no requirement
+					around how accurate those closed captions are.<br>so I&#x27;m thinking about that in other contexts,
+					like, if there are things that are automated.<br>Is there a way for us to even do that? Because, you
+					know, it might be a little bit harder for somebody to to kind of hard decide whether an alternative
+					text description is accurate enough compared to something like closed captions, which is obviously
+					easier to compare.</span></p>
+			<p class="chat"><cite class="speaker">Charles Hall: </cite><span class="text">WCAG never cared about
+					accuracy</span></p>
+			<p class="message"><cite class="speaker">Lisa Liskovoi: </cite><span class="text">Charles, I see your note in
+					the chat that we&#x27;ve never cared about accuracy. Does that are you saying that in the sense that
+					we also?<br>can&#x27;t or shouldn&#x27;t be thinking about it in a tag, or Is that just?
+					Okay.</span></p>
+			<p class="message"><cite class="speaker">Charles Hall: </cite><span class="text">No, I I yeah, sorry pretty
+					much agreeing with you. It&#x27;s a gap.</span></p>
+			<p class="message"><cite class="speaker">Miriam Fukushima: </cite><span class="text">Yeah, I was also thinking
+					about responsibility. If we say like closed captions are provided by the browser, then the content
+					that in which we that we open in the browser is not necessarily.<br>always opened by a browser, so
+					it could be other programs, other platforms, and just because we made the browser responsible
+					doesn&#x27;t mean.<br>that other platforms are equally responsible and, And so I think to keep the
+					responsibility as close to the content as possible is probably the only thing we can
+					do.<br>Obviously, like, browsers are also authoring tools and whatever other software is developed
+					to view that content should also then adhere to ATAG. But if like an author of a content is asking
+					themselves if.<br>They could rely on other software to fulfill the aid tech for them. Then the
+					answer should be no.</span></p>
+			<p class="message"><cite class="speaker">Mike Gifford (CivicActions): </cite><span class="text">Just to say
+					that there&#x27;s often embedded tools like Drupal has to conform with with a tag. We&#x27;re
+					trying, at least we&#x27;re trying to make it conform with a tag. But cke editor is the WYSIWYG
+					editor that we use. That is a tool within.<br>Drupal. So there&#x27;s a nesting of tools that are
+					involved, and there will continue to be a nesting of tools for authoring environments. So we have to
+					think about not just about the one system that we&#x27;re evaluating, but that chain of systems
+					which can be modified and customized. But still, it&#x27;s not just one.<br>It&#x27;s not just one
+					tool. It&#x27;s it&#x27;s often a bunch of tools.</span></p>
+			<p class="message"><cite class="speaker">Laura Staniland: </cite><span class="text">I think it was Mike who
+					just said something about a bunch of tools. I was thinking how they&#x27;ve pushed AI into all of
+					these platforms, and maybe that should be included in the, like Requirements is that<br>The AI
+					they&#x27;ve pushed in is also accessible.<br>I was just thinking about what&#x27;s at the site
+					level, what&#x27;s on a platform now that</span></p>
+			<p class="message"><cite class="speaker">Lisa Liskovoi: </cite><span class="text">Mike, I know in the
+					discussion you posted some some findings from a research report around authoring tools. I don&#x27;t
+					know if you want to speak about that a little bit.</span></p>
+			<p class="message"><cite class="speaker">Mike Gifford (CivicActions): </cite><span class="text">Sure. So this
+					is the the Http archive does an annual scan review of of of the web and and being involved in in the
+					accessibility chapter and the sustainability chapter. And so so have have some insights on
+					that.<br>But there&#x27;s also a CMS chapter, which is largely driven by WordPress people, because
+					they&#x27;re.<br>They&#x27;re a big part of that ecosystem. But it&#x27;s the closest thing we have
+					to a snapshot of what CMS are actually being used out there. And I think that there really should be
+					more interaction between what.<br>is actually being done on the web, which the HTV archive is
+					probably the best.<br>sort of a summary of that, and what standards we&#x27;re trying to build
+					towards. And there isn&#x27;t right now any real connection between the W3C and the HTV archive. I
+					think mostly because we&#x27;re all just short of time and energy, and.<br>And it&#x27;s a bigger
+					project than we have the resources to do, but it does make a lot of sense if we care about the web,
+					that we both look at the standards we&#x27;re trying to build towards and how effective we are at
+					doing that. So that&#x27;s the thought there. But Miriam, you had a comment?</span></p>
+			<p class="message"><cite class="speaker">Miriam Fukushima: </cite><span class="text">Me? Yeah, yeah, yeah, it
+					was just to your earlier comment, Mike, with a bunch of tools. I was just thinking that also that
+					was one of the problems we identified as problematic for the application of ATAG.<br>because people
+					weren&#x27;t sure if they were responsible, or if someone else in the chain was responsible, or like
+					how to make it into smaller portions that it&#x27;s not too overwhelming, and that you get a start,
+					and that you.<br>like, identify the problems and isolate, kind of, the workflows and the areas that
+					need to be worked on.</span></p>
+			<p class="message"><cite class="speaker">Mike Gifford (CivicActions): </cite><span class="text">I mean, again,
+					I can speak to what the Drupal community does with that, and and so much of that is is about about
+					trying to fix the problem at the source. And so if we discover an issue with CK Editor, we make sure
+					that it&#x27;s reported in Cq editor. Sometimes we can fix it ourselves within Drupal, but sometimes
+					we have to go off and wait for CK Editor.</span></p>
+			<p class="message"><cite class="speaker">Mike Gifford (CivicActions): </cite><span class="text">to fix the
+					issue. Or look for ways to go and work around that, like the in terms of editing tools, there&#x27;s
+					a really excellent editing, well, sorry, John Gunderson created a really excellent tool called Ali
+					First, which was using CCADER 4 to try and.<br>and create a better interface for accessibility to
+					prioritize the editing interface to be able to make it easier for people to create accessible
+					content by default. I&#x27;ve been advocating with the folks at CK Editor 5 for years now to try and
+					get that built in so that that sort of approach is built into CK Editor 5.<br>It&#x27;s not being a
+					priority for them on the timeline. It&#x27;s not something that they&#x27;ve been discussed. But
+					again, there&#x27;s some things that you can do as your as yourself. There&#x27;s some things that
+					you need to go off or have an upstream library maintain, but as long as you&#x27;re documenting what
+					those things are and who&#x27;s responsible.<br>that I think you&#x27;ve done your due diligence as
+					a project. So this is an upstream issue. If you&#x27;ve contributed upstream, and you&#x27;ve said,
+					this is what we&#x27;ve done to address this, and this is how I think it&#x27;s about trying to make
+					sure that you&#x27;re involving the community of software that you&#x27;re using as part of your
+					project.</span></p>
+			<p class="chat"><cite class="speaker">Laura Staniland: </cite><span class="text">What is SeeKey
+					editor?</span></p>
+			<p class="message"><cite class="speaker">Mike Gifford (CivicActions): </cite><span class="text">Does that make
+					sense?</span></p>
+			<p class="message"><cite class="speaker">Lisa Liskovoi: </cite><span class="text">There&#x27;s a question in
+					the chat from Laura, I think for clarification, Mike, around what is CK editor?</span></p>
+			<p class="chat"><cite class="speaker">Ned Zimmerman: </cite><span
+					class="text">CKEditor<br>https://ckeditor.com/</span></p>
+			<p class="message"><cite class="speaker">Mike Gifford (CivicActions): </cite><span class="text">So I&#x27;ve
+					got in terms of examples. And yeah, thank you for for that, Ned. So this is the example that that
+					I&#x27;ve I&#x27;ve actually tried to fork it. But what the so I have a cke editor 5 version running
+					that seems to
+					work.<br>https://mgifford.github.io/CKEditor5-A11yFirst/<br>https://a11yfirst.gitlab.io/<br>But the
+					initial CK Editor 4 issue is also, I just added that to the chat as well. And again, like this is
+					something that I did on the side of the plate, because I think we need to have something like this.
+					We need to have this discussion about what is possible.<br>And again, you know, the folks that in
+					Illinois went off and did an excellent job trying to outline what what a useful WYSIWYG editor could
+					look like for accessibility. And I&#x27;ve tried to bring that in as an example, and I would love to
+					see other people.<br>test and evaluate it, bring it in, like, how do we try and use these ideas and
+					push them forward?</span></p>
+			<p class="message"><cite class="speaker">Miriam Fukushima: </cite><span class="text">Yeah, just to that, that
+					makes total sense to me. And I was just thinking on how we could incorporate that more into ATAG
+					than we had in the previous version so that people who actually try to apply ATAG.<br>Kind of get
+					the sense, okay, I need to break it down, I need to search for my closest responsibility and start
+					from there. And on how to make this more understandable, and, Yeah, more transparent on how to go
+					about it, because it&#x27;s not clear for everyone.</span></p>
+			<p class="chat"><cite class="speaker">Mike Gifford (CivicActions): </cite><span class="text">Also
+					highlighting the Funka We4Authors study:<br>https://mgifford.github.io/We4Authors/<br>It&#x27;s
+					also, I just wanted to. I put in a link also for the the we for authors cluster, which which was an
+					effort from Susanna Lauren and others to try and actually engage with Cms.</span></p>
+			<p class="chat"><cite class="speaker">Saif Altalib: </cite><span class="text">Is 24 September 2015 the
+					latest version of ATAG guidelines?</span></p>
+			<p class="message"><cite class="speaker">Mike Gifford (CivicActions): </cite><span class="text">tool builders
+					to try and and evaluate what what we could do to support authors better. This was done in
+					preparation for the European Accessibility Act being released, and it was a came up with some really
+					interesting stuff that was distinct from ATAG. But again, it&#x27;s an interesting sort of
+					like.</span></p>
+			<p class="chat"><cite class="speaker">Ned Zimmerman: </cite><span class="text">Replying to &quot;Is 24
+					September 2015 the latest version of ATAG gu...&quot;:<br>I believe so</span></p>
+			<p class="message"><cite class="speaker">Mike Gifford (CivicActions): </cite><span class="text">midway point
+					in terms of what were some of the limitations, what&#x27;s a different way of thinking about it, but
+					unfortunately, with issues of Funca, the website was was dropped, and so I&#x27;ve tried to recreate
+					a copy of it. You can still see some information on the funca site, but it has.<br>There&#x27;s been
+					some changes in how that organization and the leadership on that has run.</span></p>
+			<p class="chat"><cite class="speaker">Saif Altalib: </cite><span class="text">Thank you! So our goal is to
+					update these guidelines. Is there a plan of how we are going to do that?</span></p>
+			<p class="message"><cite class="speaker">Lisa Liskovoi: </cite><span class="text">Thank you for doing that
+					work, like, for putting it together. Is there anything you want to highlight from that that you
+					think we should discuss today from a research standpoint?</span></p>
+			<p class="message"><cite class="speaker">Mike Gifford (CivicActions): </cite><span class="text">I guess, like,
+					try to find the pain points, right? Like, what are the pain points for authors? What are the pain
+					points for one of the things we just haven&#x27;t dealt with very well, and and I mean, this is what
+					we&#x27;re trying to sort of get to with. I think that that that.<br>ATAG 2.0 was very much coming
+					from a more.</span></p>
+			<p class="chat"><cite class="speaker">Rémi Bétin: </cite><span class="text">Replying to &quot;Is 24
+					September 2015 the latest version of ATAG gu...&quot;:<br>Yes</span></p>
+			<p class="message"><cite class="speaker">Mike Gifford (CivicActions): </cite><span class="text">A theoretical
+					academic perspective, and with we for authors, it was coming from the site, this authoring tool
+					builders trying to say, what what do we want to have happen? What are the things that we can do? And
+					and there&#x27;s things that just aren&#x27;t like, how do you express it in a generic way that is
+					not.<br>That is a W3C friendly kind of way of conveying it that can be understood by the builders of
+					these tools. And I think it&#x27;s, I mean, partly it&#x27;s coming down to what is who is our
+					audience? Who do we want to go off into to listen to this? And how do we?<br>you know, as somebody
+					that says tried to implement a tag 2.0, now, like a long time ago. But but it&#x27;s not easy to go
+					off and to think about how do these success criteria line up with what is it we&#x27;re doing over a
+					really complicated interface like.<br>It&#x27;s not a it&#x27;s not an easy thing to go and figure
+					out how do we support ATAG A or B, but to try and do both is a it&#x27;s a big challenge.</span></p>
+			<p class="message"><cite class="speaker">Miriam Fukushima: </cite><span class="text">Yeah, I really think,
+					like collecting data would be really good in form of surveys, but how are our capacities for that,
+					like as as a working group and like.</span></p>
+			<p class="chat"><cite class="speaker">Saif Altalib: </cite><span class="text">Are we planning to maybe use
+					an LLM model to create first draft based on our expert insights and requirements...</span></p>
+			<p class="message"><cite class="speaker">Miriam Fukushima: </cite><span class="text">Has that been done
+					before? Like we would really need maybe also not just us, but also Europe and like some just some
+					wide range data on how it&#x27;s applied and how the actual.<br>process of going about it and like
+					scales, or yes or no questions just to get some some broad.<br>Numbers.</span></p>
+			<p class="message"><cite class="speaker">Abhinav Kannan: </cite><span class="text">Yeah I had the same idea as
+					Miriam, which is collecting data and trying to validate.<br>So, what is a good suggested next step
+					in trying to collect this data? Should we go Should we go talk to should we have people use some
+					tools, get some feedback?<br>Do we need to get more feedback, or is there already some feedback out
+					there? What kind of research? What are some best next steps we can I&#x27;m just trying I&#x27;m
+					just throwing it out there. As you know, I&#x27;m really new. Yeah.</span></p>
+			<p class="chat"><cite class="speaker">Ned Zimmerman: </cite><span class="text">Replying to &quot;Are we
+					planning to maybe use an LLM model to creat...&quot;:<br>This is worth reviewing:
+					https://www.w3.org/TR/2026/NOTE-llms-standards-20260324/<br>Saif Altalib:❤️</span></p>
+			<p class="message"><cite class="speaker">Lisa Liskovoi: </cite><span class="text">I think as a first pass, we
+					should probably gather the information that&#x27;s already out there, so we&#x27;re not asking the
+					same questions if we do distribute a survey or something like that. So Github discussion seems to be
+					a good place to do that. We already have a thread dedicated to research. So.</span></p>
+			<p class="message"><cite class="speaker">Jutta Treviranus: </cite><span class="text">… and this data
+					collection will be made difficult by the changing landscape. What we find out from the past will
+					likely be disrupted.<br>Abhinav Kannan:👍</span></p>
+			<p class="message"><cite class="speaker">Lisa Liskovoi: </cite><span class="text">Maybe if folks want to
+					continue populating it with information that we know is out there, whether that&#x27;s survey data
+					or other kinds of resources, and then.<br>from there, I guess we&#x27;d have to come up with the
+					questions that we want to ask, and then figure out where we want to distribute it.</span></p>
+			<p class="message"><cite class="speaker">Lisa Liskovoi: </cite><span class="text">I don&#x27;t know if folks
+					have ideas about how how best to do that next, or if you&#x27;ve had experience doing this within
+					other W3C context. Yeah, Charles.</span></p>
+			<p class="message"><cite class="speaker">Charles Hall: </cite><span class="text">Yeah, I mentioned this last
+					time, but one of the research approaches that we held.<br>In the Silver Task Force, when WCAG 3 was
+					kicking off.<br>In 2017 was what&#x27;s wrong with what we have?<br>So the the research was all
+					based around. mostly surveys, but other research methodologies, but around.<br>what are the current
+					problems with the current set of documents?<br>So, if if we&#x27;re to approach. A tag from what we
+					think we might be off.<br>But if we approach it from what research shows that other people
+					think.<br>We might be better aligned to producing something more useful.<br>So I think poking holes
+					in what exists is a great research strategy. And one of the things that I think we should look at is
+					things outside of ATAG itself.<br>So other way resources that talk about ATAG or authoring or what
+					WCAG says about authoring.<br>is is what we have accurate, relevant, current.</span></p>
+			<p class="message"><cite class="speaker">Lisa Liskovoi: </cite><span class="text">Yeah, Mike.</span></p>
+			<p class="message"><cite class="speaker">Mike Gifford (CivicActions): </cite><span class="text">I was gonna
+					say that there there are the other thing is that there&#x27;s there&#x27;s ATAG has been around long
+					enough, and that the idea of supporting authoring tools has been around long enough. Also, the we
+					for authors clusters being around so
+					that.<br>https://www.drupal.org/project/issues/drupal?text=atag&amp;status=All<br>There&#x27;s an
+					opportunity to look in existing issue queues and existing content management systems on GitHub or on
+					other places to try to say, can we find references to this that will give us a hint of what are the
+					things that that content authors are thinking about?</span></p>
+			<p class="chat"><cite class="speaker">Saif Altalib: </cite><span class="text">One thing to conisder: Since
+					everything is in a state of transition/change, not sure if this is the right time to gather data...a
+					lot of uncertainties and ambiguity.</span></p>
+			<p class="message"><cite class="speaker">Lisa Liskovoi: </cite><span class="text">One thing that I&#x27;m
+					thinking is that so far we&#x27;ve been looking at this primarily through a kind of gaps approach,
+					but Mike, to your, kind of case study that you mentioned earlier on. There&#x27;s also a lot of
+					stuff that we can learn from things that are working, right? And I&#x27;m wondering if we
+					can.</span></p>
+			<p class="message"><cite class="speaker">Mike Gifford (CivicActions): </cite><span
+					class="text">https://www.drupal.org/project/issues/drupal?text=we4authors</span></p>
+			<p class="message"><cite class="speaker">Lisa Liskovoi: </cite><span class="text">have a kind of, yes, what
+					are the gaps and what are the holes, but also in the entire time that ATAG has existed, like, what
+					are the things that have worked really well that we know that we could potentially replicate our user needs.</span></p>
+			<p class="chat"><cite class="speaker">Laura Staniland: </cite><span class="text">Are there other working
+					groups who might have similar research that we could incorporate?<br>Saif Altalib:👍</span></p>
+			<p class="chat"><cite class="speaker">Mike Gifford (CivicActions): </cite><span
+					class="text">https://github.com/search?q=we4authors&amp;type=issues<br>https://github.com/search?q=atag&amp;type=issues</span>
+			</p>
+			<p class="message"><cite class="speaker">Jutta Treviranus: </cite><span class="text">Yeah, and I think it
+					might be good to do sort of a futuring exercise as well.<br>Because this needs to last for a while,
+					given the slowness of<br>So, I think one of the issues with all versions of what has come out
+					of<br>way is that we didn&#x27;t adequately foresee or<br>try to predict or,<br>how this would
+					change, and I think this especially affects the data collection, because if we&#x27;re<br>basing our
+					decisions upon past data that will<br>that will, again, cause us not to have sufficient</span></p>
+			<p class="chat"><cite class="speaker">Mike Gifford (CivicActions): </cite><span class="text">The web is so
+					different now than it was 25 years ago!<br>Charles Hall:💯</span></p>
+			<p class="message"><cite class="speaker">Jutta Treviranus: </cite><span class="text">understand, or yeah,
+					it&#x27;ll create something that was for that moment, or the past moment, rather than something
+					that<br>is for the moment that the<br>the standard, or the guidelines will need to exist.</span></p>
+			<p class="message"><cite class="speaker">Lisa Liskovoi: </cite><span class="text">Yeah, that to me sounds like
+					a good co-design activity if we want to get into that at some point.</span></p>
+			<p class="chat"><cite class="speaker">Charles Hall: </cite><span class="text">Replying to &quot;The web is
+					so different now than it was 25 years a...&quot;:<br>The web is different now than 5 years
+					ago<br>Mike Gifford (CivicActions):💯</span></p>
+			<p class="message"><cite class="speaker">Lisa Liskovoi: </cite><span class="text">Mike, I had a follow-up
+					question about something you said around how difficult it is to implement ATAG. Ned and I were
+					having a conversation about it this morning, and we were wondering if that is more a product of the
+					requirements themselves, or is it that.<br>WCAG has this rich, you know, pool of techniques and a
+					lot more guidance, supporting guidance around how to meet the standard. In other words, should we be
+					putting effort into thinking about how we structure the requirements themselves in a clearer way? Or
+					is there a need to.<br>have more around the requirements of supports authors or creators of
+					authoring tools in meeting those.</span></p>
+			<p class="chat"><cite class="speaker">Charles Hall: </cite><span class="text">WCAG difficult to implement
+					came from difficult to understand</span></p>
+			<p class="message"><cite class="speaker">Mike Gifford (CivicActions): </cite><span class="text">I mean, the I
+					think that that the reason that there&#x27;s so much additional content around WCAG is that
+					there&#x27;s an industry behind it, that there&#x27;s an industry around reporting. And it&#x27;s
+					largely a reporting industry. It&#x27;s not necessarily an industry of.<br>Fixing problems as much
+					as of reporting problems. Again, difficult to necessarily predict, and reporting is the first step.
+					But I But I think that that part of it comes down to like, what are the the components that people
+					are using to go off and to to build.<br>to build the web. And so, like, even trying to think about
+					it in terms of things like, you know, what? What are the elements of an authoring interface that you
+					are going to that you&#x27;re going to be building that are going to be repeated patterns throughout
+					a system, because, like, the WK does not think about systems. It does not think about.</span></p>
+			<p class="chat"><cite class="speaker">Saif Altalib: </cite><span class="text">When we say &quot;Authoring
+					Tools&quot; are we primarly referring to the design and development of on-demand courses or any
+					content?</span></p>
+			<p class="message"><cite class="speaker">Mike Gifford (CivicActions): </cite><span class="text">websites. It
+					does not think about content management systems. It thinks about pages, and that is a major
+					limitation when you&#x27;re thinking about saying, well, how do we.<br>How do we fix this, this, you
+					know, the million web pages that run, or sorry, a million web sites that run Drupal that all have
+					the same error because it&#x27;s part of this template that screwed up over there? Like there just
+					wasn&#x27;t the thought that the web would be.<br>different, or is it as complicated as structured
+					as it is, which, again, was hard to predict 25 years ago, but but I think that if we were thinking
+					about fixing systems, we need to be able to understand those systems and communicate them in a way
+					that.<br>The site builders can understand or relate to.</span></p>
+			<p class="message"><cite class="speaker">Lisa Liskovoi: </cite><span class="text">I could not agree more,
+					yeah. And the first step of that is to think about it in systems, which, like you said, is not
+					there.</span></p>
+			<p class="message"><cite class="speaker">Mike Gifford (CivicActions): </cite><span class="text">I don&#x27;t
+					know how to get there, though. That&#x27;s it. Like, other than like, and same with like trying to
+					get the trying to get the money involved to do this like, if the money was there, then this would be
+					a relatively easy thing, like.</span></p>
+			<p class="chat"><cite class="speaker">Charles Hall: </cite><span class="text">Like all the &lt;a&gt;
+					elements from the default AEM link component that use the alt attribute which is invalid
+					HTML.</span></p>
+			<p class="message"><cite class="speaker">Mike Gifford (CivicActions): </cite><span class="text">Like, but
+					it&#x27;s, it&#x27;s talking about like orders of magnitude more money than, than, say, even the,
+					the Accessible Standards Canada is going to be able to bring to bear to this. Like it&#x27;s This is
+					not a few researchers here or there going off and putting together a report. It&#x27;s about trying
+					to say, how do we shift how accessibility is done so that we are fixing, we&#x27;re shifting left to
+					where the problems are created, which sometimes is with the tools.<br>And sometimes it&#x27;s with
+					the training, and sometimes it&#x27;s with you know, but it&#x27;s not we&#x27;re not fixing it at
+					the right place, which is why we&#x27;re not as accessible as we want to be.<br>I wish I had a more
+					sort of like rah, let&#x27;s fix this sort of solution. But it just like, yeah, this is a big gnarly
+					problem.</span></p>
+			<p class="message"><cite class="speaker">Lisa Liskovoi: </cite><span class="text">Well, acknowledging it as
+					the first step, right?</span></p>
+			<p class="chat"><cite class="speaker">Ned Zimmerman: </cite><span class="text">Replying to &quot;When we
+					say &quot;Authoring Tools&quot; are we primarly refe...&quot;:<br>From the standard: “Any web-based
+					or non-web-based application(s) that can be used by authors (alone or collaboratively) to create or
+					modify web content for use by other people (other authors or end users).”<br>Saif Altalib:👍</span>
+			</p>
+			<p class="message"><cite class="speaker">Lisa Liskovoi: </cite><span class="text">I know there&#x27;s been
+					some discussion happening in the chat that I&#x27;ve been following less, so if anybody wants to
+					jump in and just speak through it a little bit, that&#x27;d be great.</span></p>
+			<p class="chat"><cite class="speaker">Ned Zimmerman: </cite><span class="text">Replying to &quot;When we
+					say &quot;Authoring Tools&quot; are we primarly
+					refe...&quot;:<br>https://www.w3.org/TR/ATAG20/#def-Authoring-Tool</span></p>
+			<p class="message"><cite class="speaker">Laura Staniland: </cite><span class="text">Oh, yeah I was just gonna
+					say, is there research that other groups might have as someone who works in a large institution that
+					can be siloed?<br>Sometimes the most effective way is simply to start talking to other people and be
+					like, hey, have you done this? Because we may be recreating the wheel. There may be other working
+					groups who have some data that we can incorporate. It may not be all of it, but it may be helpful,
+					and then we don&#x27;t have to do that.</span></p>
+			<p class="message"><cite class="speaker">Charles Hall: </cite><span class="text">Yeah, the the. Wendy was
+					going to go and talk to the AG chairs about the research that AG has on WCAG.<br>to see if any of it
+					might be useful.<br>But external, I don&#x27;t know if anyone&#x27;s done</span></p>
+			<p class="message"><cite class="speaker">Miriam Fukushima: </cite><span class="text">And maybe we could put as
+					one of the goals to have some additional documentation around ATAG, similar to the success criteria
+					of WCAG.</span></p>
+			<p class="chat"><cite class="speaker">Mike Gifford (CivicActions): </cite><span class="text">HECVAT -
+					https://www.educause.edu/higher-education-community-vendor-assessment-toolkit</span></p>
+			<p class="message"><cite class="speaker">Miriam Fukushima: </cite><span class="text">where maybe categories of
+					systems are actually listed, like Mike said, maybe we could like divide ATAG from an approach of,
+					okay, do you want to make an UI interface? Do you want to make a, like, text?<br>editing box, or do
+					you want to make a chat interface, or, like do you want to make a an authoring tool that processes
+					documents or something like that, which, like, if you if we have these little systems.</span></p>
+			<p class="chat"><cite class="speaker">Laura Staniland: </cite><span class="text">I like that idea</span>
+			</p>
+			<p class="message"><cite class="speaker">Miriam Fukushima: </cite><span class="text">as a starting point for
+					developers, maybe that is similar to the success criteria of WCAG. Maybe that helps to<br>like get it easier to
+					apply.</span></p>
+			<p class="chat"><cite class="speaker">Mike Gifford (CivicActions): </cite><span
+					class="text">https://docs.google.com/spreadsheets/d/1SlsIivkNfwwJbBEzgGI9UGhVWnJpqiDNd2VjEy097iU/edit?gid=1025021328#gid=1025021328</span>
+			</p>
+			<p class="message"><cite class="speaker">Mike Gifford (CivicActions): </cite><span class="text">Laura, I
+					mentioned the the what is it? I don&#x27;t know how to pronounce it. The heck that which are you
+					familiar with Hecvat?</span></p>
+			<p class="message"><cite class="speaker">Laura Staniland: </cite><span class="text">Sort of</span></p>
+			<p class="message"><cite class="speaker">Mike Gifford (CivicActions): </cite><span class="text">So this is a
+					procurement tool that is being used by a bunch of different universities in the Us. To try and set a
+					higher bar for a range of different procurement issues, including accessibility. And I had to check
+					to see whether or not this actually includes.<br>ATAG, and I did not see anything on ATAG or,
+					There&#x27;s there&#x27;s yeah, there&#x27;s there&#x27;s Yeah, there&#x27;s there&#x27;s only one
+					sort of line on authoring, and it&#x27;s just it might be useful to go off and to pressure those
+					those universities to try and say, how do we think about authoring tools? Because that&#x27;s pretty
+					pretty critical part of the problem that we should be thinking about.</span></p>
+			<p class="chat"><cite class="speaker">Saif Altalib: </cite><span class="text">Do Authoring Tools include
+					IDEs and Vibe Coding tools?<br>Miriam Fukushima:👌</span></p>
+			<p class="message"><cite class="speaker">Laura Staniland: </cite><span class="text">Yeah, so, I had somebody
+					reach out to me because they had this form that they have students fill out in a Google Doc, and
+					it&#x27;s 38 pages, and of course a student using AT couldn&#x27;t had some problem along the way.
+					And when I went into remediate it, it turns out Google Docs don&#x27;t really have a built-in
+					accessibility editor like I could run a test.<br>And I can re-mediated myself, but, like, you
+					can&#x27;t even go in and mark an image as decorative. So, like, at the most basic level, I said,
+					you know, you shouldn&#x27;t keep using this and so that&#x27;s, like, a huge platform, like Google
+					Docs right there, like.<br>How doesn&#x27;t this have basic accessibility editing? But yeah, when we
+					are looking at things, if I see that the VPAT.<br>Doesn&#x27;t meet WCAG 2.1 AA, which is, you know,
+					what we&#x27;re working towards. It&#x27;s like, nope, you&#x27;re out of the game.</span></p>
+			<p class="chat"><cite class="speaker">Mike Gifford (CivicActions): </cite><span class="text">Google Docs
+					has some big issues. MS seems to be better.</span></p>
+			<p class="chat"><cite class="speaker">Lisa Liskovoi: </cite><span class="text">Replying to &quot;Do
+					Authoring Tools include IDEs and Vibe Coding to...&quot;:<br>Here is the discussion regarding types
+					of authoring tools so far: https://github.com/w3c-cg/atag/discussions/12 please feel free to add to
+					the list.</span></p>
+			<p class="chat"><cite class="speaker">Jacob Wood: </cite><span class="text">Replying to &quot;Do Authoring
+					Tools include IDEs and Vibe Coding to...&quot;:<br>I had a similar question. Do code editors and
+					other interfaces count as authoring tools? (Yes, in my opinion.)</span></p>
+			<p class="message"><cite class="speaker">Laura Staniland: </cite><span class="text">But how much of that
+					It&#x27;s covered by ATAG, I&#x27;m not sure, I I just got back into this group now that you made it
+					10AM, so but, like I said to the person, if you can&#x27;t even edit a Google Doc for basic
+					accessibility, don&#x27;t even use this platform anymore, so</span></p>
+			<p class="chat"><cite class="speaker">Charles Hall: </cite><span class="text">Collaboration tools are
+					mentioned in the WAI research list:<br><br>https://www.w3.org/WAI/research/</span></p>
+			<p class="chat"><cite class="speaker">Abhinav Kannan: </cite><span class="text">Yeah, people I know use
+					GrackleDocs — a plugin for Google Docs -- to check and fix accessibility issues.</span></p>
+			<p class="message"><cite class="speaker">Laura Staniland: </cite><span class="text">I don&#x27;t know if
+					that&#x27;s a relevant response. I think it is.<br>Yeah, I just don&#x27;t think you should have to
+					use a plugin.</span></p>
+			<p class="chat"><cite class="speaker">Mike Gifford (CivicActions): </cite><span class="text">I’d encourage
+					folks to ask for OpenACR rather than VPAT PDF files - https://acreditor.section508.gov/<br>Charles
+					Hall:💯</span></p>
+			<p class="message"><cite class="speaker">Laura Staniland: </cite><span class="text">For a platform. Like, a
+					large platform as big as Google shouldn&#x27;t need a plugin for accessibility</span></p>
+			<p class="message"><cite class="speaker">Ned Zimmerman: </cite><span class="text">Yeah, just to just to add to
+					that, I mean, it&#x27;s interesting, that just makes me think of the fact that in the ATAG2
+					standard,<br>The valuation of authoring tools is of the authoring tools themselves without any
+					plugins.</span></p>
+			<p class="chat"><cite class="speaker">Saif Altalib: </cite><span class="text">For screen readers, an image
+					with no alt text and no title is generally treated as decorative and skipped.<br>Right-click the
+					image.<br>Select Alt text.<br>Ensure both the Title and Description fields are completely
+					empty.</span></p>
+			<p class="message"><cite class="speaker">Ned Zimmerman: </cite><span class="text">So, the existing standard
+					specifically says, like, if the tool is</span></p>
+			<p class="chat"><cite class="speaker">Laura Staniland: </cite><span class="text">Replying to &quot;I’d
+					encourage folks to ask for OpenACR rather than...&quot;:<br>Some don’t even have VPATs. Some wanted
+					them to be confidential.</span></p>
+			<p class="message"><cite class="speaker">Ned Zimmerman: </cite><span class="text">not accessible without a
+					plugin, or<br>is accessible, but a plugin breaks it.<br>you have to exclude the plugin from the
+					evaluation, so I just<br>Your point, I think, is very well taken there.</span></p>
+			<p class="message"><cite class="speaker">Abhinav Kannan: </cite><span class="text">Yeah, the point about
+					plugins is absolutely right. You should have Tools like Google should have these accessibility
+					features built in.</span></p>
+			<p class="message"><cite class="speaker">Mike Gifford (CivicActions): </cite><span class="text">Replying to
+					&quot;I’d encourage folks to ask for OpenACR rather than...&quot;:<br>They are worried about
+					lawsuits.</span></p>
+			<p class="message"><cite class="speaker">Abhinav Kannan: </cite><span class="text">Right. But, uh But yeah,
+					just saying that people I know are using Grackle docs, and for the last few years, I think Google
+					has taken some steps to add accessibility features into docs.<br>I think they&#x27;re also moving
+					really, really slowly, and trying to add accessibility features into docs.</span></p>
+			<p class="message"><cite class="speaker">Laura Staniland: </cite><span class="text">A basic editor should be
+					easy to find and use. Some of the images were definitely necessary for understanding what to do in
+					the form.</span></p>
+			<p class="message"><cite class="speaker">Abhinav Kannan: </cite><span class="text">And fixing the pipeline so
+					that The exported Word document or PDF document out of Google Docs has the accessibility
+					markup.<br>But there are a lot of workarounds that people are using there.<br>So, a lot of people
+					export in order to create an accessible document out of Docs.<br>They export a Word document out of
+					docs so that it has the heading level markup, and then They download it, open it in Word, in
+					Microsoft Word, and then from Microsoft Word, they export the PDF. So that makes the PDF more
+					accessible.<br>But yeah, talking to blind people, and talking to a lot of people who use screen
+					readers, I know for a fact that PDFs are not very well welcomed.<br>I</span></p>
+			<p class="message"><cite class="speaker">Lisa Liskovoi: </cite><span class="text">I will never forget a screen
+					reader user who told me there is no such thing as an accessible PDF, even when it is accessible,
+					it&#x27;s not accessible.</span></p>
+			<p class="message"><cite class="speaker">Abhinav Kannan: </cite><span class="text">Yeah.</span></p>
+			<p class="message"><cite class="speaker">Lisa Liskovoi: </cite><span class="text">I know there were a couple
+					of questions in the chat around whether coding tools and vibe coding tools would be considered
+					authoring tools, and that is in line with the discussions we&#x27;ve had so far. So yes, we would
+					consider those authoring tools, is my understanding.</span></p>
+			<p class="chat"><cite class="speaker">Jacob Wood: </cite><span class="text">As a blind user who has worked
+					very hard to create accessible PDFs, I agree. There really isn&#x27;t such a thing.<br>Abhinav
+					Kannan, Lisa Liskovoi, Ned Zimmerman:👍</span></p>
+			<p class="message"><cite class="speaker">Laura Staniland: </cite><span class="text">Should we be maybe
+					Inviting the people who are doing the Let&#x27;s see somebody put the LLM thing in the chat.<br>Is
+					that a working group for LLMs? Sorry, maybe I should know this.</span></p>
+			<p class="chat"><cite class="speaker">Charles Hall: </cite><span class="text">I know that there are many
+					public / published research papers on WCAG. But not aware of any on ATAG.<br><br>Like this
+					one:<br><br>Bridging Digital Wellbeing and Accessibility: An Analysis of the W3C Web Content
+					Accessibility Guidelines<br><br>https://dl.acm.org/doi/10.1145/3706599.3719974<br>Abhinav
+					Kannan:👍</span></p>
+			<p class="message"><cite class="speaker">Lisa Liskovoi: </cite><span class="text">Sorry, Laura, could you
+					clarify?</span></p>
+			<p class="message"><cite class="speaker">Laura Staniland: </cite><span class="text">Okay, so again, I
+					hadn&#x27;t been here for a couple months, so if I should know this, I apologize. Somebody put a W3
+					a link to a W3C document use of large language models and standards work.<br>Is this written by us,
+					or was this written by somebody else?</span></p>
+			<p class="message"><cite class="speaker">Ned Zimmerman: </cite><span class="text">I can respond to that,
+					because I put that link in. It was just in response to a question about should we use an LLM to
+					draft updated ATAG standard?<br>And in doing a scan of<br>relevant W3C materials, I just stumbled
+					upon this document, which I think is a general<br>W3C document about<br>the general W3C approach to
+					the use of LLM tools in standards work.<br>So it wasn&#x27;t created by this group.<br>I think there
+					was a broader group involved in authoring that note.<br>but it just seemed relevant to the question,
+					so I shared it.<br>Yeah, I hope that answers your question.</span></p>
+			<p class="message"><cite class="speaker">Mike Gifford (CivicActions): </cite><span class="text">I think Hidde
+					de Vries was was connected with that as well, and Eddie has done some stuff with. He created the the
+					W3C&#x27;s authoring tool atag authoring tool interface with with Shady, I think, a while back. So
+					he&#x27;s got lots of opinions about about, uh.<br>use of AI for creation of standards. But I
+					wondered if maybe one way to think about about the use of AI is we&#x27;ve got the is sort of adding
+					a third section for what are some guidance for AI? Because I think I don&#x27;t want to blend it in
+					with all the other tools.<br>All the other tools are like looking at the Part A and B, I think are
+					still that&#x27;s a useful construction and a useful breakdown. And I think AI is a whole other
+					third component that affects both A and B, but maybe there&#x27;s a way of.</span></p>
+			<p class="chat"><cite class="speaker">Saif Altalib: </cite><span class="text">Google Accessibility
+					Conformance Reports: https://belonging.google/accessibility-conformance-reports/</span></p>
+			<p class="chat"><cite class="speaker">Ned Zimmerman: </cite><span class="text">One of my colleagues found
+					this: https://link.springer.com/article/10.1007/s10209-022-00904-9</span></p>
+			<p class="message"><cite class="speaker">Mike Gifford (CivicActions): </cite><span class="text">Of not not
+					derailing us with the magic of AI, because it&#x27;s, it can easily overwhelm any discussion.</span>
+			</p>
+			<p class="message"><cite class="speaker">Lisa Liskovoi: </cite><span class="text">Any thoughts on that? Ai is
+					a separate component or AI integrated throughout</span></p>
+			<p class="chat"><cite class="speaker">Saif Altalib: </cite><span class="text">I think separate
+					section</span></p>
+			<p class="message"><cite class="speaker">Mike Gifford (CivicActions): </cite><span class="text">Is that
+					separate, or Sorry, Miriam, you just put a thumbs up and I wasn&#x27;t sure if that was for separate
+					or together.</span></p>
+			<p class="message"><cite class="speaker">Lisa Liskovoi: </cite><span class="text">I think Miriam showed
+					separate, yes?</span></p>
+			<p class="chat"><cite class="speaker">Jacob Wood: </cite><span class="text">I don&#x27;t really see a
+					future in which they&#x27;re distinct.</span></p>
+			<p class="message"><cite class="speaker">Ned Zimmerman: </cite><span class="text">Yeah, well, I I think that I
+					think the thing is that<br>like, where my head is at with this now is that<br>There are some things
+					that<br>are impossible to disentangle.<br>But there are some things that are specific to AI,<br>And
+					I think my earlier comment about<br>natural language interfaces as a research area leading towards a
+					Type 3 is important.<br>But it is specifically relevant to the<br>way that AI is used,
+					like,<br>ChatGPT and other LLMs use.<br>use natural language interfaces, and it&#x27;s not so
+					relevant to the rest of the existing ATAG authoring.<br>guidance, so I can see that there&#x27;s a
+					section specific to AI,<br>Within a new version of ATAG?<br>And then some general things that are
+					applicable regardless of whether an LLM or other AI tool is involved or not.<br>If that makes</span>
+			</p>
+			<p class="message"><cite class="speaker">Lisa Liskovoi: </cite><span class="text">I&#x27;ll just make this
+					quick. I wonder if some of that one will have to live in notes, like we&#x27;ll have to separate AI,
+					and then in cases where AI is relevant to a particular clause, we may want to capture that
+					information and notes.</span></p>
+			<p class="chat"><cite class="speaker">Charles Hall: </cite><span class="text">I agree that we need to
+					account for AI as part of an authoring process, as an author, and as an agent.<br><br>But I would
+					not agree to the CG using AI to create guidance.<br>Ned Zimmerman, Laura Staniland:👍</span></p>
+			<p class="message"><cite class="speaker">Miriam Fukushima: </cite><span class="text">Yeah, I would also say
+					like AI is such a big topic that could a separate part would be useful. And also just to have room
+					to clarify that it can be anything that is.<br>already there. just as an AI, for example, it can be
+					a chat interface. It can be a coder, it can be an editor just based on a different technology, even
+					though editors in itself already exist.<br>And I think you can we can then also cross-reference to
+					the different sections. But I think it just needs room for that clarification. And if it&#x27;s a
+					third part, then all the other parts come before, and then you can easily.<br>back reference and say
+					same if stuff overlaps, same applies, but this is new, and this is what distinguishes from that. So
+					I think we need that room.</span></p>
+			<p class="chat"><cite class="speaker">Saif Altalib: </cite><span class="text">Agreed. There will be
+					multiple types of Gen AI and agentic tools</span></p>
+			<p class="message"><cite class="speaker">Lisa Liskovoi: </cite><span class="text">Thanks so much, everybody.
+					We are at time. Thanks for the great discussion, and I&#x27;ll see you in a couple of weeks.</span>
+			</p>
+		</section>
+	</main>
+</body>
+
+</html>
