@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>
+			Authoring Tools Accessibility Guidelines CG Meeting &ndash; 21 August 2026
+		</title>
+		<meta name="viewport" content="width=device-width" />
+		<link
+			rel="stylesheet"
+			type="text/css"
+			title="2018"
+			href="https://www.w3.org/StyleSheets/scribe2/public.css" />
+		<link
+			rel="alternate stylesheet"
+			type="text/css"
+			title="2004"
+			href="https://www.w3.org/StyleSheets/base.css" />
+		<link
+			rel="alternate stylesheet"
+			type="text/css"
+			title="2004"
+			href="https://www.w3.org/StyleSheets/public.css" />
+		<link
+			rel="alternate stylesheet"
+			type="text/css"
+			title="2004"
+			href="https://www.w3.org/2004/02/minutes-style.css" />
+		<link
+			rel="alternate stylesheet"
+			type="text/css"
+			title="Fancy"
+			href="https://www.w3.org/StyleSheets/scribe2/fancy.css" />
+		<link
+			rel="alternate stylesheet"
+			type="text/css"
+			title="Typewriter"
+			href="https://www.w3.org/StyleSheets/scribe2/tt-member.css" />
+		<style>
+			.chat {
+				margin-left: 1em;
+				font-style: italic;
+			}
+		</style>
+	</head>
+	<body>
+		<header>
+			<p>
+				<a href="https://www.w3.org/"
+					><img
+						src="https://www.w3.org/assets/logos/w3c-2025/svg/w3c-white.svg"
+						alt="W3C"
+						border="0"
+						height="60"
+						width="60"
+				/></a>
+			</p>
+
+			<h1>Authoring Tools Accessibility Guidelines CG Meeting</h1>
+			<h2>21 August 2026</h2>
+		</header>
+
+		<div id="prelims">
+			<div id="attendees">
+				<h2>Attendees</h2>
+				<dl class="intro">
+					<dt>Present:</dt>
+					<dd>
+						Israel Cefrin, Mike Gifford, Sambhavi Chandrashekar, Abhinav Kannan, Wayne Dick, Miriam Fukushima
+					</dd>
+					<dt>Chair</dt>
+					<dd>Lisa Liskovoi</dd>
+				</dl>
+			</div>
+
+			<nav id="toc">
+				<h2>Contents</h2>
+				<ol>
+					<li><a href="#minutes">Meeting Minutes</a></li>
+				</ol>
+			</nav>
+		</div>
+
+		<main id="meeting" class="meeting">
+			<section id="minutes">
+				<h2>Meeting Minutes</h2>
+				<p class>NOTE: Due to an error with the transcript, some names were lost.</p>
+				<p class="message"><cite>Lisa: </cite><span class="text">The more different versions we have, the better. One thing we started last week was the fourth tab: </cite><span class="text"> things to define, including different roles and actions we might want to define.<br>One conversation was about focusing on the person or the action, but also thinking through the different roles and actions that need to be included.</span></p>
+				<p class="message"><cite>Israel: </cite><span class="text">I have two thoughts about definitions.<br>First is the AI terminology. The new version of ATAG will refer to AI, large language models, and related concepts. These need to be included in the definitions because the terms are used so broadly and generically. We need to be specific.<br>For example, AI versus machine learning versus chatbots. I'm not sure what terms we will settle on, but I think this is important.<br>The other issue that Lisa and I discussed is the role of entities, businesses, or vendors responsible for training models. An authoring tool will not necessarily be developed by the same organization that develops the large language model embedded within it.<br>Most authoring tools will use models from other vendors rather than training their own models in-house. That role is important and we should consider how it fits into the standard.</span></p>
+				<p class="message"><cite>Mike: </cite><span class="text">Part of the reason to have ATAG is to get authoring tools to improve the accessibility of their software. If there isn't a way to report errors and see errors reported by other users, we're not going to see that improvement.<br>Software is built with tools such as Jira and GitHub, so we should think about the systems used to create the software rather than assuming everything is created from scratch.<br>There was a time when JAWS didn't allow users to see its accessibility errors. Fortunately, Freedom Scientific eventually opened up the known accessibility errors. This needs to be incorporated into how we think about software development.<br>That might also help us limit how much our AI discussions wander into the possible. We should focus on the practical question: How do we make sure software being built meets accessibility needs and helps authors?</span></p>
+				<p class="message"><cite>Lisa: </cite><span class="text">I wonder if there is anything from the section you mentioned that requires research.<br>
+				<p class="message"><cite>Mike: </cite><span class="text">I don't think this is necessarily something that needs to be researched because I'm so involved in building software, but it certainly needs to be documented.<br>There seems to be very little awareness in accessibility documentation of how software is actually built. It tends to focus on results for the user, but that misses the opportunity to shape how software is built so that accessibility best practices are incorporated into the code.</span></p>
+				<p class="message"><cite>Wayne: </cite><span class="text">When implementing a team, we would go to developers and programmers and translate accessibility requirements into the programming cycle. That is an important observation.<br>I'd also like to add that the authoring tool shouldn't undo accessibility that has already been added to a document. I've repeatedly had to go back and repair heading structures and other basics.</span></p>
+				<p class="message"><cite>Mike: </cite><span class="text">I think that is already being addressed in ATAG: transformations of content should not remove accessibility. It's a basic principle that needs to be stated clearly. </span></p>
+				<p class="message"><cite>Sam: </cite><span class="text">Going back to Mike's research point, we have a researcher here, Abhinav, who is doing a PhD on authoring tools for more accessible content. It would be useful to get input on research related to definitions and other areas.</span></p>
+				<p class="message"><cite>Abhinav: </cite><span class="text">Our research has looked at different stages of authoring, particularly design interfaces. MJ and I have looked at ways to add accessibility markup while people are authoring.<br>
+				We've considered interventions at different stages:
+					<ul>
+						<li>Ensuring templates are accessible before people begin designing.</li>
+						<li>Adding alt text automatically during design.</li>
+						<li>Ensuring semantic structure.</li>
+						<li>Alerting users to poor colour choices and contrast.</li>
+						<li>Providing a review option before the document is exported.</li>
+					</ul>
+				We've incorporated a little AI across all four stages. That's the gist of the research. I'm happy to look at the definitions in more detail and see how we can distinguish them. </span></p>
+				<p class="message"><cite>Sam: </cite><span class="text">That's what I wanted to raise. When we have academic input, we should include it because most of us are practitioners.</span></p>
+				<p class="message"><cite>Abhinav: </cite><span class="text">Are we looking at both roles and things to define?<br>My research hasn't yet distinguished these terms very clearly, but we're using them in our paper. I can help with the definitions.</span></p>
+				<p class="message"><cite>Miriam: </cite><span class="text">We should also document best practices, edge cases, and materials that help people apply ATAG—not just the technical standard itself.</span></p>
+				<p class="message"><cite>Speaker 4: </cite><span class="text">I've added that to the section on things to document. I agree it is worth documenting as part of the work. It isn't part of understanding ATAG itself and isn't official, but it is necessary.<br>We already have discussions about things that need to go beyond the standard and provide examples to help people understand ATAG. Those should become a resource pool. </span></p>
+				<p class="message"><cite>Speaker 4: </cite><span class="text">I was thinking about a digital asset manager. At Adobe, you could upload images and set the alt text and long description. Later, when you referenced that image in the CMS, the system would remember the accessibility information and allow you to use or overwrite it.<br>I think we should include this under roles or actions. It involves storing metadata and ensuring that accessibility information is available wherever the content is reused.<br>It would also be worth documenting this as a use case because a use case can explain the details better than simply defining the role. </span></p>
+				<p class="message"><cite>Speaker 5: </cite><span class="text">When we document an edge case, are we providing workarounds or simply documenting the possible edge case?</span></p>
+				<p class="message"><cite>Speaker 1: </cite><span class="text">I think it is similar to how we're thinking about use cases. Rather than focusing only on typical or average use cases, we should think about edge cases and how we can stretch ATAG to address them.<br>One interesting issue is the challenge of authoring content that is accessible to people whose own access to the content may be different.<br>For example, a blind content author may create content for sighted users but cannot visually evaluate whether it is accessible to them. The accessibility of the content for the author and the audience may be different.<br>The author may therefore need other ways of assessing accessibility for audiences other than themselves. </span></p>
+				<p class="message"><cite>Speaker 1: </cite><span class="text">There is also a distinction between core developers and developers who contribute extensions, plugins, themes, or other functionality. They don't necessarily work on the core code but still contribute to the tool.<br>We have a similar situation with PKP: </cite><span class="text"> there is a core development team and community collaborators who add functionality or themes.<br>Is it worth differentiating these roles or treating them as one?</span></p>
+				<p class="message"><cite>Speaker 2: </cite><span class="text">There is also the role of an accessibility maintainer. I'm an accessibility maintainer for Drupal, and there are three of us.<br>Having an accessibility maintainer explicitly defined as part of a project is useful. Someone should be responsible for accessibility issues, just as it is useful to have an accessibility tag in issue queues so those issues can be identified quickly.<br>The accessibility industry also tends to evaluate already-released versions of software. But if we want changes to enter the project, we need to look at the development version—the GitHub version, development snapshots, or similar.<br>We need to look at where the software is going, not just where it is now.<br>For example, I'm not interested in solving an issue with CSS display: </cite><span class="text"> none for a website that exists today. I'm interested in a solution that will be relevant when Drupal 12 is released and useful for several years afterward.<br>We need to look ahead rather than relying on best practices from a decade ago. </span></p>
+				<p class="message"><cite>Speaker 4: </cite><span class="text">In ATAG, there are conformance applicability notes about developer control. They say the criteria apply to the tool itself and not necessarily to subsequent modifications by third parties, such as plugins, user-defined templates, or changes to default settings.<br>That makes sense, but it raises an interesting question. A tool may meet ATAG, but if it is used with a theme that presents the content in an inaccessible way, the resulting product isn't accessible.<br>Could we consider how some criteria might apply to plugins, themes, and extensions? Templates are important, including what they do with content when it is displayed. </span></p>
+				<p class="message"><cite>Speaker 5: </cite><span class="text">I don't think we should conflate ATAG with the definition of roles. ATAG needs to apply to all kinds of authoring tools.<br>A small, self-contained tool may have a developer who ships bug fixes, while another product may have an entire ecosystem of developers. The responsibility is ultimately the same.<br>For ATAG itself, I would keep this straightforward: the developer has responsibility for making the tool as accessible as possible, and the author has responsibility for using its features appropriately.<br>The details about different developer roles can go into best practices and examples rather than the standard itself. </span></p>
+				<p class="message"><cite>Speaker 1: </cite><span class="text">As we work through the definitions, can we provide examples so everyone is clear about what we're trying to define?<br>For example, terms such as "platform" are very broad. We could initially use examples such as WhatsApp, Twitter, or other social media platforms. We can remove the examples before publication, but they would help us clarify the definitions while we're working.<br>How detailed should the definitions be—one or two sentences, or longer?</span></p>
+				<p class="message"><cite>Speaker 4: </cite><span class="text">One thing we could do today is look at the current glossary section of ATAG 2.0 and see how much information and detail is currently provided. We can identify what is missing and what needs updating.<br>The glossary should be treated as a living resource. Many terms will need to be updated, modified, or added. </span></p>
+				<p class="message"><cite>Speaker 2: </cite><span class="text">We also need to remember that ATAG 2.0 predates some of the material that was added later, including low-vision and cognitive accessibility material. A lot has changed since it was released.</span></p>
+				<p class="message"><cite>Speaker 2: </cite><span class="text">The discussion about plugins also made me realize that we may need to define which projects we're evaluating.<br>I don't think ATAG needs to address custom code written for an existing application. This should focus on tools supported by projects and communities—tools used by thousands or hundreds of thousands of sites.<br>The goal is to improve accessibility by ensuring that those tools are built in ways that support authors. </span></p>
+				<p class="message"><cite>Speaker 2: </cite><span class="text">There are also university professors and other people producing a lot of information that has to be consumed. There are small scientific producers and individual authors whose content may be consumed by relatively small groups, including people with disabilities.</span></p>
+				<p class="message"><cite>Speaker 4: </cite><span class="text">The glossary defines content generation, including content authoring and editing—the act of specifying the web content that will be recorded, played, or executed by the user's agent.<br>Content generation can include automatically generated content and third-party content generation.<br>This is something that has changed dramatically, so we should add a section for definitions that need to be updated. As people review the document, if they notice concepts that we're no longer thinking about in the same way, they should add them to the list. </span></p>
+				<p class="message"><cite>Speaker 1: </cite><span class="text">We should focus first on influential software with a substantial community behind it rather than very small projects. That allows us to amplify voices in the right direction.<br>We can borrow many definitions directly from ATAG 2.0, while others will need different levels of refinement.</span></p>
+				<p class="message"><cite>Speaker 4: </cite><span class="text">Prompting is already mentioned in ATAG 2.0, but it is now used in a very different context, so it will probably need to be added to the definitions.<br>In ATAG 2.0, prompting referred to prompting the user to include accessibility information during authoring. The meaning of prompting has changed significantly. </span></p>
+				<p class="message"><cite>Speaker 1: </cite><span class="text">Defining the audience is very important. The intended audience is content creators—people producing content and trying to make it accessible.<br>But the standard is also used by people evaluating accessibility. We have an intended audience and unintended audiences who actively use the standard, and those audiences are important to consider.</span></p>
+				<p class="message"><cite>Speaker 2: </cite><span class="text">For example, in a university context, procurement teams may use WCAG to evaluate the accessibility of products they are considering. They aren't necessarily the intended audience, but they widely use the standard to evaluate procurement options.<br>We also verify learning content tools and compare what the tool claims it can do with the VPAT. So there is a group of people using the standards in this way. </span></p>
+				<p class="message"><cite>Speaker 4: </cite><span class="text">Is our intended audience the people building the tools, the people using the tools, or the people evaluating them?</span></p>
+				<p class="message"><cite>Speaker 1: </cite><span class="text">I think people developing the tools are the primary audience. People evaluating the tools are secondary. Users also benefit, but they are less likely to use the standard directly.</span></p>
+				<p class="message"><cite>Speaker 2: </cite><span class="text">I see it as developers and evaluators, rather than users.<br>We can add a section at the end of the document about the audience. </span></p>
+				<p class="message"><cite>Speaker 4: </cite><span class="text">We should also include academic content creators among the users.<br>One of the key objectives of the project is making it practical to create accessible content for students, including in large university systems.</span></p>
+				<p class="message"><cite>Speaker 2: </cite><span class="text">As people who create authoring tools, we have to involve the people who use those tools and learn from their experience. We cannot simply imagine their needs and build the tools ourselves.<br>ATAG is meant for people creating authoring tools, but when we create those tools, we have to work with the people who use them. Use cases should always involve users. </span></p>
+				<p class="message"><cite>Speaker 3: </cite><span class="text">I agree. Especially in instructional design, we hear a lot of excuses or blame placed on the tool: "I can only do what I can do."<br>It's important to involve people with disabilities from the beginning. If they are involved from the research stage, accessibility becomes part of how you think about the specifications and the design process.</span></p>
+				<p class="message"><cite>Speaker 1: </cite><span class="text">We should expand some of these use cases. For example:
+					<ul>
+						<li>As an author, I need to be able to create and edit content in my authoring tool without barriers.</li>
+						<li>As someone with no accessibility experience, I need to know whether my learning materials are accessible before publication.</li>
+						<li>As an instructional designer, I need my authoring tool to provide real-time accessibility guidance as I build lessons so that I don't discover problems during an audit or deployment.</li>
+						<li>As a teacher, when I share materials I did not create, I need to know that they are accessible.</li>
+						<li>As a teacher, I need to be able to easily generate documents in multiple formats from a single document.</li>
+						<li>As an instructional designer, when I upload an image, the tool should require appropriate alternative text before I proceed.</li>
+						<li>AI should allow me to transform one format into multiple formats without losing the accessibility metadata that was added originally.</li>
+					</ul>
+				</span></p>
+				<p class="message"><cite>Speaker 2: </cite><span class="text">For the user, WCAG matters. ATAG's job is to make it as easy as possible for the user to use WCAG and conform to it.</span></p>
+				<p class="message"><cite>Speaker 4: </cite><span class="text">If a professor has to deal with accessibility at two in the morning before class, that's not an effective system. We all encounter these constraints.<br>From the student perspective, a student should also be able to write a paper at the last minute, submit it, and have it be accessible to the professor. </span></p>
+				<p class="message"><cite>Speaker 4: </cite><span class="text">I've had many students with extremely small handwriting. Creating or reading their work was difficult, particularly when magnification was needed.</span></p>
+				<p class="message"><cite>Speaker 2: </cite><span class="text">That raises another issue: after content is authored, someone has to read it. The effectiveness of the content depends on how well the reader can access it.<br>It makes me wonder how AI could interpret very small handwriting and make it legible.</span></p>
+				<p class="message"><cite>Speaker 1: </cite><span class="text">AI is a huge help with this. You can send it a picture and ask it to read it aloud. I use it all the time now. I would have loved to have had that capability earlier, but I have it now.<br>I'm also using screenshots of the captions to make notes.</span></p>
+				<p class="message"><cite>Speaker 2: </cite><span class="text">Automatic transcription is very useful because you don't have to worry about capturing everything yourself.</span></p>
+				<p class="message"><cite>Sam: </cite><span class="text">Zoom has a tool called Zoom Notes. It isn't the Zoom AI feature. It can provide transcription, summaries, and task assignments. Unfortunately, it can't listen to this meeting because transcription is turned off.</span></p>
+				<p class="message"><cite>Speaker 2: </cite><span class="text">That's a useful example of how these tools can support accessibility and participation.</span></p>
+				<p class="message"><cite>Lisa: </cite><span class="text">Thank you, everyone. We're at time. Wendy will be back next week, and we can continue the discussion. Have a great weekend.</span></p>
+			</section>
+		</main>
+	</body>
+</html>
