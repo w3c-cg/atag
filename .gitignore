@@ -1,1 +1,5 @@
+# General
 .DS_Store
+
+# Transcript files should not be uploaded
+utilities/input/
