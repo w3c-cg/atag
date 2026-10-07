@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <title>Authoring Tool Accessibility Guidelines - Use Cases and Requirements</title>
+    <script src='https://www.w3.org/Tools/respec/respec-w3c' async class='remove'></script>
+    <script class='remove'>
+      var respecConfig = {
+        group: "atag", 
+        specStatus: "CG-DRAFT",
+        shortname: "atag-ucr",
+        editors: [{
+          name: "Wendy Reid",
+          company: "Invited Expert",
+		  w3cid: 102009
+        }],
+        github: {
+          branch: "main",
+          repoURL: "https://github.com/w3c-cg/atag", 
+        },
+        
+      };
+    </script>
+  </head>
+  <body>
+    <h1 id="title">Authoring Tool Accessibility Guidelines - Use Cases and Requirements</h1>
+
+    <section id='abstract'>
+      <p>
+        The goal of this document and exercise is to gather use cases, user stories, and requirements for authoring tools present and future. 
+      </p>
+    </section>
+
+    <section id='sotd'></section>
+
+    <section id="introduction">
+        <h2>Introduction</h2>
+
+        <section id="intro-user-types">
+            <h3>User Types</h3>
+
+            <p>
+                There are many users that use authoring tools for a variety of tasks and functions. Almost every task or job role contains an element of authoring. To focus our efforts, we have grouped users into three main roles:
+            </p>
+
+            <ul>
+                <li><strong>Creator</strong>: the originator of the content or tool, responsible for the creation of the end product and its foundational accessibility.</li>
+                <li><strong>Maintainer</strong>: the user of existing product or content who modifies or maintains it.</li>
+                <li><strong>Consumer</strong>: the end user of the product or content who engages with it as it is.</li>
+            </ul>
+        </section>
+
+        <section id="intro-tool-functions">
+            <h3>Authoring Tool Functions</h3>
+
+            <p>
+                Authoring tools perform a number of different functions. Each of the following functions exist on a spectrum ranging from the most basic to the most advanced. For example, a rich text editing interface can range from a simple textbox that offers the ability to bold or underline text, to a complex document editing interface that offers advanced typesetting features.
+            </p>
+
+            <p>
+                We have identified the following authoring tool functions:
+            </p>
+
+            <ul>
+                <li>Rich text editing interface</li>
+                <li>Audio editing interface</li>
+                <li>Video editing interface</li>
+                <li>Image editing interface</li>
+                <li>Diagram editing interface</li>
+                <li>Voice editing interface</li>
+                <li>Programming interface</li>
+                <li>VR, XR, 3D CAD editing interface</li>
+                <li>Collaborative editing tools</li>
+                <li>Version control interface</li>
+                <li>Annotations and comments</li>
+                <li>Content templates</li>
+                <li>Generative AI or LLM interfaces</li>
+                <li>Content previews</li>
+                <li>Content translation</li>
+            </ul>
+        </section>
+    </section>
+
+    <section id="use-cases">
+        <h2>Use Cases for Authoring Tools</h2>
+
+        <p>
+            The use cases for authoring tools are structured by the actions taken during authoring processes. The authoring process is not linear, and the actions taken depend highly on the content being produced, the intent of the user, and the needs of the end user.
+        </p>
+
+        <section id="uc-creation">
+            <h3>Content creation</h3>
+
+            <p>
+                The following use cases are focused on the creation of new content using an authoring tool.
+            </p>
+
+            <section id="uc-creation-media">
+                <h4>Creating media content</h4>
+
+                <p>
+                    Users must be able to author accessible content in different media types using the necessary accessibility features or alternatives.
+                </p>
+
+                <p>Users may achieve this for:</p>
+
+                <ol>
+                    <li>Textual content, by including all semantics necessary for content structure and formatting.</li>
+                    <li>Audio content, by including textual alternatives such as transcripts and descriptions.</li>
+                    <li>Video content, by including textual alternatives such as captions, transcripts, and descriptions.</li>
+                    <li>Image content, by including textual alternatives such as alternative text and extended descriptions.</li>
+                    <li>Complex visual content, such as charts, graphs, and visualizatons, by including alternative text, text summaries, extended descriptions, or audio alternatives.</li>
+                </ol>
+            </section>
+
+            <section id="uc-creation-technical">
+                <h4>Creating technical content</h4>
+
+                <p>
+                    Users must be able to author accessible technical content such as software or source files for complex content using the necessary accessibility features.
+                </p>
+
+                <p>Users may achieve this for:</p>
+
+                <ol>
+                    <li>Markup languages, such as HTML, XML, MarkDown, or LaTeX, by using the language's accessibility features, validation tools, and authoring tools that support accessible development.</li>
+                    <li>Programming languages, such as Java, Javascript, C, or C#, by using the language's accessibility features, validation tools, and authoring tools that support accessible development.</li>
+                    <li>Computer-aided design (CAD) files, <span class="todo">[TODO: Does CAD have accessibility features?]</span>.</li>
+                    <li>Design assets, such as source files for print media, marketing materials, user experience design assets, and any associated metadata, by using authoring tools that support accessible design practice, and validation tools.</li>
+                </ol>
+            </section>
+
+            <section id="uc-creation-control">
+                <h4>Control over content creation</h4>
+
+                <p>
+                    Users, when creating content of any kind, must have complete control over the content they produce while being provided with the guidance and features to make informed decisions about accessibility.
+                </p>
+
+                <p>Users may require control over content creation when:</p>
+
+                <ol>
+                    <li>Producing specialized content for educational or diagnostic purposes, such as course or testing materials, where certain parts of content must be inaccessible to fulfill a requirement.</li>
+                    <li>Producing personalized accessible alternatives to other content that prioritizes the accessibility needs of the target user over the needs of other users.</li>
+                    <li>Producing artistic content where creating accessible alternatives may in some way invalidate or harm the intent of the work.</li>
+                </ol>
+            </section>
+        </section>
+
+        <section id="uc-modification">
+            <h3>Content modification</h3>
+
+            <p>
+                The following use cases cover the modification of existing content.
+            </p>
+
+            <section id="uc-modification-editing">
+                <h4>Editing content</h4>
+
+                <p>
+                    Users must be able to edit or modify content in ways that retain existing accessibility features and ensure all content is accessible. When the source content is not accessible, users must be able to remediate the content.
+                </p>
+
+                <p>Users may achieve this by:</p>
+
+                <ol>
+                    <li>Using accessible authoring tools that provide the ability to view existing content and its accessibility features.</li>
+                    <li>Using accessible authoring tools that offer the necessary features and guidance to make content accessible.</li>
+                    <li>Using authoring tools that provide the necessary tools to make content accessible.</li>
+                </ol>
+            </section>
+
+            <section id="uc-modification-metadata">
+                <h4>Adding accessibility metadata to content</h4>
+
+                <p>
+                    Users must be able to add accessibility features and metadata to content when uploading it to its relevant platform.
+                </p>
+
+                <p>Users may achieve this by:</p>
+
+                <ol>
+                    <li>Using platforms that provide the ability to add relevant accessibility features or metadata when content is uploaded, such as alternative text, captions, or audio descriptions.</li>
+                    <li>Using platforms that provide features that generate relevant accessibility features or metadata when content is uploaded, such as auto-generation of alternative text or captions.</li>
+                    <li>Using platforms that provide the ability to edit or modify any accessibility information or metadata that is attached to the source or auto-generated by the platform, such as alternative text, captions, or audio descriptions.</li>
+                </ol>
+            </section>
+            
+            <section id="uc-modification-export">
+                <h4>Exporting or saving content</h4>
+
+                <p>
+                    Users must be able to save or export content in multiple accessible formats and with any accessibility metadata and features preserved, when content can be developed in multiple formats.
+                </p>
+
+                <p>Users may achieve this by:</p>
+
+                <ol>
+                    <li>Using an authoring tool that offers saving or export in multiple formats as a feature.</li>
+                    <li>Using specialized software for the conversion or transformation of content into different formats that preserves accessibility features.</li>
+                    <li>Using software that informs the user of differences or requirements for accessibility that may arise in different formats, such as different metadata values, format constraints, or format-specific features.</li>
+                </ol>
+            </section>
+        </section>
+
+        <section id="uc-validation">
+            <h3>Accessibility validation</h3>
+
+            <p>
+                The following use cases cover the validation or remediation of accessible content.
+            </p>
+
+            <section id="uc-validation-check">
+                <h4>Checking the accessibility of content</h4>
+
+                <p>
+                    Users must be able to check the accessibility of their content, understand what issues are present, and how to address them.
+                </p>
+
+                <p>Users may achieve this by:</p>
+
+                <ol>
+                    <li>Using an authoring tool that has built-in accessibility validation for the content it produces that provides information on the issues and how to address them.</li>
+                    <li>Using an extension or plugin for the authoring tool that provides accessibility validation for the content that provides information on the issues and how to address them.</li>
+                    <li>Using an external tool for validating the accessibility of the content, such as an accessibility monitoring tool, or automated testing tools in production pipelines that provides information on the issues and how to address them.</li>
+                </ol>
+            </section>
+
+            <section id="uc-validation-repair">
+                <h4>Repairing accessibility issues in content</h4>
+
+                <p>
+                    Users must be able to repair accessibility issues found in their content.
+                </p>
+
+                <p>Users may achieve this by:</p>
+
+                <ol>
+                    <li>Using an authoring tool that provides built-in remediation tools or guidance for repairing issues.</li>
+                    <li>Using an extension or plugin that provides remediation tools or guidance for repairing issues.</li>
+                </ol>
+            </section>
+        </section>
+    </section>
+
+    <section id="authoring-tool-requirements">
+        <h2>Authoring Tool Requirements</h2>
+
+        <p>
+            The requirements for authoring tools are structured by the actions taken by the user during the authoring process, and what the authoring tool must do to enable them.
+        </p>
+
+        <section id="req-at-accessibility">
+            <h3>Authoring tool accessibility</h3>
+
+            <p>
+                Authoring tools must be accessible to the user. This requires that:
+            </p>
+
+            <ol>
+                <li>The authoring tool's interface, features, and documentation must be accessible.</li>
+                <li>The authoring tool supports use with different assistive technologies.</li>
+                <li>The authoring tool should offer settings and features that allow users to personalize the interface according to their needs.</li>
+                <li>The authoring tool must expose all parts of the interface to users, including informative or processing-related content.</li>
+                <li>The authoring tool must document all of their features.</li>
+                <li>The authoring tool should support multiple languages and scripts.</li>
+            </ol>
+        </section>
+
+        <section id="req-at-authoring">
+            <h3>Authoring accessible content</h3>
+
+            <p>
+                Authoring tools must be able to support the creation of accessible content. This requires that:
+            </p>
+
+            <ol>
+                <li>The authoring tool must follow accessibility best practices when content is automatically generated.</li>
+                <li>The authoring tool must follow accessibility best practices when content is generated through an interface that reflects the final product not the underlying structure, such as a rich text editor.</li>
+                <li>The authoring tool must support the addition of accessibility features to the content.</li>
+                <li>The authoring tool must be able to inform the user of what inputs are required to provide accessible output.</li>
+                <li>The authoring tool must support the addition of extensions or third-party tools that provide accessibility guidance or features.</li>
+                <li>The authoring tool must be able to request, store, and associate accessibility metadata to the content.</li>
+                <li>The authoring tool must support content type-specific accessibility features.</li>
+            </ol>
+        </section>
+
+        <section id="req-at-validation">
+            <h3>Authoring tool validation</h3>
+
+            <p>
+                Authoring tools must be able to validate the accessibility of content, and provide the means to repair any issues. This requires that:
+            </p>
+
+            <ol>
+                <li>The authoring tool has the ability to validate the content against the relevant accessibility best practices for the content.</li>
+                <li>The authoring tool supports extensions or third-party tools that validate the content against the relevant accessibility best practices for the content.</li>
+                <li>The authoring tool has the ability to fix accessibility issues automatically or at the direction of the user.</li>
+                <li>The authoring tool provides the necessary information for the user to address any identified issues.</li>
+            </ol>
+        </section>
+
+        <section id="req-at-output">
+            <h3>Authoring tool outputs</h3>
+
+            <p>
+                Authoring tools must be able to produce outputs that preserve the accessibility features and metadata applied during the authoring process. This requires that:
+            </p>
+
+            <ol>
+                <li>The authoring tool is able to store and associate accessibility metadata with the content it produces.</li>
+                <li>The authoring tool ensures that the accessibility features applied during authoring are preserved in the final product(s).</li>
+                <li>The authoring tool informs the user when an output format requires additional information for accessibility, such as format-specific metadata.</li>
+                <li>The authoring tool informs the user when an output format has limitations or does not support accessibility features in the source content.</li>
+                <li>The authoring tool should be able to support multiple languages or scripts, and provide means to translate or transform content into different languages.</li>
+                <li>The authoring tool should support extensions or tools to provide translation or transformation without any loss of accessibility information if the tool does not support translation or transformation.</li>
+            </ol>
+        </section>
+    </section>
+
+    <section id="glossary">
+    
+    </section>
+
+  </body>
+</html>
