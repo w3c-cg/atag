@@ -1,14 +1,14 @@
-# Welcome to the Authoring Tool Accessibility Guideline (ATAG) CG!
+# Welcome to the Authoring Tool Accessibility Guideline (ATAG) Community Group!
 
 This repository is where we will be working on everything related to ATAG. Contributors are encouraged to log issues relating to the specification in our [issues](https://github.com/w3c-cg/atag/issues) or create a [discussion](https://github.com/w3c-cg/atag/discussions) post for more open-ended topics or questions.
 
-You can find helpful documentation and resources in our [wiki](https://github.com/w3c-cg/atag/wiki), members are also welcome to contribute to our wiki.
+You can find helpful documentation and resources in our [wiki](https://github.com/w3c-cg/atag/wiki). Members are also welcome to contribute to our wiki.
 
-If you are interested in joining the CG, you can find the information on our [homepage](https://www.w3.org/community/atag/).
+If you are interested in joining the Community Group (CG), you can find the information on our [Community Group homepage](https://www.w3.org/community/atag/).
 
 ## Documents
 
-TBD
+[Use Cases and Requirements](https://w3c-cg.github.io/atag/docs/ucr/) (UCR)
 
 ## Charter 
 
@@ -16,7 +16,9 @@ We are preparing a [draft charter](ATAG_Charter.html).
 
 ## Meeting Minutes 
 
-You can find minutes for our meetings in the `minutes/` folder. 
+You can find minutes for our meetings:
+* in the `minutes/` folder here in GitHub
+* in the [ATAG CG activity page](https://www.w3.org/groups/cg/atag/activity/)
 
 ## Contributing to this Project 
 
